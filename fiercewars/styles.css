@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #041562;
+    background-color: #0a1736;
 }
 
 #seleccionar-mascota {
@@ -10,12 +10,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    height: 75vh;
 }
 
-.titulo {
-    font-family: 'Fredoka One', cursive;
-    color: white;
-    font-size: 32px;
+.titulo img{
+    margin-top: 20px;
+    width: 280px;
 }
 
 .subtitulo {
@@ -25,25 +25,26 @@ body {
 
 .selectores,.botones-ataques {
     display: flex;
-    gap: 10px;
+    gap: 7px;
+    margin: 20px;
 }
 
 .selector-mascota {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #11468F;
+    background-color: #1c2250;
     color: white;
-    width: 190px;
-    height: 100px;
+    width: 209px;
+    height: 105px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 35px;
     margin: 10px;
     box-sizing: border-box;
 }
 
 .selector-mascota img {
-    width: 80px;
+    width: 90px;
 }
 
 input {
@@ -51,18 +52,19 @@ input {
 }
 
 input:checked + label {
-    background-color: #5D8BF4;
+    background-color: #4a22af;
 }
 
 
 #boton-seleccionarmascota {
     font-family: 'Poppins', sans-serif;
-    background-color: transparent;
+    font-size: 16px;
+    background-color: #4a22af;
     color: white; 
     width: 190px;
     height: 40px;
     padding: 7px;
-    border: 2px solid #ffffff;
+    border: 2px solid #4a22af;
     border-radius: 20px;  
     margin-top: 30px;
     box-sizing: border-box;
@@ -75,7 +77,7 @@ input:checked + label {
 
 .boton-ataque {
     font-family: 'Poppins', sans-serif;
-    background-color: #11468F;
+    background-color: #1c2250;
     color: white;
     width: 120px;
     padding: 10px;
@@ -87,17 +89,26 @@ input:checked + label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #EEEEEE;
+    background-color: #08122c;
     width: 280px;
     padding: 20px;
     border-radius: 20px;
-    margin-top: 20px;
+    margin: 15px;
 }
+
+#resultado {
+    color: white;
+} 
 
 #boton-reiniciar {
     font-family: 'Poppins', sans-serif;
+    font-size: 18px;
     border: none;
-    color:#11468F;
+    border-radius: 20px;
+    color:white;
+    background-color: #4a22af;
+    width: 280px;
+    height: 50px;
 }
 
 .informacion {
@@ -119,7 +130,21 @@ input:checked + label {
 }
 
 @media (max-width: 360px) {
+    #seleccionar-mascota {
+        height: 90vh;
+        margin-top: 15px;
+    }
+
+    .titulo img {
+        margin-top: 0px;
+    }
+
     .selectores, .botones-ataques {
         flex-direction: column; 
+        margin: 0px;
+    }
+
+    #mensajes {
+        margin: 10px;
     }
 }

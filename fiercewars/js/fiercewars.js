@@ -21,7 +21,7 @@ let inputW
 let ataquesMascotas 
 let jugadorAtaques = []
 let enemigoAtaques = []
-let ataquesMascotaEnemigo
+let ataquesMascotaEnemigo = []
 let botonFuego
 let botonAgua
 let botonTierra
@@ -41,9 +41,9 @@ class Mascota {
     }
 }
 
-let cubisaurio = new Mascota('Cubisaurio', './assets/mokepons_mokepon_ratigueya_attack.png', 3)
-let penisaurio = new Mascota('Penisaurio', './assets/mokepons_mokepon_capipepo_attack.png', 3)
-let wilsonsaurio = new Mascota('Wilsonsaurio', './assets/mokepons_mokepon_hipodoge_attack.png', 3)
+let cubisaurio = new Mascota('Cubisaurio', './assets/Cubisaurio.png', 3)
+let pennysaurio = new Mascota('Pennysaurio', './assets/Pennysaurio.png', 3)
+let wilsonsaurio = new Mascota('Wilsonsaurio', './assets/Wilsonsaurio.png', 3)
 
 cubisaurio.ataques.push(
     {nombre: 'Agua 💧', id: 'boton-agua'},
@@ -53,7 +53,7 @@ cubisaurio.ataques.push(
     {nombre: 'Tierra 🌱', id: 'boton-tierra'},
 )
 
-penisaurio.ataques.push(
+pennysaurio.ataques.push(
     {nombre: 'Tierra 🌱', id: 'boton-tierra'},
     {nombre: 'Tierra 🌱', id: 'boton-tierra'},
     {nombre: 'Tierra 🌱', id: 'boton-tierra'},
@@ -69,7 +69,7 @@ wilsonsaurio.ataques.push(
     {nombre: 'Tierra 🌱', id: 'boton-tierra'},
 )
 
-mascotas.push(cubisaurio, penisaurio, wilsonsaurio)
+mascotas.push(cubisaurio, pennysaurio, wilsonsaurio)
 
 function reiniciarJuego() {
     location.reload()
@@ -90,7 +90,7 @@ function iniciarJuego() {
     contenedorSelectores.innerHTML += opcionesMascotas
     
     inputC = document.getElementById("Cubisaurio")
-    inputP = document.getElementById("Penisaurio")
+    inputP = document.getElementById("Pennysaurio")
     inputW = document.getElementById("Wilsonsaurio")
     })
     
@@ -167,15 +167,15 @@ function secuenciaAtaque() {
         boton.addEventListener('click', (e) => {
             if (e.target.textContent == 'Fuego 🔥') {
                 jugadorAtaques.push('FUEGO')
-                boton.style.background = "#112F58"
+                boton.style.background = "#4a22af"
                 boton.disabled = true  
             } else if (e.target.textContent == 'Agua 💧') {
                 jugadorAtaques.push('AGUA')
-                boton.style.background = "#112F58"
+                boton.style.background = "#4a22af"
                 boton.disabled = true 
             } else if (e.target.textContent == 'Tierra 🌱') {
                 jugadorAtaques.push('TIERRA')
-                boton.style.background = "#112F58"
+                boton.style.background = "#4a22af"
                 boton.disabled = true
             }
             ataqueAleatorioEnemigo()
@@ -186,11 +186,11 @@ function secuenciaAtaque() {
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(0, ataquesMascotaEnemigo.length - 1)
 
-    if (ataqueAleatorio == 0 || ataqueAleatorio == 1) {
+    if (ataquesMascotaEnemigo[ataqueAleatorio].nombre == 'Fuego 🔥') {
         enemigoAtaques.push('FUEGO')
-    } else if (ataqueAleatorio == 3 || ataqueAleatorio == 4) {
+    } else if (ataquesMascotaEnemigo[ataqueAleatorio].nombre == 'Agua 💧') {
         enemigoAtaques.push('AGUA')
-    } else {
+    } else if (ataquesMascotaEnemigo[ataqueAleatorio].nombre == 'Tierra 🌱') {
         enemigoAtaques.push('TIERRA')
     }
     iniciarCombate()
@@ -262,6 +262,11 @@ function crearMensaje() {
 function mensajeFinal(resultadoFin) { 
     pResultado.innerHTML = resultadoFin  
     sectionReiniciar.style.display = 'block'
+    botones.forEach((boton) => {
+        if (boton.disabled == true) {
+            boton.style.background = "#07122c"
+        }
+    })
 }
 
 window.addEventListener('load', iniciarJuego)
