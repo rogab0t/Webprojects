@@ -14,7 +14,6 @@ body {
 }
 
 .titulo img{
-    margin-top: 20px;
     width: 280px;
 }
 
@@ -26,7 +25,7 @@ body {
 .selectores,.botones-ataques {
     display: flex;
     gap: 7px;
-    margin: 20px;
+    margin: 0px;
 }
 
 .selector-mascota {
@@ -93,7 +92,7 @@ input:checked + label {
     width: 280px;
     padding: 20px;
     border-radius: 20px;
-    margin: 15px;
+    margin-top: 20px;
 }
 
 #resultado {
