@@ -240,7 +240,7 @@ function iniciarCombate() {
 
 function revisarVictorias() {
     if (victoriasJugador == victoriasEnemigo) {
-        mensajeFinal("¡FUE UN EMPATE! 🫤")
+        mensajeFinal("¡FUE UN EMPATE! 😱")
     } else if (victoriasJugador > victoriasEnemigo) {
         mensajeFinal("¡HAZ GANADO! 😄")
     } else if (victoriasEnemigo > victoriasJugador) {
@@ -262,6 +262,7 @@ function crearMensaje() {
 function mensajeFinal(resultadoFin) { 
     pResultado.innerHTML = resultadoFin  
     sectionReiniciar.style.display = 'block'
+
     botones.forEach((boton) => {
         if (boton.disabled == true) {
             boton.style.background = "#07122c"
