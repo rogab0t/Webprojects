@@ -13,8 +13,12 @@ body {
     height: 75vh;
 }
 
-.titulo img{
+.titulo-img img{
     width: 280px;
+}
+
+.titulo {
+    color: white;
 }
 
 .subtitulo {
@@ -67,6 +71,16 @@ input:checked + label {
     border-radius: 20px;  
     margin-top: 30px;
     box-sizing: border-box;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+    border: 2px solid white;
 }
 
 #seleccionar-ataque {

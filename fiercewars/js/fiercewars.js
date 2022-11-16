@@ -3,6 +3,8 @@ const sectionReiniciar = document.getElementById("reiniciar")
 const botonMascotaJugador = document.getElementById("boton-seleccionarmascota")
 const botonReiniciar = document.getElementById("boton-reiniciar")
 const sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
+const sectionVerMapa = document.getElementById("ver-mapa")
+const mapa = document.getElementById("mapa")
 const contenedorSelectores = document.getElementById("contenedor-selectores")
 const pNombreMascotaJugador = document.getElementById("nombremascotajugador")
 const pNombreMascotaEnemigo = document.getElementById("nombremascotaenemigo")
@@ -29,8 +31,12 @@ let botones = []
 let indexAtaqueJugador
 let indexAtaqueEnemigo
 let mascotaJugador
+let mascotaJugadorObjeto
 let victoriasJugador = 0
 let victoriasEnemigo = 0
+let lienzo = mapa.getContext("2d")
+let intervalo
+let mapaBackground = new Image()
 
 class Mascota {
     constructor(nombre, imagen, vida) {
@@ -38,6 +44,14 @@ class Mascota {
         this.imagen = imagen
         this.vida = vida
         this.ataques = []
+        this.x = 20
+        this.y = 30
+        this.ancho = 80
+        this.largo = 80
+        this.mascotaImagen = new Image()
+        this.mascotaImagen.src = imagen
+        this.velocidadX = 0
+        this.velocidadY = 0
     }
 }
 
@@ -78,6 +92,7 @@ function reiniciarJuego() {
 function iniciarJuego() {   
     sectionSeleccionarAtaque.style.display = 'none'
     sectionReiniciar.style.display = 'none'
+    sectionVerMapa.style.display = 'none'
 
     mascotas.forEach((mascota) => {
         opcionesMascotas = `
@@ -102,7 +117,7 @@ function iniciarJuego() {
 function selccionarMascotaJugador() {   
     sectionSeleccionarMascota.style.display = 'none'
     
-    sectionSeleccionarAtaque.style.display = 'flex'
+    //sectionSeleccionarAtaque.style.display = 'flex'
     
     if(inputC.checked) {
         pNombreMascotaJugador.innerHTML = inputC.id
@@ -121,6 +136,9 @@ function selccionarMascotaJugador() {
     extraerAtaques(mascotaJugador)
 
     selccionarMascotaEnemigo()
+
+    sectionVerMapa.style.display = 'flex'
+    iniciarMapa()
 }
 
 function aleatorio(min, max) {
@@ -135,6 +153,90 @@ function selccionarMascotaEnemigo() {
     ataquesMascotaEnemigo = mascotas[mascAleatoria].ataques
 
     secuenciaAtaque()
+}
+
+function obtenerObjetoMascota(mascotaJugador) {
+    for (let i = 0; i < mascotas.length; i++) {
+        if (mascotaJugador == mascotas[i].nombre) {
+            return mascotas[i]
+        } 
+    }
+}
+
+function pintarEnCanvas() {
+    lienzo.clearRect(0, 0, mapa.width, mapa.height)
+    mapaBackground.src = './assets/fiercemap.png'
+    lienzo.drawImage(
+        mapaBackground,
+        0,
+        0,
+        mapa.width,
+        mapa.height
+    )
+
+    lienzo.drawImage(
+        mascotaJugadorObjeto.mascotaImagen,
+        mascotaJugadorObjeto.x,
+        mascotaJugadorObjeto.y,
+        mascotaJugadorObjeto.ancho,
+        mascotaJugadorObjeto.largo
+    )
+
+    mascotaJugadorObjeto.x = mascotaJugadorObjeto.x + mascotaJugadorObjeto.velocidadX
+    mascotaJugadorObjeto.y = mascotaJugadorObjeto.y + mascotaJugadorObjeto.velocidadY
+}
+
+function moverArriba() {
+    mascotaJugadorObjeto.velocidadY = -1
+}
+
+function moverDerecha() {
+    mascotaJugadorObjeto.velocidadX = 1
+}
+
+function moverAbajo() {
+    mascotaJugadorObjeto.velocidadY = 1
+}
+
+function moverIzquierda() {
+    mascotaJugadorObjeto.velocidadX = -1
+}
+
+function detenerMovimiento() {
+    mascotaJugadorObjeto.velocidadX = 0
+    mascotaJugadorObjeto.velocidadY = 0
+}
+
+function teclaPresionada(event) {
+    switch (event.key) {
+        case 'ArrowUp':
+            moverArriba()
+            break;
+        case 'ArrowRight':
+            moverDerecha()
+            break;
+        case 'ArrowDown':
+            moverAbajo()
+            break;
+        case 'ArrowLeft':
+            moverIzquierda()
+            break;
+        default:
+            break;
+    }
+}
+
+function iniciarMapa() {
+    mapa.width = 320
+    mapa.height = 240
+
+    mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
+
+    intervalo = setInterval(pintarEnCanvas, 10)
+
+    window.addEventListener('keydown', teclaPresionada)
+
+    window.addEventListener('keyup', detenerMovimiento)
 }
 
 function extraerAtaques(mascotaJugador) {

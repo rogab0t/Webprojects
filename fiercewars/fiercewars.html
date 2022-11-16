@@ -10,7 +10,7 @@
             <!--Cubisaurio -> Agua 
             Pennysaurio -> Tierra
             Wilsonsaurio -> Fuego-->
-            <h1 class="titulo"><img src="./assets/logo_fiercewars.png" alt="logo"></h1>
+            <h1 class="titulo-img"><img src="./assets/logo_fiercewars.png" alt="logo"></h1>
             <h2 class="subtitulo">Elige a tu Mascota:</h2>
             
             <div id="contenedor-selectores" class="selectores"> 
@@ -19,13 +19,23 @@
             
             <button id="boton-seleccionarmascota">Seleccionar</button>
         </section>
+
+        <section id="ver-mapa">
+            <h1 class="titulo-img"><img src="./assets/logo_fiercewars.png" alt="logo"></h1>
+            <h2 class="titulo">¡Recorre el mapa con tu mascota!</h2>
+            <canvas id="mapa"> </canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>  
+        </section>
         
         <section id="seleccionar-ataque">
-            <h1 class="titulo"><img src="./assets/logo_fiercewars.png" alt="logo"></h1> 
+            <h1 class="titulo-img"><img src="./assets/logo_fiercewars.png" alt="logo"></h1> 
             
             <h2 class="subtitulo">Elige tu secuencia de 5 Ataques:</h2>
             
-            <div id= "contenedor-ataques" class="botones-ataques">
+            <div id="contenedor-ataques" class="botones-ataques">
             
             </div>
             
