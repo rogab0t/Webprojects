@@ -41,6 +41,15 @@ let mapaBackground = new Image()
 let largoRequerido
 let anchoDePantalla = window.innerWidth - 20
 
+if (anchoDePantalla > anchoMaximoMapa) {
+    anchoDePantalla = anchoMaximoMapa - 40
+}
+
+largoRequerido = anchoDePantalla * 600 / 800
+
+mapa.width = anchoDePantalla
+mapa.height = largoRequerido
+
 class Mascota {
     constructor(nombre, imagen, vida, mascotaMapa) {
         this.nombre = nombre
@@ -198,15 +207,6 @@ function obtenerObjetoMascota(mascotaJugador) {
     }
 }
 
-if (anchoDePantalla > anchoMaximoMapa) {
-    anchoDePantalla = anchoMaximoMapa - 20
-}
-
-largoRequerido = anchoDePantalla * 600 / 800
-
-mapa.width = anchoDePantalla
-mapa.height = largoRequerido
-
 function pintarEnCanvas() {
     lienzo.clearRect(0, 0, mapa.width, mapa.height)
     mapaBackground.src = './assets/fiercemap.png'
@@ -238,16 +238,16 @@ function moverArriba() {
     mascotaJugadorObjeto.velocidadY = -1
 }
 
-function moverDerecha() {
-    mascotaJugadorObjeto.velocidadX = 1
+function moverIzquierda() {
+    mascotaJugadorObjeto.velocidadX = -1
 }
 
 function moverAbajo() {
     mascotaJugadorObjeto.velocidadY = 1
 }
 
-function moverIzquierda() {
-    mascotaJugadorObjeto.velocidadX = -1
+function moverDerecha() {
+    mascotaJugadorObjeto.velocidadX = 1
 }
 
 function detenerMovimiento() {
@@ -260,14 +260,14 @@ function teclaPresionada(event) {
         case 'ArrowUp':
             moverArriba()
             break;
-        case 'ArrowRight':
-            moverDerecha()
+        case 'ArrowLeft':
+            moverIzquierda()
             break;
         case 'ArrowDown':
             moverAbajo()
             break;
-        case 'ArrowLeft':
-            moverIzquierda()
+        case 'ArrowRight':
+            moverDerecha()
             break;
         default:
             break;

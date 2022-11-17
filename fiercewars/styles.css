@@ -17,11 +17,8 @@ body {
     width: 280px;
 }
 
-.titulo {
-    color: white;
-}
-
 .subtitulo {
+    font-family: 'Fredoka One', cursive;
     color: white;
     font-size: 20px;
 }
@@ -76,15 +73,47 @@ input:checked + label {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 90vh;
 }
 
 #mapa {
     border: 2px solid white;
 }
 
+#boton-arriba {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #4a22af;
+    color: white; 
+    width: 90px;
+    height: 40px;
+    padding: 7px;
+    border: 2px solid #4a22af;
+    border-radius: 20px;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.botones-movimiento {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #4a22af;
+    color: white; 
+    width: 90px;
+    height: 40px;
+    padding: 7px;
+    border: 2px solid #4a22af;
+    border-radius: 20px;  
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 #seleccionar-ataque {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    height: 90vh;
 }
 
 .boton-ataque {
@@ -141,14 +170,17 @@ input:checked + label {
     font-size: x-large;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 690px) {
     #seleccionar-mascota {
-        height: 90vh;
-        margin-top: 15px;
+        height: 93vh;
     }
 
-    .titulo img {
-        margin-top: 0px;
+    #ver-mapa {
+        height: 93vh;
+    }
+
+    .titulo-img {
+        height: 5vh;
     }
 
     .selectores, .botones-ataques {
@@ -156,7 +188,43 @@ input:checked + label {
         margin: 0px;
     }
 
+    #seleccionar-ataque {
+        height: 0vh;
+    }
+
     #mensajes {
         margin: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .subtitulo {
+        text-align: center;
+    }
+
+    #seleccionar-mascota {
+        height: 93vh;
+    }
+
+    #ver-mapa {
+        height: 93vh;
+    }
+
+    #ver-mapa div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #boton-arriba {
+        margin-bottom: 5px;
+    }
+
+    .botones-movimiento {
+        margin: 5px;
+    }
+
+    #seleccionar-ataque {
+        height: 0vh;
     }
 }
