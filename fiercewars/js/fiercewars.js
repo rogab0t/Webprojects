@@ -14,6 +14,7 @@ const ataqueJugador = document.getElementById("ataque-jugador")
 const ataqueEnemigo = document.getElementById("ataque-enemigo")
 const pVictoriasMascotaJugador = document.getElementById("victoriasmascotajugador")
 const pVictoriasMascotaEnemigo = document.getElementById("victoriasmascotaenemigo")
+const anchoMaximoMapa = 500
 
 let mascotas = []
 let opcionesMascotas
@@ -37,9 +38,11 @@ let victoriasEnemigo = 0
 let intervalo
 let lienzo = mapa.getContext("2d")
 let mapaBackground = new Image()
+let largoRequerido
+let anchoDePantalla = window.innerWidth - 20
 
 class Mascota {
-    constructor(nombre, imagen, vida, mascotaMapa, x = 10, y = 10) {
+    constructor(nombre, imagen, vida, mascotaMapa) {
         this.nombre = nombre
         this.imagen = imagen
         this.vida = vida
@@ -47,8 +50,8 @@ class Mascota {
         this.mascotaMapa.src = mascotaMapa
         this.mascotaMapaAncho = 70
         this.mascotaMapaLargo = 70
-        this.x = x
-        this.y = y
+        this.x = aleatorio(0, mapa.width - this.mascotaMapaAncho)
+        this.y = aleatorio(0, mapa.height - this.mascotaMapaLargo)
         this.velocidadX = 0
         this.velocidadY = 0
         this.ataques = []
@@ -69,9 +72,9 @@ let cubisaurio = new Mascota('Cubisaurio', './assets/Cubisaurio.png', 3, './asse
 let pennysaurio = new Mascota('Pennysaurio', './assets/Pennysaurio.png', 3, './assets/Penny_C3.png')
 let wilsonsaurio = new Mascota('Wilsonsaurio', './assets/Wilsonsaurio.png', 3, './assets/Wilson_C3.png')
 
-let cubisaurioEnemigo = new Mascota('Cubisaurio', './assets/Cubisaurio.png', 3, './assets/Cubi_C3.png', mapa.width + 10, mapa.height + 30)
-let pennysaurioEnemigo = new Mascota('Pennysaurio', './assets/Pennysaurio.png', 3, './assets/Penny_C3.png', mapa.width - 60, mapa.height + 30)
-let wilsonsaurioEnemigo = new Mascota('Wilsonsaurio', './assets/Wilsonsaurio.png', 3, './assets/Wilson_C3.png', mapa.width - 140, mapa.height + 30)
+let cubisaurioEnemigo = new Mascota('Cubisaurio', './assets/Cubisaurio.png', 3, './assets/Cubi_C3.png')
+let pennysaurioEnemigo = new Mascota('Pennysaurio', './assets/Pennysaurio.png', 3, './assets/Penny_C3.png')
+let wilsonsaurioEnemigo = new Mascota('Wilsonsaurio', './assets/Wilsonsaurio.png', 3, './assets/Wilson_C3.png')
 
 cubisaurio.ataques.push(
     {nombre: 'Agua 💧', id: 'boton-agua'},
@@ -195,6 +198,15 @@ function obtenerObjetoMascota(mascotaJugador) {
     }
 }
 
+if (anchoDePantalla > anchoMaximoMapa) {
+    anchoDePantalla = anchoMaximoMapa - 20
+}
+
+largoRequerido = anchoDePantalla * 600 / 800
+
+mapa.width = anchoDePantalla
+mapa.height = largoRequerido
+
 function pintarEnCanvas() {
     lienzo.clearRect(0, 0, mapa.width, mapa.height)
     mapaBackground.src = './assets/fiercemap.png'
@@ -207,13 +219,18 @@ function pintarEnCanvas() {
     )
 
     mascotaJugadorObjeto.pintarMascota()
+
     cubisaurioEnemigo.pintarMascota()
+    pennysaurioEnemigo.pintarMascota()
+    wilsonsaurioEnemigo.pintarMascota()
 
     mascotaJugadorObjeto.x = mascotaJugadorObjeto.x + mascotaJugadorObjeto.velocidadX
     mascotaJugadorObjeto.y = mascotaJugadorObjeto.y + mascotaJugadorObjeto.velocidadY
 
     if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0) {
         revisarColision(cubisaurioEnemigo)
+        revisarColision(pennysaurioEnemigo)
+        revisarColision(wilsonsaurioEnemigo)
     }
 }
 
@@ -258,8 +275,8 @@ function teclaPresionada(event) {
 }
 
 function iniciarMapa() {
-    mapa.width = 420
-    mapa.height = 320
+    mapa.width
+    mapa.height
 
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
 
