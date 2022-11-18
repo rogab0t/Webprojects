@@ -228,6 +228,7 @@ function pintarEnCanvas() {
     mascotaJugadorObjeto.y = mascotaJugadorObjeto.y + mascotaJugadorObjeto.velocidadY
 
     if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0) {
+        limitarMovimieto(mapa)
         revisarColision(cubisaurioEnemigo)
         revisarColision(pennysaurioEnemigo)
         revisarColision(wilsonsaurioEnemigo)
@@ -287,6 +288,21 @@ function iniciarMapa() {
     window.addEventListener('keyup', detenerMovimiento)
 }
 
+function limitarMovimieto(mapa) {
+    if (mascotaJugadorObjeto.x < 0) {
+        mascotaJugadorObjeto.x = 0
+    }
+    if (mascotaJugadorObjeto.y < 0) {
+        mascotaJugadorObjeto.y = 0
+    }
+    if (mascotaJugadorObjeto.x > (mapa.width - mascotaJugadorObjeto.mascotaMapaAncho)) {
+        mascotaJugadorObjeto.x = (mapa.width - mascotaJugadorObjeto.mascotaMapaAncho)
+    }
+    if (mascotaJugadorObjeto.y > (mapa.height - mascotaJugadorObjeto.mascotaMapaLargo)) {
+        mascotaJugadorObjeto.y = (mapa.height - mascotaJugadorObjeto.mascotaMapaLargo)
+    }
+}
+
 function revisarColision(enemigo) {
     const arribaJugador = mascotaJugadorObjeto.y
     const derechaJugador = mascotaJugadorObjeto.x + mascotaJugadorObjeto.mascotaMapaAncho
@@ -306,7 +322,7 @@ function revisarColision(enemigo) {
     ) {
         return
     } else {
-        alert("Hubo una colision con: " + enemigo.nombre)
+        alert("Haz encontrado a: " + enemigo.nombre)
         detenerMovimiento()
         clearInterval(intervalo)
         sectionVerMapa.style.display = 'none'
