@@ -322,7 +322,7 @@ function revisarColision(enemigo) {
     ) {
         return
     } else {
-        alert("Haz encontrado a: " + enemigo.nombre)
+        alert("Haz encontrado a " + enemigo.nombre)
         detenerMovimiento()
         clearInterval(intervalo)
         sectionVerMapa.style.display = 'none'
