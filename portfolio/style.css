@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500;900&display=swap'); /*Se importa la fuente de letra mediante su url/link*/
+
+* { /*Selector universal para aplicar estilo a todos los elementos del documento html*/
+    box-sizing: border-box; /*Propiedad para calcular la medidas de un elemento con el valor para que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente*/
+    margin: 0; /*Propiedad de margen con el valor 0 para no tener margenes*/
+    padding: 0; /*Propiedad de margen interno con el valor 0 para no tener margenes internos*/
+}
+
+html { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar el estilo a lo que anide*/
+    font-size: 16px; /*Propiedad para el tamaño de fuente con el valor de 16px*/
+}
+
+body { /*Selector de tipo para seleccionar la etiquera body, para asi aplicar el estilo a lo que anide*/
+    font-family: 'Lato', sans-serif; /*Propiedad para la familia de fuente con el valor de la fuente importada*/
+}
+
+h1, h2, h3 { /*Selector de tipo para seleccionar todas las etiquetas h1, h2 y h3*/
+    font-family: 'Poppins', sans-serif /*Propiedad para la familia de fuente con el valor de la fuente importada*/
+}
+
+/* Menu */
+
+.menu { /*Selector de clase para seleccionar los elementso con dicha clase*/
+    width: 100%; /*Propiedad de ancho con el valor de 100% para tener el 100% del ancho de la pantalla*/
+    height: 70px; /*Propiedad de alto con el valor de 70px para tener un ancho de dicho valor*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+    justify-content: flex-end; /*Propiedad para alinear el contenido con el valor flex-end para colocar el contenido al final del contenedor*/
+    align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
+    padding: 20px 40px; /*Propiedad para agregar un margen interno, el primer valor es el superior e inferior y el segundo es izquierda y derecha*/
+}
+
+.menu li { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
+    display: inline-block; /*Propieda para la visualizacion del elemento en pantalla con el valor inline-block para colocar los elementos uno a lado del otro y admitiendo valores de dimensiones*/
+    list-style-type: none; /*Propiedad para la apariencia del listado con el valor none para que no tenga apariencia por defecto*/
+    align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
+    padding: 10px 20px; /*Propiedad para agregar un margen interno, el primer valor es el superior e inferior y el segundo es izquierda y derecha*/
+    font-family: 'Poppins', sans-serif; /*Propiedad para la familia de fuente con el valor de la fuente importada*/
+    font-size: 1rem; /*Propiedad para el tamaño de la fuente con el valor de 1rem(16px)*/
+    text-transform: uppercase; /*Propiedad para especificar el cambio entre mayúsculas y minúsculas del texto con el valor uppercase(mayuscula)*/
+}
+
+.menu li a { /*Selector de tipo para selccionar los elementos dentro del otro elemento con el selector de tipo dentro del elemento con el selector de clase*/
+    color: #051626; /*Propiedad para el color de fuente de letra con el valor de un color*/
+    text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
+}
+
+/* Bio */
+
+.bio-container { /*Selector de clase para seleccionar el elemento con dicha clase*/
+    background-color: #000000; /*Propiedad para el color de fondo con el valor de un color*/
+    width: 100%; /*Propiedad para el ancho con el valor de 100% para tener el 100% del ancho de la pantalla*/
+}
+
+.bio-banner { /*Selector de clase para seleccionar el elemento con dicha clase*/
+    margin: 0 auto; /*Propiedad para el margen, con los valores 0 para que los margenes superior e inferior sean cero y auto para que el espacio que sobre del ancho lo reparta en dos partes iguales y así el elemento quede centrado*/
+    width: 100%; /*Propiedad de ancho con el valor de 100% para tener el 100% del ancho de la pantalla*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+	justify-content: space-around; /*Propiedad para alinear el contenido con el valor space-around para colocarlos uniformemente con un esapacio igual entre ellos */
+    align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
+    height: 500px; /*Propiedad de alto con el valor 500px para que el alto del elemento sea de 500px*/
+}
+
+.bio-details h1 { /*Selector de tipo para seleccionar al elemento dentro del que tiene el selector de clase*/
+    color: white; /*Propiedad para el color de la fuente de letra con valor de un color*/
+    font-size: 6.25rem; /*Propiedad para el tamaño de la fuente con el valor de 6.25rem(100px)*/
+    font-weight: bold; /*Propiedad para el ancho de las letras con el valor bold para que sean de trazo grueso*/
+}
+
+.bio-details p { /*Selector de tipo para seleccionar al elemento dentro del que tiene el selector de clase*/
+    color: #a9ffca; /*Propiedad para el color de la fuente de letra con valor de un color*/
+    font-size: 1rem; /*Propiedad para el tamaño de la fuente con el valor de 1rem(16px)*/
+    margin-top: 10px; /*Propiedad para colocar un margen superior con valor de 10 px*/
+    text-transform: uppercase; /*Propiedad para especificar el cambio entre mayúsculas y minúsculas del texto con el valor uppercase(mayuscula)*/
+    text-align: start; /*Propiedad para alinear el texto con el valor start para colocarlo al inicio(derecha)*/
+    letter-spacing: 1px; /*Propiedad para colocar un espaciado de 1px entre cada letra*/
+}
+
+.bio-img { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    width: 390px; /*Propiedad de ancho con el valor de 390px*/
+	height: 390px; /*Propiedad de alto con el valor de 390px*/
+	border-radius: 50%; /*Propiedad para el radio del borde con el valor de 50% para hacer un circulo*/
+}
+
+/* Sections */
+
+.container-portfolio { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    background-color: #f4f5f7; /*Propiedad para el color de fondo con el valor de un color*/
+}
+
+.container { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    width: 88%; /*Propiedad de ancho con el valor de 100% para tener el 88% del ancho de la pantalla*/
+    margin: 0 auto; /*Propiedad para el margen, con los valores 0 para que los margenes superior e inferior sean cero y auto para que el espacio que sobre del ancho lo reparta en dos partes iguales y así el elemento quede centrado*/
+    padding-top: 35px; /*Propiedad para colocar un margen interno superior con el valor de 35px*/
+    padding-bottom: 35px; /*Propiedad para colocar un margen interno inferior con el valor de 35px*/
+}
+
+.container-title {  /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    font-size: 2.25rem; /*Propiedad para el tamaño de la fuente con el valor de 2.25rem(36px)*/
+    font-weight: 500; /*Propiedad para el ancho de las letras con el valor 500 para que sean de trazo medio grueso*/
+}
+
+/* Project section */
+
+.project { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+    align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
+    gap: 20px; /*Propiedad para colocar un esapcia entre los elementos con el valor de 20px*/
+}
+
+figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar el estilo a lo que anide*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+    flex-direction: column; /*Propiedad para colocar los elementos uno debajo del otro en columna*/
+    gap: 25px; /*Propiedad para colocar un esapcia entre los elementos con el valor de 25px*/
+}
+
+.project-details { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    width: 40%; /*Propiedad de ancho con el valor de 100% para tener el 40% del ancho de la pantalla*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+    flex-direction: column; /*Propiedad para colocar los elementos uno debajo del otro en columna*/
+}
+
+.project-title { /**Selector de clase para seleccionar el elemento html con dicha clase*/
+    font-size: 1.5rem; /*Propiedad para el tamaño de la fuente con el valor de 1.5rem(24px)*/
+    font-weight: 500; /*Propiedad para el ancho de las letras con el valor 500 para que sean de trazo medio grueso*/
+}
+
+.project-description { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    font-size: 1.2rem; /*Propiedad para el tamaño de la fuente con el valor de 1.5rem(19px)*/
+    line-height: 1.5rem; /*Propiedad para el taaño del esapciado entre lineas del texto con valorde 1.5rem(24px)*/
+    margin-top: 20px; /*Propiead para colocar un margen superior*/
+}
+
+.project-img { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    height: 450px; /*Propiedad de alto con el valor de 450px para tener un ancho de dicho valor*/
+}
+
+.copyright { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    color: #b6b6b6; /*Propiedad para el color de la fuente de letra con valor de un color*/
+}
+
+.project-description a { /**/
+    color: #a9ffca; /*Propiedad para el color de la fuente de letra con valor de un color*/
+    text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
+}
+
+/* Footer */
+
+.contact { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+    align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
+    justify-content: space-between; /*Propiedad para alinear el contenido con el valor space-between para colocarlos distribuidos uniformemente al principio, en el centro y al final del contenedor*/
+    align-content: center; /*Propiedad para justar las líneas al rededor del centro del eje transversal*/
+    margin-top: 30px; /*Propiedad para colocar un marger superior con el valor de 30px*/
+}
+
+.contact-email a { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
+    color: #a9ffca; /*Propiedad para el color de la fuente de letra con valor de un color*/
+}
+
+.contact a { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
+    text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
+}
