@@ -136,7 +136,7 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 28px;
+    line-height: 33px;
 }
 
 .rectangle {
@@ -192,7 +192,7 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 30px;
+    line-height: 33px;
     text-align: center;
 }
 
@@ -243,6 +243,115 @@ header {
     }
     
     .nav_list {
+        gap: 20px;
+    }
+    
+    .nav_icon {
+        width: 10vw;
+        margin-right: 0vw;
+    }
+
+    .main {
+        width: 100vw;
+        height: 80vh;
+        margin: 0 0%;
+        padding: 15% 0%;
+    }
+    
+    .principal_text {
+        padding: 0% 0%;
+    }
+    
+    .main_title {
+        height: 26vh;
+        line-height: 115px;
+    }
+    
+    .third_title {
+        padding-top: 40%;
+    }
+    
+    /*section frutos rojos*/
+    
+    .frutos_rojos {
+        height: 145vh;
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .imagen_frutos1 {
+        align-items: center;
+        height: 60%;
+    }
+
+    .imagen1_frutos {
+        width: 80vw;
+    }
+    
+    .image_description {
+        width: 90vw;
+        height: 43vh;
+        gap: 10px;
+    }
+    
+    .frutos_description {
+        font-size: 1.3rem;
+        line-height: 33px;
+    }
+    
+    .rectangle {
+        width: 100%;
+        height: 6%;
+        left: 0%;
+        bottom: 0%;
+    }
+    
+    .imagen2_frutos {
+        width: 100%;
+        left: 0%;
+        top: 63%;
+    }
+    
+    /*section propiedades*/
+    
+    .panfrutos_imagen {
+        padding: 10% 0%;
+        padding-bottom: 30%;
+    }
+    
+    .image_description2 {
+        gap: 30px;
+        width: 90vw;
+        height: 56vh;
+        left: 5%;
+    }
+    
+    .panfrutos_description {
+        font-size: 1.3rem;
+        line-height: 33px;
+    }
+    
+    /*section contact*/
+    
+    .contact {
+        height: 17vh;
+    }
+    
+    .information {
+        padding: 4% 0%;
+        gap: 4px;
+    }
+}
+
+/*media 375px*/
+
+@media (max-device-width: 375px) {
+
+    .header {
+        background-size: 355vw;
+    }
+    
+    .nav_list {
         gap: 22px;
     }
     
@@ -266,12 +375,16 @@ header {
     /*section frutos rojos*/
     
     .frutos_rojos {
-        height: 145vh;
+        height: 135vh;
         flex-direction: column;
     }
     
+    .imagen_frutos1 {
+        align-items: center;
+    }
+
     .imagen1_frutos {
-        width: 90vw;
+        width: 80vw;
     }
     
     .image_description {
@@ -311,7 +424,7 @@ header {
     
     .panfrutos_description {
         font-size: 1.3rem;
-        line-height: 50px;
+        line-height: 33px;
     }
     
     /*section contact*/
@@ -321,11 +434,9 @@ header {
     }
     
     .information {
-        padding: 7% 0%;
+        padding: 5% 0%;
         gap: 4px;
     }
 }
-
-/*media 375px*/
 
 /*media 320px*/
