@@ -43,7 +43,7 @@ header {
     list-style: none;
 }
 
-.nav_icon {
+.icon {
     width: 3vw;
     margin-right: 58vw;
 }
@@ -249,13 +249,14 @@ header {
     }
     
     .nav_list {
-        gap: 13px;
-        width: 94vw;
+        gap: 20px;
+        width: 96vw;
     }
     
-    .nav_icon {
-        width: 0vw;
+    .icon {
+        width: 60%;
         margin-right: 0vw;
+        margin-left: 5vw;
     }
 
     .main {
@@ -362,9 +363,13 @@ header {
         gap: 22px;
     }
     
+    .nav_list {
+        gap: 20px;
+        width: 95vw;
+    }
+
     .nav_icon {
-        width: 10vw;
-        margin-right: 0vw;
+        display: none;
     }
     
     .principal_text {
