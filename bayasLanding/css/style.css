@@ -45,7 +45,10 @@ header {
 
 .icon {
     width: 3vw;
-    margin-right: 58vw;
+    margin-right: 62vw;
+    position: fixed;
+    left: 3vh;
+    top: 7vh;
 }
 
 .nav_link {
@@ -249,14 +252,9 @@ header {
     }
     
     .nav_list {
-        gap: 20px;
-        width: 96vw;
-    }
-    
-    .icon {
-        width: 60%;
-        margin-right: 0vw;
-        margin-left: 5vw;
+        gap: 15px;
+        width: 94vw;
+        padding-left: 20%;
     }
 
     .main {
@@ -273,6 +271,7 @@ header {
     .main_title {
         height: 26vh;
         line-height: 115px;
+        width: 100vw;
     }
     
     .third_title {
@@ -348,6 +347,13 @@ header {
     .information {
         padding: 4% 0%;
         gap: 4px;
+    }
+
+    .icon {
+        width: 11%;
+        position: fixed;
+        left: 2vh;
+        top: 7vh;
     }
 }
 
