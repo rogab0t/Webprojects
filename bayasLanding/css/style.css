@@ -184,7 +184,6 @@ body {
 .contact {
     grid-area: footer;
     width: 100vw;
-    height: 20vh;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -270,14 +269,17 @@ body {
         width: 100%;
     }
 
+    .propiedades {
+        height: 100vh;
+    }
+
     .panfrutos_imagen {
-        width: 100%;
         padding: 2em 0 0 0;
     }
 
     .image_description2 {
         padding: 1em 5em;
-    gap: 10px;
+        gap: 10px;
     }
 
     .contact {
