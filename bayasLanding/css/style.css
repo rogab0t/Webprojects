@@ -1,584 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;700&family=Raleway:wght@400;700&display=swap');
-
 * {
     box-sizing: border-box;
-    margin: 0%;
+    margin: 0;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "header"
+    "frutos"
+    "propiedades"
+    "footer";
 }
-
-header {
-    color: white;
-}
-
-/*section header*/
-
-.header {
-    position: relative;
-    background-image: linear-gradient(#6823AD38, #FF6B1747), url(../images/background.png);
-    background-size: 100vw;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-/*navigation*/
 
 .nav {
     width: 100vw;
-    padding: 1% 3%;
-    background-color: #49291142;
+    background: #3b16032a;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: .9em .8em;
     position: fixed;
     z-index: 1;
 }
 
 .icon {
-    width: 40px;
+    display: block;
+    max-width: 40px;
+    width: 35px;
 }
 
 .nav_list {
     display: flex;
-    gap: 20px;
-    padding: 0;
-}
-
-.nav_item {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-align: center;
     list-style: none;
 }
 
 .nav_link {
-    text-transform: uppercase;
     text-decoration: none;
-    font-weight: 700;
-    color: white;
+    color: #FFFFFF;
+    font-size: 1em;
+    font-weight: 600;
 }
 
-/*main section*/
-
-.main {
-    width: 100vw;
+.header {
     height: 100vh;
-    margin: 0 0%;
-    padding: 2%;
+    width: 100vw;
+    grid-area: header;
+    background-image: linear-gradient(#f543432d, #ffb98e69), url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .principal_text {
-    padding: 15% 0%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 20%;
 }
 
 .main_title {
-    font-family: 'Poppins';
-    font-size: 6rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    height: 15vh;
-    width: 96vw;
+    line-height: 125px;
 }
 
 .main_subtitle {
-    font-family: 'Poppins';
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
+    font-size: 1em;
 }
 
 .third_title {
-    font-family: 'Raleway';
-    font-size: 1rem;
-    padding-top: 3%;
-}
-
-/*section frutos rojos*/
-
-.frutos_rojos {
-    height: 100vh;
-    width: 100vw;
-    padding: 5% 5%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 1em;
     position: relative;
-    background-position: center;
-    background-color: #F2F2F2;
-    background-size: 100vh;
-    display: flex;
-    gap: 11%;
-}
-
-.imagen_frutos1 {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.imagen1_frutos {
-    width: 26vw;
-}
-
-.image_description {width: 36vw;
-    height: 34vh;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.frutos_subtitle {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    text-align: start;
-    text-transform: uppercase;
-    line-height: 35px;
-}
-
-.frutos_description {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 33px;
-}
-
-.rectangle {
-    width: 55%;
-    height: 43%;
-    left: 45%;
-    bottom: 0%;
-    position: absolute;
-    background-color: #6823AD;
-    color: #6823AD;
-    opacity: 14%;
-}
-
-.imagen2_frutos {
-    width: 44%;
-    position: absolute;
-}
-
-/*section propiedades*/
-
-.propiedades {
-    height: 100vh;
-    width: 100vw;
-}
-
-.panfrutos_imagen {
-    position: relative;
-    width: 100vw;
-    padding: 3% 0%;
-}
-
-.image_description2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    position: absolute;
-    width: 60vw;
-    height: 24vh;
-    left: 20%;
-}
-
-.panfrutos_subtitle {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3rem;
-    text-transform: uppercase;
-}
-
-.panfrutos_description {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 33px;
-    text-align: center;
-}
-
-/*section contact*/
-
-.contact {
-    height: 20vh;
-    width: 100vw;
-    background-color: #F2F2F2;
-}
-
-.information {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1% 0%;
-    gap: 10px;
-}
-
-.contact_subtitle {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-.contact_info {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 29px;
-}
-
-.name {
-    color: #6C6C6C;
-}
-
-/*media 425px*/
-@media (max-width: 425px) {
-
-    /*section header*/
-
-    .header {
-        background-size: 355vw;
-    }
-
-    /*navigation*/
-    
-    .nav {
-        padding: 5% 3%;
-    }
-
-    .nav_icon {
-        width: 30%;
-    }
-
-    .icon {
-        width: 30px;
-    }
-
-    .nav_list {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    /*main section*/
-
-    .main {
-        width: 100vw;
-        height: 100vh;
-        margin: 0 0%;
-        padding: 2%;
-    }
-    
-    .principal_text {
-        padding: 45% 0%;
-    }
-    
-    .main_title {
-        height: 26vh;
-        line-height: 115px;
-        width: 98vw;
-    }
-    
-    .third_title {
-        font-family: 'Raleway';
-        font-size: 1rem;
-        padding-top: 3%;
-    }
-    
-    /*section frutos rojos*/
-    
-    .frutos_rojos {
-        height: 145vh;
-        flex-direction: column;
-        gap: 0px;
-    }
-    
-    .imagen_frutos1 {
-        align-items: center;
-        height: 60%;
-    }
-
-    .imagen1_frutos {
-        width: 80vw;
-    }
-    
-    .image_description {
-        width: 90vw;
-        height: 43vh;
-        gap: 10px;
-    }
-    
-    .frutos_description {
-        font-size: 1.3rem;
-        line-height: 33px;
-    }
-    
-    .rectangle {
-        width: 100%;
-        height: 6%;
-        left: 0%;
-        bottom: 0%;
-    }
-    
-    .imagen2_frutos {
-        width: 100%;
-        left: 0%;
-        top: 63%;
-    }
-    
-    /*section propiedades*/
-    
-    .panfrutos_imagen {
-        padding: 10% 0%;
-        padding-bottom: 30%;
-    }
-    
-    .image_description2 {
-        gap: 50px;
-        width: 90vw;
-        height: 54vh;
-        left: 5%;
-    }
-    
-    .panfrutos_description {
-        font-size: 1.3rem;
-        line-height: 33px;
-    }
-    
-    /*section contact*/
-    
-    .contact {
-        height: 17vh;
-    }
-    
-    .information {
-        padding: 4% 0%;
-        gap: 4px;
-    }
-}
-
-/*media 375px*/
-@media (max-width: 375px) {
-
-    /*section header*/
-
-    .header {
-        background-size: 350vw;
-    }
-
-    /*navigation*/
-
-    .nav {
-        padding: 5% 3%;
-    }
-
-    .nav_icon {
-        width: 20%;
-    }
-
-    .icon {
-        width: 30px;
-    }
-
-    .nav_list {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    /*main section*/
-
-    .principal_text {
-        padding: 30% 0%;
-    }
-    
-    .main_title {
-        height: 32vh;
-    }
-    
-    .third_title {
-        padding-top: 0%;
-    }
-    
-    /*section frutos rojos*/
-    
-    .frutos_rojos {
-        height: 150vh;
-    }
-    
-    .imagen_frutos1 {
-        height: 58%;
-    }
-
-    .imagen1_frutos {
-        width: 70vw;
-    }
-    
-    .image_description {
-        gap: 5px;
-    }
-    
-    .frutos_description {
-        font-size: 1rem;
-    }
-    
-    .rectangle {
-        height: 10%;
-    }
-    
-    .imagen2_frutos {
-        top: 59%;
-    }
-    
-    /*section propiedades*/
-    
-    .panfrutos_imagen {
-        padding: 10% 0%;
-    }
-    
-    .panfrutos_description {
-        font-size: 1rem;
-    }
-    
-    /*section contact*/
-    
-    .contact {
-        height: 21vh;
-    }
-
-    .contact_subtitle {
-        font-size: 1.5rem;
-    }
-
-    .name {
-        font-size: .9rem;
-    }
-}
-
-/*media 320px*/
-@media (max-width: 320px) {
-
-    /*section header*/
-
-    .header {
-        background-size: 280vw;
-    }
-
-    /*navigation*/
-
-    .nav {
-        padding: 5% 3%;
-    }
-
-    .nav_icon {
-        width: 20%;
-    }
-
-    .icon {
-        width: 25px;
-    }
-
-    .nav_list {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 0;
-        font-size: 0.8rem;
-    }
-
-    /*main section*/
-
-    .principal_text {
-        padding: 40% 0%;
-    }
-    
-    .main_title {
-        height: 22vh;
-        font-size: 4rem;
-        line-height: 64px;
-    }
-
-    .main_subtitle {
-        font-size: 2rem;
-    }
-    
-    .third_title {
-        padding-top: 0%;
-        font-size: 1rem;
-    }
-    
-    /*section frutos rojos*/
-    
-    .frutos_rojos {
-        height: 150vh;
-    }
-    
-    .imagen_frutos1 {
-        height: 58%;
-    }
-
-    .imagen1_frutos {
-        width: 70vw;
-    }
-    
-    .image_description {
-        gap: 5px;
-    }
-
-    .frutos_subtitle {
-        font-size: 1.5rem;
-    }
-    
-    .frutos_description {
-        font-size: 0.9rem;
-        line-height: 22px;
-    }
-    
-    .rectangle {
-        height: 10%;
-    }
-    
-    .imagen2_frutos {
-        top: 59%;
-    }
-    
-    /*section propiedades*/
-    
-    .panfrutos_imagen {
-        padding: 10% 0%;
-    }
-    
-    .panfrutos_subtitle {
-        font-size: 2.5rem;
-    }
-
-    .panfrutos_description {
-        font-size: 0.9rem;
-        line-height: 22px;
-    }
-    
-    /*section contact*/
-    
-    .contact {
-        height: 22vh;
-    }
-
-    .contact_subtitle {
-        font-size: 1.5rem;
-    }
-
-    .name {
-        font-size: .8rem;
-    }
+    top: 8%;
 }
