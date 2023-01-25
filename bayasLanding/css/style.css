@@ -72,15 +72,15 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2.3em;
+    font-size: 2.5em;
 }
 
 .main_title {
-    line-height: 125px;
+    line-height: 105px;
 }
 
 .main_subtitle {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .third_title {
