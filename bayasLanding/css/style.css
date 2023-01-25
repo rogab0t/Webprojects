@@ -62,8 +62,8 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -72,7 +72,7 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2.7em;
+    font-size: 2.3em;
 }
 
 .main_title {
@@ -171,7 +171,7 @@ body {
 
 .panfrutos_subtitle {
     font-weight: 600;
-    font-size: 2.7em;
+    font-size: 2.3em;
     text-transform: uppercase;
 }
 
@@ -185,12 +185,9 @@ body {
     grid-area: footer;
     width: 100vw;
     background-color: #F2F2F2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     font-weight: 600;
-    gap: 15px;
+    padding: 1em;
 }
 
 .contact_subtitle {
@@ -261,7 +258,7 @@ body {
     }
 
     .imagen2_frutos {
-        width: 72%;
+        width: 60%;
         margin: auto;
     }
 
@@ -283,7 +280,7 @@ body {
     }
 
     .contact {
-        height: 26vh;
+        height: 140px;
         margin: 30px 0;
     }
 }
