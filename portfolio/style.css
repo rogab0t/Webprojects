@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500;900&display=swap'); /*Se importa la fuente de letra mediante su url/link*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500;600;900&display=swap'); /*Se importa la fuente de letra mediante su url/link*/
 
 * { /*Selector universal para aplicar estilo a todos los elementos del documento html*/
     box-sizing: border-box; /*Propiedad para calcular la medidas de un elemento con el valor para que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente*/
@@ -31,7 +31,7 @@ h1, h2, h3 { /*Selector de tipo para seleccionar todas las etiquetas h1, h2 y h3
 
 .menu li { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
     display: inline-block; /*Propieda para la visualizacion del elemento en pantalla con el valor inline-block para colocar los elementos uno a lado del otro y admitiendo valores de dimensiones*/
-    list-style-type: none; /*Propiedad para la apariencia del listado con el valor none para que no tenga apariencia por defecto*/
+    list-style-type: none; /*Propiedad para la aparie ncia del listado con el valor none para que no tenga apariencia por defecto*/
     align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
     padding: 10px 20px; /*Propiedad para agregar un margen interno, el primer valor es el superior e inferior y el segundo es izquierda y derecha*/
     font-family: 'Poppins', sans-serif; /*Propiedad para la familia de fuente con el valor de la fuente importada*/
@@ -113,23 +113,6 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     gap: 25px; /*Propiedad para colocar un esapcia entre los elementos con el valor de 25px*/
 }
 
-.project-details { /*Selector de clase para seleccionar el elemento html con dicha clase*/
-    width: 40%; /*Propiedad de ancho con el valor de 100% para tener el 40% del ancho de la pantalla*/
-    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
-    flex-direction: column; /*Propiedad para colocar los elementos uno debajo del otro en columna*/
-}
-
-.project-title { /**Selector de clase para seleccionar el elemento html con dicha clase*/
-    font-size: 1.5rem; /*Propiedad para el tamaño de la fuente con el valor de 1.5rem(24px)*/
-    font-weight: 500; /*Propiedad para el ancho de las letras con el valor 500 para que sean de trazo medio grueso*/
-}
-
-.project-description { /*Selector de clase para seleccionar el elemento html con dicha clase*/
-    font-size: 1.2rem; /*Propiedad para el tamaño de la fuente con el valor de 1.5rem(19px)*/
-    line-height: 1.5rem; /*Propiedad para el taaño del esapciado entre lineas del texto con valorde 1.5rem(24px)*/
-    margin-top: 20px; /*Propiead para colocar un margen superior*/
-}
-
 .project-img { /*Selector de clase para seleccionar el elemento html con dicha clase*/
     height: 450px; /*Propiedad de alto con el valor de 450px para tener un ancho de dicho valor*/
 }
@@ -138,8 +121,48 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     color: #b6b6b6; /*Propiedad para el color de la fuente de letra con valor de un color*/
 }
 
+.project-details { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    width: 40%; /*Propiedad de ancho con el valor de 100% para tener el 40% del ancho de la pantalla*/
+    display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
+    flex-direction: column; /*Propiedad para colocar los elementos uno debajo del otro en columna*/
+}
+
+.project-title { /**Selector de clase para seleccionar el elemento html con dicha clase*/
+    font-size: 2rem; /*Propiedad para el tamaño de la fuente con el valor de 2rem(32px)*/
+    font-weight: 600; /*Propiedad para el ancho de las letras con el valor 600 para que sean de trazo medio grueso*/
+}
+
+.project-description { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    font-size: 1.2rem; /*Propiedad para el tamaño de la fuente con el valor de 1.5rem(19px)*/
+    line-height: 1.5rem; /*Propiedad para el taaño del esapciado entre lineas del texto con valorde 1.5rem(24px)*/
+    margin-top: 20px; /*Propiead para colocar un margen superior*/
+}
+
 .project-description a { /**/
     color: #a9ffca; /*Propiedad para el color de la fuente de letra con valor de un color*/
+    text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
+}
+
+.button { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    background-color: slateblue; /*Propiedad de color de fondo con un valor de color*/
+    color: #FFFFFF; /*Propiedad de color de fuente de texto con valor del color blanco en hexadecimal*/
+    text-decoration: none; /*Propiedad de decoracion del texto con valor none para que no tenga decorado*/
+    padding: 1em 3em; /*Propiedad de margen interno con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 3 veces el tamaño de fuente de padre a los lados*/
+    border-radius: 1em; /*Propiedad de redondeo de las esquinas del elemento valor de 1 vez el tamaño de fuente del padre*/
+    align-self:flex-start; /*Propiedad para alinear el elemento independiente con valor de colocarlo al inicio del flex-container*/
+    margin: 1em 0; /*Propiedad de margen externo con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 0 a los lados*/
+}
+
+.title { /*Selector de clase para seleccionar el elemento html con dicha clase**/
+    font-weight: 600; /*Propiedad para el ancho de las letras con el valor 600 para que sean de trazo medio grueso*/
+}
+
+.proyecto1 { /*Selector de clase para seleccionar el elemento html con dicha clase**/
+    list-style: none; /*Propiedad de estilo de lista con valo none para que no tenga estilo*/
+}
+
+.li_button { /*Selector de clase para seleccionar el elemento html con dicha clase**/
+    color: slateblue; /*Propiedad para el color de la fuente de letra con valor de un color*/
     text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
 }
 
@@ -154,7 +177,7 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
 }
 
 .contact-email a { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
-    color: #a9ffca; /*Propiedad para el color de la fuente de letra con valor de un color*/
+    color: slateblue; /*Propiedad para el color de la fuente de letra con valor de un color*/
 }
 
 .contact a { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
