@@ -87,9 +87,10 @@ h1, h2, h3 { /*Selector de tipo para seleccionar todas las etiquetas h1, h2 y h3
     background-color: #f4f5f7; /*Propiedad para el color de fondo con el valor de un color*/
 }
 
-.container-title {  /*Selector de clase para seleccionar el elemento html con dicha clase*/
+.container-title { /*Selector de clase para seleccionar el elemento html con dicha clase*/
     font-size: 2.25rem; /*Propiedad para el tamaño de la fuente con el valor de 2.25rem(36px)*/
     font-weight: 500; /*Propiedad para el ancho de las letras con el valor 500 para que sean de trazo medio grueso*/
+    text-align: right; /*Propiedad para alinear el texto con valor para colocarlo a la derecha*/
 }
 
 .container { /*Selector de clase para seleccionar el elemento html con dicha clase*/
@@ -124,6 +125,7 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     width: 40%; /*Propiedad de ancho con el valor de 100% para tener el 40% del ancho de la pantalla*/
     display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
     flex-direction: column; /*Propiedad para colocar los elementos uno debajo del otro en columna*/
+    text-align: right; /*Propiedad para alinear el texto con valor para colocarlo a la derecha*/
 }
 
 .project-title { /**Selector de clase para seleccionar el elemento html con dicha clase*/
@@ -149,7 +151,7 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     width: auto;
     padding: 1em 2em; /*Propiedad de margen interno con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 3 veces el tamaño de fuente de padre a los lados*/
     border-radius: 1em; /*Propiedad de redondeo de las esquinas del elemento valor de 1 vez el tamaño de fuente del padre*/
-    align-self:flex-start; /*Propiedad para alinear el elemento independiente con valor de colocarlo al inicio del flex-container*/
+    align-self: flex-end;; /*Propiedad para alinear el elemento independiente con valor de colocarlo al final del flex-container*/
     margin: 1em 0; /*Propiedad de margen externo con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 0 a los lados*/
 }
 
@@ -178,6 +180,11 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     padding: 35px 0;/*Propiedad de margen interno con valor de 35 pixles superior e inferior y 0 a los lados*/
 }
 
+.container-title-footer { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    font-size: 2.25rem; /*Propiedad para el tamaño de la fuente con el valor de 2.25rem(36px)*/
+    font-weight: 500; /*Propiedad para el ancho de las letras con el valor 500 para que sean de trazo medio grueso*/
+}
+
 .contact { /*Selector de clase para seleccionar el elemento html con dicha clase*/
     display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
     align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
@@ -194,51 +201,50 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
 }
 
-@media (max-device-width: 425px) {
-    .bio-container {
-        padding: 4em;
+@media (max-device-width: 425px) { /*Mediaquery para un maximo de ancho de dispositivo de 425px*/
+    .bio-container { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        padding: 4em; /*Propiedad de margen interno con valor de 4 veces el tamaño de fuente del padre*/
     }
 
-    .bio-banner {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 500px;
+    .bio-banner { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        flex-direction: column; /*Propiedad de direccion del eje principal con valor para que sea en columna*/
+        justify-content: space-around; /*Propiedad para alinear los elementos en el eje principal con valor para distribuirlos equitativamente sumando sus espacios*/
+        align-items: center; /*Propiedad para alninear en el eje secundario con valor para centrarlo*/
+        height: 500px; /*Propiedad de alto del elemento con valor de 500 pixeles*/
     }
 
-    .bio-details p {
-        color: #a9ffca;
-        text-align: center;
+    .bio-details p { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
+        text-align: center; /*Propiedad para alinear el texto con valor para centrarlo*/
     }
 
-    .bio-img {
-        width: 290px;
-        height: 290px;
+    .bio-img { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        width: 290px; /*Propiedad de ancho del elemento con valor de 290 pixeles*/
+        height: 290px; /*Propiedad de alto del elemento con valor de 290 pixeles*/
     }
 
-    .container-portfolio {
-        padding: 4em;
+    .container-portfolio { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        padding: 4em; /*Propiedad de margen interno con valor de 4 veces el tamaño de fuente del padre*/
     }
 
-    .project {
-        flex-direction: column;
+    .project { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        flex-direction: column; /*Propiedad de direccion del eje principal con valor para que sea en columna*/
     }
 
-    .project-details {
-        width: 100%;
-        display: flex;
+    .project-details { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        width: 100%; /*Propiedad de ancho del elemento con valor del 100% de su contenedor*/
+        display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
     }
 
-    .button {
-        width: 130px;
-        padding: 1em 1em;
+    .button { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        width: 130px; /**/
+        padding: 1em 1em; /*Propiedad de margen interno con valor de 1 vez el tamaño de fuente del padre superior e inferior y 1 vez el tamaño de fuente del padre a los lados*/
     }
 
     .project_list { /*Selector de clase para seleccionar el elemento html con dicha clase*/
         text-align: left; /*Propiedad para alinear el texto con el valor para colocarse a la izquierda*/
     }
 
-    .container-footer {
-        padding: 60px;
+    .container-footer { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        padding: 60px; /*Propiedad de margen interno con valor de 60 pixeles*/
     }
 }
