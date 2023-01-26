@@ -3,11 +3,9 @@
 	<head> <!--Etiqueta hija/padre la cual contiene los elementos fuera de la pagina y los elementos no visuales-->
       	<meta charset="UTF-8"> <!--Etiqueta que posee los metadatos los cuales seran colocados mediante atributos, como el atributo charset="UTF-8" que hace permisivo el uso de caracteres especiales-->
       	<title>rogab0t portfolio</title> <!--Etiqueta que muestra el titulo de la pagina sobre la pestaña del navegador-->
-      	<link rel="stylesheet" href="./style.css"> <!--Etiqueta para vincular el archivo CSS mediante su ruta-->
+      	<link rel="stylesheet" href="./css/style.css"> <!--Etiqueta para vincular el archivo CSS mediante su ruta-->
     </head>
-
     <body> <!--Etiqueta que contiene todos los elementos visibles de la pagina-->
-
       	<!-- Header-->
       	<header>  <!--Etiqueta que es la seccion inicial de la pagina-->
         	<nav class="menu"> <!--Etiqueta que es la barra de navegacion, contiene elementos que hacen referencia a secciones de la pagina, la cual contiene el atributo/selector de clase class="menu"-->
@@ -45,23 +43,23 @@
                             <h3 class="project-title">FierceWars</h3> <!--Etiqueta de subtitulo, posee el selector de clase class="project-title"-->
                             <p class="project-description">Juego de batalla entre mascotas con poderes de los elementos de la naturaleza, inspirado en los juegos RPG de turno por turno. Creado mediante HTML, CSS y JavaScript.</p> <!--Etiqueta para escribir parrafos, posee el selector de clase class="project-description", contiene texto-->
 							<a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="button">Ver proyecto</a><!--Etiqueta <a href="" target=""> para colocar un hypervinculo que se abrira en una pestaña nueva utilizando target="_blank"-->
-							<ul class="poject_list"> <!--Etiqueta para una lista desordenada con un selector de clase-->
-								<h2 class="title">Más proyectos:</h2> <!--Etiqueta de subtitulo con un selector de clase y dicha etiqueta contiene texto-->
-								<li class="proyecto1"> <!--Etiqueta de elemento listado con un selector de clase-->
-									<p class="paragaph_pro"> <!--Etiqueta de parrafo con un selector de clase y contiene texto y una etiqueta de hyperviculo-->
-										Bayas Landing: 
-										<a href="https://lasbayas.000webhostapp.com/" target="_blank" class="li_button">ver proyecto</a> <!--Etiqueta de hyperviculo el cual redirecciona a una nueva pestaña y tiene un selector de clase-->
-									</p>
-								</li>
-							</ul>
              		    </div>
             		</div>
+                    <ul class="project_list"> <!--Etiqueta para una lista desordenada con un selector de clase-->
+                        <h2 class="title">Más proyectos:</h2> <!--Etiqueta de subtitulo con un selector de clase y dicha etiqueta contiene texto-->
+                        <li class="proyecto1"> <!--Etiqueta de elemento listado con un selector de clase-->
+                            <p class="paragaph_pro"> <!--Etiqueta de parrafo con un selector de clase y contiene texto y una etiqueta de hyperviculo-->
+                                Bayas Landing: 
+                                <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="li_button">ver proyecto</a> <!--Etiqueta de hyperviculo el cual redirecciona a una nueva pestaña y tiene un selector de clase-->
+                            </p>
+                        </li>
+                    </ul>
           		</article>
         	</section>
       	</div>
 
       	<!-- Contact -->
-      	<footer class="container" id="contact"> <!--Etiqueta para colocar la seccion final de la pagina, posee el selector de clase class="container" y el ID id="contact"-->
+      	<footer class="container-footer" id="contact"> <!--Etiqueta para colocar la seccion final de la pagina, posee el selector de clase class="container" y el ID id="contact"-->
         	<h2 class="container-title">Trabajemos juntos</h2> <!--Etiqueta de subtiulo, la cual contiene el atributo/selector de clase class="container-title"-->
         	<div class="contact"> <!--Etiqueta que es un contenedor de elementos, posee el selector de clase class="contact"-->
           		<p class="contact-email">Envíame un <a href="mailto:grau.gau99@gmail.com"> email</a></p> <!--Etiqueta para escribir parrafos la cual posee el selector de clase class="contact-email", la cual contiene/anida una etiqueta <a href=""> la cual representa un hipervinculo con el atributo href="mailto:" para mandar un mensaje-->
@@ -72,6 +70,5 @@
           		</div>
         	</div>
       	</footer>
-
     </body>
 </html>

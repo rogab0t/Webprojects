@@ -76,8 +76,8 @@ h1, h2, h3 { /*Selector de tipo para seleccionar todas las etiquetas h1, h2 y h3
 }
 
 .bio-img { /*Selector de clase para seleccionar el elemento html con dicha clase*/
-    width: 390px; /*Propiedad de ancho con el valor de 390px*/
-	height: 390px; /*Propiedad de alto con el valor de 390px*/
+    width: 310px; /*Propiedad de ancho con el valor de 390px*/
+	height: 310px; /*Propiedad de alto con el valor de 390px*/
 	border-radius: 50%; /*Propiedad para el radio del borde con el valor de 50% para hacer un circulo*/
 }
 
@@ -87,16 +87,15 @@ h1, h2, h3 { /*Selector de tipo para seleccionar todas las etiquetas h1, h2 y h3
     background-color: #f4f5f7; /*Propiedad para el color de fondo con el valor de un color*/
 }
 
-.container { /*Selector de clase para seleccionar el elemento html con dicha clase*/
-    width: 88%; /*Propiedad de ancho con el valor de 100% para tener el 88% del ancho de la pantalla*/
-    margin: 0 auto; /*Propiedad para el margen, con los valores 0 para que los margenes superior e inferior sean cero y auto para que el espacio que sobre del ancho lo reparta en dos partes iguales y así el elemento quede centrado*/
-    padding-top: 35px; /*Propiedad para colocar un margen interno superior con el valor de 35px*/
-    padding-bottom: 35px; /*Propiedad para colocar un margen interno inferior con el valor de 35px*/
-}
-
 .container-title {  /*Selector de clase para seleccionar el elemento html con dicha clase*/
     font-size: 2.25rem; /*Propiedad para el tamaño de la fuente con el valor de 2.25rem(36px)*/
     font-weight: 500; /*Propiedad para el ancho de las letras con el valor 500 para que sean de trazo medio grueso*/
+}
+
+.container { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    width: 88%; /*Propiedad de ancho con el valor de 100% para tener el 88% del ancho de la pantalla*/
+    margin: 0 auto; /*Propiedad para el margen, con los valores 0 para que los margenes superior e inferior sean cero y auto para que el espacio que sobre del ancho lo reparta en dos partes iguales y así el elemento quede centrado*/
+    padding: 35px 0;/*Propiedad de margen interno con valor de 35 pixles superior e inferior y 0 a los lados*/
 }
 
 /* Project section */
@@ -147,10 +146,15 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
     background-color: slateblue; /*Propiedad de color de fondo con un valor de color*/
     color: #FFFFFF; /*Propiedad de color de fuente de texto con valor del color blanco en hexadecimal*/
     text-decoration: none; /*Propiedad de decoracion del texto con valor none para que no tenga decorado*/
-    padding: 1em 3em; /*Propiedad de margen interno con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 3 veces el tamaño de fuente de padre a los lados*/
+    width: auto;
+    padding: 1em 2em; /*Propiedad de margen interno con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 3 veces el tamaño de fuente de padre a los lados*/
     border-radius: 1em; /*Propiedad de redondeo de las esquinas del elemento valor de 1 vez el tamaño de fuente del padre*/
     align-self:flex-start; /*Propiedad para alinear el elemento independiente con valor de colocarlo al inicio del flex-container*/
     margin: 1em 0; /*Propiedad de margen externo con valor de 1 vez el tamaño de fuente de padre superior e inferiror y 0 a los lados*/
+}
+
+.project_list { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    text-align: right; /*Propiedad para alinear el texto con el valor para colocarse a la derecha*/
 }
 
 .title { /*Selector de clase para seleccionar el elemento html con dicha clase**/
@@ -168,6 +172,12 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
 
 /* Footer */
 
+.container-footer { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+    width: 88%; /*Propiedad de ancho con el valor de 100% para tener el 88% del ancho de la pantalla*/
+    margin: 0 auto; /*Propiedad para el margen, con los valores 0 para que los margenes superior e inferior sean cero y auto para que el espacio que sobre del ancho lo reparta en dos partes iguales y así el elemento quede centrado*/
+    padding: 35px 0;/*Propiedad de margen interno con valor de 35 pixles superior e inferior y 0 a los lados*/
+}
+
 .contact { /*Selector de clase para seleccionar el elemento html con dicha clase*/
     display: flex; /*Propieda para la visualizacion del elemento en pantalla con el valor flex para hacer uso de flexbox(flexible)*/
     align-items: center; /*Propiedad para alinear el contenido en el eje trasversal con el valor de center para alinearlos en el centro*/
@@ -182,4 +192,53 @@ figure { /*Selector de tipo para seleccionar la etiqueta html, para asi aplicar 
 
 .contact a { /*Selector de tipo para selccionar los elementos dentro del elemento con el selector de clase*/
     text-decoration: none; /*Propiedad para la decoracion del texto con el valor none para no tener ninguna decoracion*/
+}
+
+@media (max-device-width: 425px) {
+    .bio-container {
+        padding: 4em;
+    }
+
+    .bio-banner {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 500px;
+    }
+
+    .bio-details p {
+        color: #a9ffca;
+        text-align: center;
+    }
+
+    .bio-img {
+        width: 290px;
+        height: 290px;
+    }
+
+    .container-portfolio {
+        padding: 4em;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-details {
+        width: 100%;
+        display: flex;
+    }
+
+    .button {
+        width: 130px;
+        padding: 1em 1em;
+    }
+
+    .project_list { /*Selector de clase para seleccionar el elemento html con dicha clase*/
+        text-align: left; /*Propiedad para alinear el texto con el valor para colocarse a la izquierda*/
+    }
+
+    .container-footer {
+        padding: 60px;
+    }
 }
