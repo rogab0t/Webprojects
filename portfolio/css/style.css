@@ -27,6 +27,12 @@ body {
 
 /* nav */
 
+.nav {
+    width: 100%;
+    background: #FFFFFF;
+    position: fixed;
+}
+
 .nav__container {
     height: auto;
     padding: 1.5rem 0;
@@ -56,6 +62,7 @@ body {
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 42%;
+    padding-top: 5rem;
 }
 
 .hero__header {
@@ -384,16 +391,4 @@ body {
 
 .media__img {
     width: 20px;
-}
-
-@media (max-width: 425px) {
-    .nav{
-        width: 100%;
-        background: #FFFFFF;
-        position: fixed;
-    }
-
-    .header {
-        padding-top: 23%;
-    }
 }
