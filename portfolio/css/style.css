@@ -39,6 +39,8 @@ body {
 .nav__logo {
     margin-right: auto;
     font-size: 2rem;
+    text-decoration: none;
+    color: #000000;
 }
 
 .nav__link {
@@ -380,4 +382,16 @@ body {
 
 .media__img {
     width: 20px;
+}
+
+@media (max-width: 425px) {
+    .nav{
+        width: 100%;
+        background: #FFFFFF;
+        position: fixed;
+    }
+
+    .header {
+        padding-top: 23%;
+    }
 }
