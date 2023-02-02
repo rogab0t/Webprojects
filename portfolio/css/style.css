@@ -312,7 +312,8 @@ body {
     padding: 0;
     display: block;
     border: none;
-    background-color: transparent; 
+    background-color: transparent;
+    font-family: 'Roboto';
 }
 
 .form__email::placeholder {
@@ -341,6 +342,7 @@ body {
     padding: 0;
     display: block;
     border: none;
+    font-family: 'Roboto';
 }
 
 .form__message::placeholder {
