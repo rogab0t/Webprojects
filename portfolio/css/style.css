@@ -2,6 +2,11 @@
 
 :root {
     --secondary-texts: 'Roboto', sans-serif;
+    --gray: #9DAFBD;
+    --light-gray: #ECF0FD;
+    --very--light-gray: #fefeff;
+    --blue: #366BFF;
+    --dark-blue: #122250A3;
 }
 
 * {
@@ -39,7 +44,7 @@ body {
 .nav__link {
     text-decoration: none;
     font-size: 1rem;
-    color: #050028;
+    color: #000000;
 }
 
 /* header */
@@ -111,7 +116,7 @@ body {
 .projects {
     display: grid;
     align-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 425px));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     grid-auto-rows: 320px;
 }
 
@@ -150,12 +155,12 @@ body {
 /* benefits */
 
 .benefits {
-    background-image: linear-gradient(to right, #FFFFFF, #ECF0FD);
+    background-image: linear-gradient(to right, #FFFFFF, var(--light-gray));
     background-size: 100%;
 }
 
 .benefits__container {
-    padding: 5.4rem 0;
+    padding: 5.4rem 0.3rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -179,7 +184,7 @@ body {
     font-family: var(--secondary-texts);
     font-weight: 400;
     font-size: 1.2rem;
-    color: #122250A3;
+    color: var(--dark-blue);
 }
 
 .benefits__items {
@@ -200,18 +205,18 @@ body {
 
 .benefits__icon {
     width: 50px;
-    outline: 1.5px solid #cdcbcb;
+    outline: 1px solid var(--gray);
     padding: 7px;
     margin: 0 auto;
     margin-bottom: 0.9rem;
     border-radius: 50%;
     display: block;
-    background-color: #fbfcff;
+    background-color: var(--very--light-gray);
 }
 
 .item__paragraph {
     line-height: 1.5;
-    color: #122250A3;
+    color: var(--dark-blue);
 }
 
 /* quote */
@@ -219,13 +224,14 @@ body {
 .quote__container {
     max-width: 730px;
     margin: 6rem auto;
+    padding: 0 1rem;
 }
 
 .quote__text {
     font-weight: 400;
     font-size: 2.1rem;
     text-align: center;
-    color: #366BFF;
+    color: var(--blue);
 }
 
 .quote__person {
@@ -249,13 +255,13 @@ body {
 
 .person__proffesion {
     font-weight: 400;
-    color: #122250A1;
+    color: var(--dark-blue);
 }
 
 /* footer */
 
 .footer {
-    background-image: linear-gradient(to right, #FFFFFF, #ECF0FD);
+    background-image: linear-gradient(to right, #FFFFFF, var(--light-gray));
 }
 
 .footer__container {
@@ -281,9 +287,9 @@ body {
     height: 60px;
     padding: 1rem;
     margin-bottom: 1rem;
-    background-color: #F7F9FA;
-    color: #9DAFBD;
-    border: 1px solid #D1DBE3;
+    background-color: var(--very--light-gray);
+    color: var(--gray);
+    border: 1px solid var(--light-gray);
     font-family: var(--secondary-texts);
     font-weight: 400;
     font-size: .7rem;
@@ -299,18 +305,19 @@ body {
 }
 
 .form__email::placeholder {
-    color: #9DAFBD;
+    color: var(--gray);
 }
 
 .form__email:focus {
     outline: none;
+    font-family: var(--secondary-texts);
 }
 
 .label__message {
     height: 65%;
     padding: 1rem;
-    color: #9DAFBD;
-    border: 1px solid #D1DBE3;
+    color: var(--gray);
+    border: 1px solid var(--light-gray);
     font-family: var(--secondary-texts);
     font-weight: 400;
     font-size: .7rem;
@@ -326,11 +333,12 @@ body {
 }
 
 .form__message::placeholder {
-    color: #9DAFBD;
+    color: var(--gray);
 }
 
 .form__message:focus {
     outline: none;
+    font-family: var(--secondary-texts);
 }
 
 .form__send {
@@ -340,7 +348,7 @@ body {
     width: 120px;
     border: none;
     color: #FFFFFF;
-    background-color: #366BFF;
+    background-color: var(--blue);
     box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2);
 }
 
@@ -356,13 +364,13 @@ body {
 .footer__title {
     font-weight: 600;
     font-size: 2rem;
-    color: #366BFF;
+    color: var(--blue);
 }
 
 .paragraph {
     font-weight: 400;
     font-size: 1.1rem;
-    color: #122250;
+    color: var(--dark-blue);
 }
 
 .footer__media {
