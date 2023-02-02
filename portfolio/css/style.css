@@ -31,6 +31,7 @@ body {
     width: 100%;
     background: #FFFFFF;
     position: fixed;
+    z-index: 1;
 }
 
 .nav__container {
@@ -297,9 +298,9 @@ body {
     height: 60px;
     padding: 1rem;
     margin-bottom: 1rem;
-    background-color: var(--very--light-gray);
+    background-color: var(--light-gray);
     color: var(--gray);
-    border: 1px solid var(--light-gray);
+    border: 1px solid var(--gray);
     font-family: var(--secondary-texts);
     font-weight: 400;
     font-size: .7rem;
