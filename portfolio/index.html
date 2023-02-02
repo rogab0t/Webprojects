@@ -1,74 +1,127 @@
-<!DOCTYPE html> <!--Delcaracion del tipo de archivo y version HTML-->
-<html lang="es">  <!--Etiquete pincipal/padre que contiene todos los elementos de la pagina, posee el atributo lang="es" para configurar el lenguaje de la pagina el cual tiene el valor de español-->
-<head> <!--Etiqueta hija/padre la cual contiene los elementos fuera de la pagina y los elementos no visuales-->
-    <meta charset="UTF-8"> <!--Etiqueta que posee los metadatos los cuales seran colocados mediante atributos, como el atributo charset="UTF-8" que hace permisivo el uso de caracteres especiales-->
-    <title>rogab0t portfolio</title> <!--Etiqueta que muestra el titulo de la pagina sobre la pestaña del navegador-->
-    <link rel="stylesheet" href="./style.css"> <!--Etiqueta para vincular el archivo CSS mediante su ruta-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body> <!--Etiqueta que contiene todos los elementos visibles de la pagina-->
-<!-- Header-->
-    <header>  <!--Etiqueta que es la seccion inicial de la pagina-->
-        <nav class="menu"> <!--Etiqueta que es la barra de navegacion, contiene elementos que hacen referencia a secciones de la pagina, la cual contiene el atributo/selector de clase class="menu"-->
-			<ul> <!--Etiqueta que es una lista desordenada-->
-				<li><a href="#projects">Proyectos</a></li> <!--Etiqueta que enlista un elemento dentro de una etiqueta de lista, la cual anida una etiqueta de hypervinculo que redirecciona al elemento con el ID dentro de href=""-->
-				<li><a href="#contact">Trabajemos juntos</a></li> <!--Etiqueta que enlista un elemento dentro de una etiqueta de lista, la cual anida una etiqueta de hypervinculo que redirecciona al elemento con el ID dentro de href=""-->
-			</ul>
-        </nav>
-    </header>
-    
-<!-- Main section -->
-    <section class="bio-container"> <!--Etiqueta para crear una seccion dentro de la pagina, la cual contiene los elementos principales de la pagina y contiene el selector de clase class="bio-container"-->
-        <div class="bio-banner"> <!--Etiqueta que es un contenedor de elementos, la cual contiene el selector de clase class="bio-banner"-->
-          	<div class="bio-details"> <!--Etiqueta que es un contenedor de elementos, la cual contiene el selector de clase class="bio-details"-->
-            	<h1>RodrigoGrau</h1> <!--Etiqueta de titulo principal de la pagina-->
-            	<p>Desarrollador frontend</p> <!--Etiqueta para escribir parrafos-->
-          	</div>
-          	<figure> <!--Etiqueta para colocar imagenes independientes-->
-            	<img class="bio-img" src="./images/ro_icon.png" alt="gato robot, icono perfil de rogab0t"> <!--Etiqueta para colocar una imagen, posee tres atributos, uno es el selector de clase class="bio-img", el segundo para la ruta de la imagen y otro para un texto de respaldo si no se muestra la imagen-->
-          	</figure>
-        </div>
-    </section>
-
-<!-- Portfolio -->
-    <div class="container-portfolio"> <!--Etiqueta que es un contenedor de elementos el cual tiene el selector de clase class="container-portfolio"-->
-        <section class="container" id="projects"> <!--Etiqueta para crear una seccion dentro de la pagina, la cual contiene los elementos de la seccion de proyectos y contiene el selector de clase class="container" y el id id="projects"-->
-          	<h2 class="container-title">Proyectos</h2>  <!--Etiqueta de subtiulo, la cual contiene el atributo/selector de clase class="container-title"-->
-          	<article> <!--Etiqueta para colocar contenido independiente encapsulado-->
-            	<div class="project"> <!--Etiqueta que es un contenedor de elementos el cual tiene el selector de clase class="project"-->
-              		<figure> <!--Etiqueta para colocar imagenes independientes-->
-                		<img class="project-img" src="./images/laptop_icon.png" alt="Proyecto de Rodrigo"> <!--Etiqueta para colocar una imagen, posee tres atributos, uno es el selector de clase class="project-img", el segundo para la ruta de la imagen y otro para un texto de respaldo si no se muestra la imagen-->
-                        <p class="copyright">Todas las imágenes de FierceWars son propiedad de rogab0t ©2022.</p> <!--Etiqueta para escribir parrafos, posee la clase class="copyright"-->
-              		</figure>
-                    <div class="project-details"> <!--Etiqueta que es un contenedor de elementos el cual tiene el selector de clase class="project-details"-->
-                        <h3 class="project-title">FierceWars</h3> <!--Etiqueta de subtitulo, posee el selector de clase class="project-title"-->
-                         <p class="project-description">Juego de batalla entre mascotas con poderes de los elementos de la naturaleza, inspirado en los juegos RPG de turno por turno. Creado mediante HTML, CSS y JavaScript.</p> <!--Etiqueta para escribir parrafos, posee el selector de clase class="project-description", contiene texto-->
-						<a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="button">Ver proyecto</a><!--Etiqueta <a href="" target=""> para colocar un hypervinculo que se abrira en una pestaña nueva utilizando target="_blank"-->
-             		</div>
-            	</div>
-                <ul class="project_list"> <!--Etiqueta para una lista desordenada con un selector de clase-->
-                    <h2 class="title">Más proyectos:</h2> <!--Etiqueta de subtitulo con un selector de clase y dicha etiqueta contiene texto-->
-                    <li class="proyecto1"> <!--Etiqueta de elemento listado con un selector de clase-->
-                        <p class="paragaph_pro"> <!--Etiqueta de parrafo con un selector de clase y contiene texto y una etiqueta de hyperviculo-->
-                        Bayas Landing: 
-                        <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="li_button">ver proyecto</a> <!--Etiqueta de hyperviculo el cual redirecciona a una nueva pestaña y tiene un selector de clase-->
-                        </p>
-                    </li>
-                </ul>
-          	</article>
-        </section>
+<body>
+  <nav class="nav">
+    <div class="nav__container container">
+        <p class="nav__logo">R.</p>
+        <a href="#projects" class="nav__link">Proyectos</a>
+        <a href="#benefits" class="nav__link">Habilidades</a>
+        <a href="#" class="nav__link">Contacto</a>
     </div>
+  </nav>
 
-<!-- Contact -->
-    <footer class="container-footer" id="contact"> <!--Etiqueta para colocar la seccion final de la pagina, posee el selector de clase class="container" y el ID id="contact"-->
-        <h2 class="container-title-footer">Trabajemos juntos</h2> <!--Etiqueta de subtiulo, la cual contiene el atributo/selector de clase class="container-title"-->
-        <div class="contact"> <!--Etiqueta que es un contenedor de elementos, posee el selector de clase class="contact"-->
-          	<p class="contact-email">Envíame un <a href="mailto:grau.gau99@gmail.com"> email</a></p> <!--Etiqueta para escribir parrafos la cual posee el selector de clase class="contact-email", la cual contiene/anida una etiqueta <a href=""> la cual representa un hipervinculo con el atributo href="mailto:" para mandar un mensaje-->
-        	<div> <!--Etiqueta que es un contenedor de elementos-->
-            	<a href="https://twitter.com/rogab0t" target="_blank"> <img src="./images/twitter_icon.svg" alt="Conectar con Twitter. Se abre en una nueva ventana."> </a> <!--Etiqueta para colocar hypervinculos, la cual tienes dos atributos, href="" para colocar el link del sitio, target="_blank" para que al hacer click se abra una nueva pagina al sitio. Anida la etiqueta para colocar imagenes con sus respectivos atributos para encontrar la imagen desde su ruta y el texto alternativo-->
-            	<a href="https://github.com/rogab0t" target="_blank"> <img src="./images/github_icon.svg" alt="Conectar con GitHub"> </a> <!--Etiqueta para colocar hypervinculos, la cual tienes dos atributos, href="" para colocar el link del sitio, target="_blank" para que al hacer click se abra una nueva pagina al sitio. Anida la etiqueta para colocar imagenes con sus respectivos atributos para encontrar la imagen desde su ruta y el texto alternativo-->
-            	<a href="https://www.linkedin.com/in/grauu99/" target="_blank"> <img src="./images/linkedin_icon.svg" alt="Conectar con LinkedIn"> </a> <!--Etiqueta para colocar hypervinculos, la cual tienes dos atributos, href="" para colocar el link del sitio, target="_blank" para que al hacer click se abra una nueva pagina al sitio. Anida la etiqueta para colocar imagenes con sus respectivos atributos para encontrar la imagen desde su ruta y el texto alternativo-->
-          	</div>
+  <header class="header">
+    <section class="hero__header container">
+      <div class="hero__texts">
+        <p class="paragraph__1">Disponible como freelancer</p>
+        <p class="paragraph__2">Hola, soy Rodrigo Grau, soy Front End Developer <span class="different">freelancer</span>, me apasiona desarrollar interfaces</p>
+        <p class="paragraph__3">Estoy en constante crecimiento</p>
+      </div>
+
+      <figure class="hero__picture">
+        <img src="./images/my_picture.png" alt="Foto de Rodrigo" class="my__picture">
+      </figure>
+    </section>
+  </header>
+
+  <section class="projects" id="projects">
+    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--1"></a>
+    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--2"></a>
+    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--3"></a>
+    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img  gallery__img--4"></a>
+    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img gallery__img--5"></a>
+    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img gallery__img--6"></a>
+  </section>
+  
+  <section class="benefits" id="benefits">
+    <div class="benefits__container container">
+      <div class="texts__container">
+        <h2 class="benefits__title">Habilidades</h2>
+        <p class="benefits__description">Creación de páginas web dinámicas y estilizadas, para tener un buen posicionamiento SEO, accesibilidad y un diseño atractivo; desarrolladas para cualquier dispositivo</p>
+      </div>
+
+      <div class="benefits__items">
+        <article class="benefits__item">
+          <img src="./images/html-icon.svg" alt="icono" class="benefits__icon">
+          <h3 class="item__title">HTML 5</h3>
+          <p class="item__paragraph">Buena maquetación de sitios web, optimizados pas SEO y accesibilidad</p>
+        </article>
+
+        <article class="benefits__item">
+          <img src="./images/css-icon.svg" alt="icono" class="benefits__icon">
+          <h3 class="item__title">CSS</h3>
+          <p class="item__paragraph">Estilizacion de sitios web con diseños personalizados y responsivos</p>
+        </article>
+
+        <article class="benefits__item">
+          <img src="./images/js-icon.svg" alt="icono" class="benefits__icon">
+          <h3 class="item__title">JavaScript</h3>
+          <p class="item__paragraph">Creación de paginas dinámicas para ser interactivas y con buen funcionamiento</p>
+        </article>
+
+        <article class="benefits__item">
+          <img src="./images/react-icon.svg" alt="icono" class="benefits__icon">
+          <h3 class="item__title">React</h3>
+          <p class="item__paragraph">Framework de JavaScript para el dinamismo de la página web</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="quote__container">
+      <p class="quote__text">
+        El mejor dueño, es un buen desarrollador y es muy bueno creando interfaces para páginas web. Soy muy feliz con el "guof guof"
+      </p>
+
+      <article class="quote__person">
+        <img src="./images/wilson-img.png" alt="foto de mascota wilson" class="person__img">
+        <h2 class="person__name">Wilson</h2>
+        <p class="person__proffesion">Mascota de Rodrigo</p>
+      </article>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer__container">
+      <form class="footer__form">
+        <label for="email" class="label__email">Email:
+          <input type="email" placeholder="hello@gmail.com" id="email" class="form__email">
+        </label>
+
+        <label for="text" class="label__message"> Message
+          <textarea name="text" id="text" class="form__message"></textarea>
+        </label>
+        
+        <input type="submit" value="Enviar" class="form__send">
+      </form>
+      
+      <div class="contact">
+        <h2 class="footer__title">Hablemos</h2>
+        <p class="footer__paragraph paragraph">Envíame un mensaje diciendome que es lo que necesitas y podría intentarlo</p>
+        <p class="footer__home paragraph">México</p>
+        <p class="footer__home paragraph">Puebla, México</p>
+
+        <div class="footer__media">
+          <a href="https://twitter.com/rogab0t" target="_blank" class="footer__media">
+            <img src="./images/tw-img.svg" alt="twitter" class="media__img">
+          </a>
+          <a href="https://github.com/rogab0t" target="_blank" class="footer__media">
+            <img src="./images/gh-img.svg" alt="github" class="media__img">
+          </a>
+          <a href="https://www.linkedin.com/in/grauu99/" target="_blank" class="footer__media">
+            <img src="./images/lk-img.svg" alt="facebook" class="media__img">
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
