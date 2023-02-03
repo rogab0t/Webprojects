@@ -1,124 +1,123 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rogab0t</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
-  <link rel="stylesheet" href="./css/style.css">
+<!DOCTYPE html> <!--Etiqueta de declaracion del tipo de archivo que es HTML-->
+<html lang="es"> <!--Etiqueta contenedora de la pagina, posee el atributo de lenguaje, con el valor de español-->
+<head> <!--Etiqueta de los elementos no visibles de la pagina-->
+  <meta charset="UTF-8"> <!--Etiqueta de metadatos, posee el atributo de caracteres, con el valor de caracteres del español-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Etiqueta de metadados, posee los atributos de nombre con el valor de la ventana del navegador, y el de contenido, con el valor para establecer el zoom inicial de la pagina con valores respecto al ancho del dispositivo y la escala inicial en 1.0-->
+  <title>Rogab0t</title> <!--Etiqueta para colocar un titulo en la pestaña del navegador, contiene texto-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png"> <!--Etiqueta de relacion para colocar un icono en la pestaña del navegador, posee los atributos de relacion con el valor de icono, el tipo de archivo con el valor de imagen jpg, el de tamaño con el valor de 32x32, y el de referecia para obtener la imagen desde su ruta-->
+  <link rel="stylesheet" href="./css/style.css"> <!--Etiqueta de relacion para enlazar el archivo CSS, posee los atributos de relacion con el valor de hoja de estilos, y el de referencia para obtener el archivo desde su ruta-->
 </head>
-<body>
-  <nav class="nav">
-    <div class="nav__container container">
-        <a href="#header" class="nav__logo">R.</a>
-        <a href="#projects" class="nav__link">Proyectos</a>
-        <a href="#benefits" class="nav__link">Habilidades</a>
-        <a href="#contact" class="nav__link">Contacto</a>
+<body> <!--Etiqueta del cuerpo de la pagina la cual contiene todos los elementos visibles de la pagina-->
+  <nav class="nav"> <!--Etiqueta de navegacion, posee un selector de clase-->
+    <div class="nav__container container"> <!--Etiqueta contenedora de bloque, posee dos selectores de clase-->
+        <a href="#header" class="nav__logo">R.</a> <!--Etiqueta de anclaje, posee el atributo de referencia con el valor de una seccion de la pagina para ser redireccionado, un selector de clase, y contiene texto-->
+        <a href="#projects" class="nav__link">Proyectos</a> <!--Etiqueta de anclaje, posee el atributo de referencia con el valor de una seccion de la pagina para ser redireccionado, un selector de clase, y contiene texto-->
+        <a href="#benefits" class="nav__link">Habilidades</a> <!--Etiqueta de anclaje, posee el atributo de referencia con el valor de una seccion de la pagina para ser redireccionado, un selector de clase, y contiene texto-->
+        <a href="#contact" class="nav__link">Contacto</a> <!--Etiqueta de anclaje, posee el atributo de referencia con el valor de una seccion de la pagina para ser redireccionado, un selector de clase, y contiene texto-->
     </div>
   </nav>
 
-  <header class="header" id="header">
-    <section class="hero__header container">
-      <div class="hero__texts">
-        <p class="paragraph__1">Disponible como freelancer</p>
-        <p class="paragraph__2">Hola, soy Rodrigo Grau, soy Front End Developer <span class="different">freelancer</span>, me apasiona desarrollar interfaces</p>
-        <p class="paragraph__3">Estoy en constante crecimiento</p>
+  <header class="header" id="header"> <!--Etiqueta de encabezado de la pagina, posee un selector de clase, y un selector de identitad-->
+    <section class="hero__header container"> <!--Propiedad de seccion dentro de la pagina, posee dos selectores de clase-->
+      <div class="hero__texts"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+        <p class="paragraph__1">Disponible como freelancer</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
+        <p class="paragraph__2">Hola, soy Rodrigo Grau, soy Front End Developer <span class="different">freelancer</span>, me apasiona desarrollar interfaces</p> <!--Etiqueta de parrafo, posee un selector de clase, contiene texto, y un contenerdor de linea que posee un selector de clase y contiene texto-->
+        <p class="paragraph__3">Estoy en constante crecimiento</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
       </div>
 
-      <figure class="hero__picture">
-        <img src="./images/my_picture.png" alt="Foto de Rodrigo" class="my__picture">
+      <figure class="hero__picture"> <!--Etiqueta contenedora de imagenes, posee un selector de clase-->
+        <img src="./images/my_picture.png" alt="Foto de Rodrigo" class="my__picture"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
       </figure>
     </section>
   </header>
 
-  <section class="projects" id="projects">
-    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--1"></a>
-    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--2"></a>
-    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--3"></a>
-    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img  gallery__img--4"></a>
-    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img gallery__img--5"></a>
-    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img gallery__img--6"></a>
+  <section class="projects" id="projects"> <!--Propiedad de seccion dentro de la pagina, posee un selector de clase, y un selector de identidad-->
+    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--1"></a> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, un selector de clase y uno modificador-->
+    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--2"></a> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, un selector de clase y uno modificador-->
+    <a href="http://rogab0t.atwebpages.com/fiercewars/fiercewars.html" target="_blank" class="gallery__img gallery__img--3"></a> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, un selector de clase y uno modificador-->
+    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img  gallery__img--4"></a> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, un selector de clase y uno modificador-->
+    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img gallery__img--5"></a> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, un selector de clase y uno modificador-->
+    <a href="https://lasbayas.000webhostapp.com/" target="_blank" class="gallery__img gallery__img--6"></a> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, un selector de clase y uno modificador-->
   </section>
   
-  <section class="benefits" id="benefits">
-    <div class="benefits__container container">
-      <div class="texts__container">
-        <h2 class="benefits__title">Habilidades</h2>
-        <p class="benefits__description">Creación de páginas web dinámicas y estilizadas, para tener un buen posicionamiento SEO, accesibilidad y un diseño atractivo; desarrolladas para cualquier dispositivo</p>
+  <section class="benefits" id="benefits"> <!--Propiedad de seccion dentro de la pagina, posee un selector de clase, y un selector de identidad-->
+    <div class="benefits__container container"> <!--Etiqueta contenedora de bloque, posee dos selectores de clase-->
+      <div class="texts__container"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+        <h2 class="benefits__title">Habilidades</h2> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+        <p class="benefits__description">Creación de páginas web dinámicas y estilizadas, para tener un buen posicionamiento SEO, accesibilidad y un diseño atractivo; desarrolladas para cualquier dispositivo</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
       </div>
 
-      <div class="benefits__items">
-        <article class="benefits__item">
-          <img src="./images/html-icon.svg" alt="icono" class="benefits__icon">
-          <h3 class="item__title">HTML 5</h3>
-          <p class="item__paragraph">Buena maquetación de sitios web, optimizados pas SEO y accesibilidad</p>
+      <div class="benefits__items"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+        <article class="benefits__item"> <!--Etiqueta de contenido independiente dentro de la pagina, posee un selector de clase-->
+          <img src="./images/html-icon.svg" alt="icono" class="benefits__icon"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
+          <h3 class="item__title">HTML 5</h3> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+          <p class="item__paragraph">Buena maquetación de sitios web, optimizados pas SEO y accesibilidad</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
         </article>
 
-        <article class="benefits__item">
-          <img src="./images/css-icon.svg" alt="icono" class="benefits__icon">
-          <h3 class="item__title">CSS</h3>
-          <p class="item__paragraph">Estilizacion de sitios web con diseños personalizados y responsivos</p>
+        <article class="benefits__item"> <!--Etiqueta de contenido independiente dentro de la pagina, posee un selector de clase-->
+          <img src="./images/css-icon.svg" alt="icono" class="benefits__icon"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
+          <h3 class="item__title">CSS</h3> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+          <p class="item__paragraph">Estilizacion de sitios web con diseños personalizados y responsivos</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
         </article>
 
-        <article class="benefits__item">
-          <img src="./images/js-icon.svg" alt="icono" class="benefits__icon">
-          <h3 class="item__title">JavaScript</h3>
-          <p class="item__paragraph">Creación de paginas dinámicas para ser interactivas y con buen funcionamiento</p>
+        <article class="benefits__item"> <!--Etiqueta de contenido independiente dentro de la pagina, posee un selector de clase-->
+          <img src="./images/js-icon.svg" alt="icono" class="benefits__icon"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
+          <h3 class="item__title">JavaScript</h3> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+          <p class="item__paragraph">Creación de paginas dinámicas para ser interactivas y con buen funcionamiento</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
         </article>
 
-        <article class="benefits__item">
-          <img src="./images/react-icon.svg" alt="icono" class="benefits__icon">
-          <h3 class="item__title">React</h3>
-          <p class="item__paragraph">Framework de JavaScript para el dinamismo de la página web</p>
+        <article class="benefits__item"> <!--Etiqueta de contenido independiente dentro de la pagina, posee un selector de clase-->
+          <img src="./images/react-icon.svg" alt="icono" class="benefits__icon"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
+          <h3 class="item__title">React</h3> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+          <p class="item__paragraph">Framework de JavaScript para el dinamismo de la página web</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
         </article>
       </div>
     </div>
   </section>
 
-  <section class="quote">
-    <div class="quote__container">
+  <section class="quote"> <!--Propiedad de seccion dentro de la pagina, posee un selector de clase-->
+    <div class="quote__container"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
       <p class="quote__text">
         El mejor dueño, es un buen desarrollador y es muy bueno creando interfaces para páginas web. Soy muy feliz con él "guof guof"
-      </p>
+      </p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
 
-      <article class="quote__person">
-        <img src="./images/wilson-img.png" alt="foto de mascota wilson" class="person__img">
-        <h2 class="person__name">Wilson</h2>
-        <p class="person__proffesion">Mascota de Rodrigo</p>
+      <article class="quote__person"> <!--Etiqueta de contenido independiente dentro de la pagina, posee un selector de clase-->
+        <img src="./images/wilson-img.png" alt="foto de mascota wilson" class="person__img"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
+        <h2 class="person__name">Wilson</h2> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+        <p class="person__proffesion">Mascota de Rodrigo</p> <!--Etiqueta de parrafo, posee un selector de clase, y contiene texto-->
       </article>
     </div>
   </section>
   
-  <footer class="footer">
-    <div class="footer__container">
-      <form class="footer__form">
-        <label for="email" class="label__email">Email:
-          <input type="email" placeholder="hello@gmail.com" id="email" class="form__email">
+  <footer class="footer"> <!--Etiqueta de pie de pagina, posee un selector de clase-->
+    <div class="footer__container"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+      <form class="footer__form"> <!--Etiqueta de formulario-->
+        <label for="email" class="label__email">Email: <!--Etiqueta enlazadora para un elemento de formulario, posee los atributos de asociacion con el valor de un elemento con id, un selector de clase, y contiene texto-->
+          <input type="email" placeholder="hello@gmail.com" id="email" class="form__email"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de email, el de texto demostrativo, un selector de identidad, y un selector de clase-->
         </label>
 
-        <label for="text" class="label__message"> Message
-          <textarea name="text" id="text" class="form__message"></textarea>
+        <label for="text" class="label__message"> Message <!--Etiqueta enlazadora para un elemento de formulario, posee los atributos de asociacion con el valor de un elemento con id, un selector de clase, y contiene texto-->
+          <textarea name="text" id="text" class="form__message"></textarea> <!--Etiqueta de area de texto, posee los atributos de nombre con el valor text, un selector de identidad, y un selector de clase-->
         </label>
         
-        <input type="submit" value="Enviar" class="form__send">
+        <input type="submit" value="Enviar" class="form__send"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de entregar, el de valor, y un selector de clase-->
       </form>
       
-      <div class="contact" id="contact">
-        <h2 class="footer__title">Hablemos</h2>
-        <p class="footer__paragraph paragraph">Envíame un mensaje diciendome que es lo que necesitas y podría intentarlo</p>
-        <p class="footer__home paragraph">México</p>
-        <p class="footer__home paragraph">Puebla, México</p>
+      <div class="contact" id="contact"> <!--Etiqueta contenedora de bloque, posee un selector de clase, y uno de identidad-->
+        <h2 class="footer__title">Hablemos</h2> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
+        <p class="footer__paragraph paragraph">Envíame un mensaje diciendome que es lo que necesitas y podría intentarlo</p> <!--Etiqueta de parrafo, posee dos selectores de clase, y contiene texto-->
+        <p class="footer__home paragraph">México</p> <!--Etiqueta de parrafo, posee dos selectores de clase, y contiene texto-->
+        <p class="footer__home paragraph">Puebla, México</p> <!--Etiqueta de parrafo, posee dos selectores de clase, y contiene texto-->
 
-        <div class="footer__media">
-          <a href="https://twitter.com/rogab0t" target="_blank" class="footer__media">
-            <img src="./images/tw-img.svg" alt="twitter" class="media__img">
+        <div class="footer__media"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+          <a href="https://twitter.com/rogab0t" target="_blank" class="footer__media"> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, y un selector de clase-->
+            <img src="./images/tw-img.svg" alt="twitter" class="media__img"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
           </a>
-          <a href="https://github.com/rogab0t" target="_blank" class="footer__media">
-            <img src="./images/gh-img.svg" alt="github" class="media__img">
+          <a href="https://github.com/rogab0t" target="_blank" class="footer__media"> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, y un selector de clase-->
+            <img src="./images/gh-img.svg" alt="github" class="media__img"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
           </a>
-          <a href="https://www.linkedin.com/in/grauu99/" target="_blank" class="footer__media">
-            <img src="./images/lk-img.svg" alt="facebook" class="media__img">
+          <a href="https://www.linkedin.com/in/grauu99/" target="_blank" class="footer__media"> <!--Etiqueta de anclaje, posee los atributos de referencia con el valor de una url para ser redireccionado, de abrir en una nueva ventana, y un selector de clase-->
+            <img src="./images/lk-img.svg" alt="facebook" class="media__img"> <!--Etiqueta de imagen, posee los atributos de recursos para obtener la imagen desde su ruta, el de texto alternativo, y un selector de clase-->
           </a>
         </div>
       </div>
