@@ -21,7 +21,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .container { /*Selector de clase para el elemento HTML que lo posea*/
-    max-width: 1104px; /*ropiedad de ancho maximo, con valor para no superar los 1104 pixeles*/
+    max-width: 1104px; /*Propiedad de ancho maximo, con valor para no superar los 1104 pixeles*/
     width: 90%; /*Propiedad de ancho, con valor del 90% de su contenedor*/
     margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
 }
@@ -76,7 +76,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .hero__texts { /*Selector de clase para el elemento HTML que lo posea*/
-    max-width: 535px; /*ropiedad de ancho maximo, con valor para no superar los 535 pixeles*/
+    max-width: 535px; /*Propiedad de ancho maximo, con valor para no superar los 535 pixeles*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
     justify-content: flex-start; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al inicio del eje*/
@@ -113,7 +113,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .hero__picture { /*Selector de clase para el elemento HTML que lo posea*/
-    max-width: 340px; /*ropiedad de ancho maximo, con valor para no superar los 340 pixeles*/
+    max-width: 340px; /*Propiedad de ancho maximo, con valor para no superar los 340 pixeles*/
     margin-left: auto; /*Propiedad para el margen izquierdo, con el valor de auto para que el elemento se coloque al extremo opuesto*/
 }
 
@@ -179,7 +179,8 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .texts__container { /*Selector de clase para el elemento HTML que lo posea*/
-    width: 60%; /*Propiedad de ancho, con valor del 60% de su contenedor*/
+    max-width: 687px; /*Propiedad de ancho maximo, con valor para no superar los 687 pixeles*/
+    width: 70%; /*Propiedad de ancho, con valor del 70% de su contenedor*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
     gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuente del padre*/
@@ -232,7 +233,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* quote */
 
 .quote__container { /*Selector de clase para el elemento HTML que lo posea*/
-    max-width: 730px; /*ropiedad de ancho maximo, con valor para no superar los 730 pixeles*/
+    max-width: 730px; /*Propiedad de ancho maximo, con valor para no superar los 730 pixeles*/
     margin: 6rem auto; /*Propiedad de margen externo, con valor de 6 veces el tamaño de fuente raiz del documento HTML superior e inforio, y 0 a los lados*/
     padding: 0 1rem; /*Propiedad de margen interno, con valor 0 superior e inferior, y 1 vez el tamaño de fuente raiz del HTML a los lados*/
 }
@@ -368,7 +369,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* contact */
 
 .contact { /*Selector de clase para el elemento HTML que lo posea*/
-    max-width: 358px; /*ropiedad de ancho maximo, con valor para no superar los 358 pixeles*/
+    max-width: 358px; /*Propiedad de ancho maximo, con valor para no superar los 358 pixeles*/
     margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
