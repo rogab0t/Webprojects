@@ -113,13 +113,14 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .hero__picture { /*Selector de clase para el elemento HTML que lo posea*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
     max-width: 340px; /*Propiedad de ancho maximo, con valor para no superar los 340 pixeles*/
     margin-left: auto; /*Propiedad para el margen izquierdo, con el valor de auto para que el elemento se coloque al extremo opuesto*/
 }
 
 .my__picture { /*Selector de clase para el elemento HTML que lo posea*/
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
-    min-width: 340px; /*ropiedad de ancho minimo, con valor para no disminuir los 340 pixeles*/
+    min-width: 320px; /*ropiedad de ancho minimo, con valor para no disminuir los 340 pixeles*/
 }
 
 /* projects */
@@ -127,7 +128,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .projects { /*Selector de clase para el elemento HTML que lo posea*/
     display: grid; /*Propiedad de comportamiento de visualizacion del elemento, con valor para hacer uso de grid*/
     align-content: center; /*Propiedad para alinear al grid-container horizontalmente, con valor para centrarlo*/
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr)); /*Propiedad para crear columnas de grid, con valor para que sean dinamicas utilizando la funcion para repetir, con los parametros de ajuste automatico, y la funcion para el tamaño de las columnas con un minimo y un maximo de tamaño*/
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*Propiedad para crear columnas de grid, con valor para que sean dinamicas utilizando la funcion para repetir, con los parametros de ajuste automatico, y la funcion para el tamaño de las columnas con un minimo y un maximo de tamaño*/
     grid-auto-rows: 320px; /*Propiedad para crear filas automaticas, con valor de 320 pixeles como tamaño minimo*/
 }
 
@@ -253,6 +254,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .person__img { /*Selector de clase para el elemento HTML que lo posea*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
     width: 60px; /*Propiedad de ancho, con valor de 60 pixeles*/
     height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
     border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor del 50% para crear un circulo*/
