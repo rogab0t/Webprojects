@@ -369,12 +369,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     width: 120px; /*Propiedad de ancho, con valor de 120 pixeles*/
     border: none; /*Propiedad de borde, con valor none para no tener borde*/
     color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
-    background-color: var(--blue); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    background-color: #0064f0; /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
     box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
 }
 
 .form__send:focus { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento de dicho selector de clase*/
-    outline: 2px solid var(--dark-blue) ; /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color blanco en hexadecimal*/
+    outline: 2px solid #7dc5f8 ; /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color blanco en hexadecimal*/
 }
 
 /* contact */
