@@ -100,6 +100,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .paragraph__2 { /*Selector de clase para el elemento HTML que lo posea*/
     font-size: 2.5rem; /*Propiedad de tamaña de fuene de letra, con valor de 2.5 veces el tamaño de fuente raiz del documento HTML*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
 }
 
 .different { /*Selector de clase para el elemento HTML que lo posea*/
@@ -137,6 +138,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
     background-size: cover; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor para para conservar sus dimensiones sin distorcionarse*/
     background-position: center; /*Propiedad para la posicion de la imagen con el valor para colocarla centrada*/
+    color: transparent; /*Propiedad de color del texto, con valor transparente para no ser mostrado*/
 }
 
 .gallery__img--1 { /*Selector de clase modificador para el elemento HTML que lo posea*/
@@ -403,5 +405,5 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .media__img { /*Selector de clase para el elemento HTML que lo posea*/
-    width: 20px; /*Propiedad de ancho, con valor de 20 pixeles*/
+    width: 33px; /*Propiedad de ancho, con valor de 20 pixeles*/
 }
