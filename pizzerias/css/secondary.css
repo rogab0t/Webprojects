@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #bc2b2b, #56329a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__container {
+    max-width: 1200px;
+    width: 80%;
+    height: 55%;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    box-shadow: 0 15px 23px -15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.title__container {
+    text-transform: uppercase;
+    padding: .5rem 0;
+    border-bottom: 2px solid #bc2b2b;
+    display: flex;
+    align-items: center;
+}
+
+.number__title {
+    color: #ffffff;
+    background-color: #bc2b2b;
+    margin-right: 1rem;
+    padding: .6rem 1rem;
+    border-radius: .3rem;
+}
+
+.main__button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-left: auto;
+    border-radius: 50%;
+    border: none;
+    background-color: #56329a;
+    color: #ffffff;
+    box-shadow: 0 5px 7px -3px #56329a
+}
+
+.main__content {
+    display: flex;
+    gap: 2em;
+}
+
+.paragraph__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.location__icon {
+    width: 2rem;
+    vertical-align: bottom;
+}
+
+.ubication__content {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #56329a;
+}
+
+.image {
+    max-width: 300px;
+    width: 30%;
+    border-radius: 0.5em;
+}
+
+@media (max-width: 767px) {
+    .main__container {
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .main__content {
+        height: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .main__title {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 80%;
+    }
+
+    .paragraph__container {
+        height: 50%;
+    }
+
+    .ubication__content {
+        font-size: 1rem;
+    }
+
+    .paragraph {
+        padding: 0 0.5rem;
+        line-height: 1.5;
+        font-size: .8rem;
+    }
+}
