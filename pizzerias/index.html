@@ -1,61 +1,61 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pizzerias</title>
-  <link rel="icon" href="./images/icono.png" sizes="32x32">
-  <link rel="stylesheet" href="./css/style.css">
+<!DOCTYPE html> <!--Etiqueta de declaracion del tipo de archivo y version HTML-->
+<html lang="es"> <!--Etiqueta contenedora de la pagina, posee el atributo de lenguaje, con el valor de español-->
+<head> <!--Etiqueta de los elementos no visibles de la pagina-->
+  <meta charset="UTF-8"> <!--Etiqueta de metadatos, posee el atributo de caracteres, con el valor de caracteres del español-->
+  <meta name="description" content="lista de las mejores pizzas, Autor: Rodrigo Grau"> <!--Etiqueta de metadatos, posee los atributos de nombre con el valor de descripcion de la pagina, y el de contenido con el valor de una descripcion de la pagina-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Etiqueta de metadados, posee los atributos de nombre con el valor de la ventana del navegador, y el de contenido, con el valor para establecer el zoom inicial de la pagina con valores respecto al ancho del dispositivo y la escala inicial en 1.0-->
+  <title>Pizzerias</title> <!--Etiqueta para colocar un titulo en la pestaña del navegador, contiene texto-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icono.png"> <!--Etiqueta de relacion para colocar un icono en la pestaña del navegador, posee los atributos de relacion con el valor de icono, el tipo de archivo con el valor de imagen jpg, el de tamaño con el valor de 32x32, y el de referecia para obtener la imagen desde su ruta-->
+  <link rel="stylesheet" href="./css/style.css"> <!--Etiqueta de relacion para enlazar el archivo CSS, posee los atributos de relacion con el valor de hoja de estilos, y el de referencia para obtener el archivo desde su ruta-->
 </head>
-<body>
-    <main class="main">
-			<div class="container">
-				<h1 class="main__title">Mis pizzerías favoritas</h1>
-        <div class="table__container">
-          <table class="table">
-            <tbody class="table__body">
-              <tr class="table__row">
-                <th class="row__title">#</th>
-                <th class="row__title">Nombre</th>
-                <th class="row__title">Ubicación</th>
-                <th class="row__title">Calificación</th>
-                <th class="row__title">Acciones</th>
+<body> <!--Etiqueta del cuerpo de la pagina la cual contiene todos los elementos visibles de la pagina-->
+    <main class="main"> <!--Etiqueta de seccion principal de la pagina, posee un selector de clase-->
+			<div class="container"> <!--Etiqueta contenedora en bloque, posee un selector de clase-->
+				<h1 class="main__title">Mis pizzerías favoritas</h1> <!--Etiqueta de titulo principal de la página, posee un selector de clase, y contiene texto-->
+        <div class="table__container"> <!--Etiqueta contenedora en bloque, posee un selector de clase-->
+          <table class="table"> <!--Etiqueta de declaración de tabla, posee un selector de clase-->
+            <tbody class="table__body"> <!--Etiqueta de cuerpo de tabla, posee un selecor de clase-->
+              <tr class="table__row"> <!--Etiqueta de fila de tabla, posee un selector de clase-->
+                <th class="row__title">#</th> <!--Etiqueta de titulo de tabla, posee un selector de clase, y contiene texto-->
+                <th class="row__title">Nombre</th> <!--Etiqueta de titulo de tabla, posee un selector de clase, y contiene texto-->
+                <th class="row__title">Ubicación</th> <!--Etiqueta de titulo de tabla, posee un selector de clase, y contiene texto-->
+                <th class="row__title">Calificación</th> <!--Etiqueta de titulo de tabla, posee un selector de clase, y contiene texto-->
+                <th class="row__title">Acciones</th> <!--Etiqueta de titulo de tabla, posee un selector de clase, y contiene texto-->
               </tr>
-              <tr class="table__row">
-                <td class="item__number">1</td>
-                <td class="table__item">Pizzas Nosferatu</td>
-                <td class="table__item">Eje 2 Sur 24, Condesa, CDMX</td>
-                <td class="table__item table__item--star">★★★★★</td>
-                <td class="table__item">
-                  <a href="./html/nosferatu.html" target="_blank" class="item__link">Ver más</a>
+              <tr class="table__row"> <!--Etiqueta de fila de tabla, posee un selector de clase-->
+                <td class="item__number">1</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Pizzas Nosferatu</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Eje 2 Sur 24, Condesa, CDMX</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item table__item--star">★★★★★</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase y uno modificador, y contiene texto-->
+                <td class="table__item"> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de caase, y contiene texto-->
+                  <a href="./html/nosferatu.html" target="_blank" class="item__link">Ver más</a> <!--Etiqueta de anclaje, posee los atributos de referencia para redireccionar, el de abirir una nueva ventana, posee un selector de clase, y contiene texto-->
                 </td>
               </tr>
-              <tr class="table__row table__row--color">
-                <td class="item__number">2</td>
-                <td class="table__item">Tenabari Pizza</td>
-                <td class="table__item">Juan Escutia 117, Condesa, CDMX</td>
-                <td class="table__item table__item--star">★★★★★</td>
-                <td class="table__item">
-                  <a href="./html/tenabari.html" target="_blank" class="item__link">Ver más</a>
+              <tr class="table__row table__row--color"> <!--Etiqueta de fila de tabla, posee un selector de clase, y uno modificador-->
+                <td class="item__number">2</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Tenabari Pizza</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Juan Escutia 117, Condesa, CDMX</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item table__item--star">★★★★★</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase y uno modificador, y contiene texto-->
+                <td class="table__item"> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                  <a href="./html/tenabari.html" target="_blank" class="item__link">Ver más</a> <!--Etiqueta de anclaje, posee los atributos de referencia para redireccionar, el de abirir una nueva ventana, posee un selector de clase, y contiene texto-->
                 </td>
               </tr>
-              <tr class="table__row">
-                <td class="item__number">3</td>
-                <td class="table__item">Green Pizza Roma Norte</td>
-                <td class="table__item">Colima 385, Roma Nte., CDMX</td>
-                <td class="table__item table__item--star">★★★★✩</td>
-                <td class="table__item">
-                  <a href="./html/green.html" target="_blank" class="item__link">Ver más</a>
+              <tr class="table__row"> <!--Etiqueta de fila de tabla, posee un selector de clase-->
+                <td class="item__number">3</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Green Pizza Roma Norte</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Colima 385, Roma Nte., CDMX</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item table__item--star">★★★★✩</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase y uno modificador, y contiene texto-->
+                <td class="table__item"> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                  <a href="./html/green.html" target="_blank" class="item__link">Ver más</a> <!--Etiqueta de anclaje, posee los atributos de referencia para redireccionar, el de abirir una nueva ventana, posee un selector de clase, y contiene texto-->
                 </td>
               </tr>
-              <tr class="table__row table__row--color">
-                <td class="item__number">4</td>
-                <td class="table__item">Pizza del Perro Negro</td>
-                <td class="table__item">Parque España 3-Local 1, Roma Nte., CDMX</td>
-                <td class="table__item table__item--star">★★★✩✩</td>
-                <td class="table__item">
-                  <a href="./html/perro.html" target="_blank" class="item__link">Ver más</a>
+              <tr class="table__row table__row--color"> <!--Etiqueta de fila de tabla, posee un selector de clase, y uno modificador-->
+                <td class="item__number">4</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Pizza del Perro Negro</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item">Parque España 3-Local 1, Roma Nte., CDMX</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                <td class="table__item table__item--star">★★★✩✩</td> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase y uno modificador, y contiene texto-->
+                <td class="table__item"> <!--Etique de celda de datos dentro de una fila de tabla, posee un selector de clase, y contiene texto-->
+                  <a href="./html/perro.html" target="_blank" class="item__link">Ver más</a> <!--Etiqueta de anclaje, posee los atributos de referencia para redireccionar, el de abirir una nueva ventana, posee un selector de clase, y contiene texto-->
                 </td>
               </tr>
             </tbody>

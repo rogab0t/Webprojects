@@ -1,102 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); /*Importación de la fuente de letra importada desde la url del sitio web*/
 
-* {
-    box-sizing: border-box;
-    margin: 0;
+* { /*Selector universal paara todos los elementos del HTML*/
+    box-sizing: border-box; /*Propiedad de comportamiento de dimensiones, con valor para que las dimensiones declaradas no se vean afectadas*/
+    margin: 0; /*Propiedad de margen externo, con valor 0 para no tener margen*/
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+body { /*Selector de tipo para el elemento HTML y sus contenidos*/
+    font-family: 'Poppins', sans-serif; /*Propiedad de fuente de letra, con valor de la fuente importada*/
+    font-size: 16px; /*Propiedad del tamaño de fuente de letra, con valor de 16 pixeles*/
 }
 
-.main {
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(to right, #bc2b2b, #56329a);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main { /*Selector de clase para el elemento html que lo posea*/
+    height: 100vh; /*Propiedad de alto, con valor del 100% del alto del viewport visible*/
+    width: 100vw; /*Propiedad de ancho, con valor del 100% del ancho del viewport visible*/
+    background-image: linear-gradient(to right, #bc2b2b, #56329a); /*Propiedad para colocar una imagen de fondo, con valoe para colocar un gradiente de color, que vayan a la derecha, desde un valor de color, hacia otro*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    justify-content: center; /*Propiedad de alineamiento en el eje principal, con valor para centrar*/
+    align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
 }
 
-table, tr, td, th {
-    border-collapse: collapse;
-    padding: 15px 10px;
+table, th, tr, td { /*Selector de tipo para los elementos HTML*/
+    border-collapse: collapse; /*Propiedad del colapso de bordes de tabla, con valor para colapsarlos*/
+    padding: 15px 10px; /*Propiedad de margen interno, con valor de 15 pixeles superior e inferior, y 10 pixeles a los lados*/
    }
 
-.container {
-    max-width: 1200px;
-    width: 80%;
-    height: 70%;
-    padding: 1.5em;
-    background-color: #ffffff;
-    border-radius: 0.5em;
-    box-shadow: 0 15px 23px -15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.container { /*Selector de clase para el elemento html que lo posea*/
+    max-width: 1200px; /*Prooiedad de ancho maximo, con valor para no superar los 1200 pixeles*/
+    width: 80%; /*Propiedad de ancho, con valor del 80% de su contenedor*/
+    height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
+    padding: 1.5rem; /*Propiedad de margen interno, con valor de 1.5 veces el tamaño de fuente raiz del HTML*/
+    background-color: #ffffff; /*Propiedad de color de fondo, con valor del color blanco en hexadecimal*/
+    border-radius: 0.5rem; /*Propiedad de redondeo de esquinas, con valor de 0.5 veces el tamaño de fuente raiz del HTML a todas las esquinas*/
+    box-shadow: 0 15px 23px -15px; /*Propiedad de sombra del elmento, con los valores de 0 en eje "x", 15 pixeles en eje "y", 23 pixeles de difuminado, y -15 pixeles de esparcimiento*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
+    justify-content: space-evenly; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sin sumarlo*/
 }
 
-.table__container {
-    height: 70%;
-    overflow: scroll;
+.table__container { /*Selector de clase para el elemento html que lo posea*/
+    height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
+    overflow: scroll; /*Propiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
 }
 
-.main__title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2.5rem;
+.main__title { /*Selector de clase para el elemento html que lo posea*/
+    text-align: center; /*Propiedad de alineamiento del texto, con valor para centrarlo*/
+    text-transform: uppercase; /*Propiedad de transformacion del texto, con valor para colocar el texto en mayusculas*/
+    font-size: 2.5rem; /*Propiedad del tamaño de fuente de letra, con valor de 2.5 veces el tamaño de fuente raiz del html*/
 }
 
-.table {
-    width: 95%;
-    height: 100%;
-    margin: 0 auto;
-    text-align: left;
+.table { /*Selector de clase para el elemento html que lo posea*/
+    width: 95%; /*Propiedad de ancho, con valor del 95% de su contenedor*/
+    height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
+    margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+    text-align: left; /*Propiedad de alineamiento del texto, con valor para colocarlo a la izquierda*/
 }
 
-.table__row--color {
-    background-color: #ffeaf7;
+.table__row--color { /*Selector de clase modificador para el elemento html que lo posea*/
+    background-color: #ffeaf7; /*Propiedad de color de fondo, con valor de color en hexadecimal*/
 }
 
-.table__item--star {
-    color: rgb(249, 202, 15);
+.table__item--star { /*Selector de clase modificador para el elemento html que lo posea*/
+    color: #f9ca0f; /*Propiedad de color del texto, con valor de color en hexadecimal*/
 }
 
-.item__number {
-    font-weight: 600;
+.item__number { /*Selector de clase para el elemento html que lo posea*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negritas*/
 }
 
-.item__link {
-    text-decoration: none;
-    color: #da00fe;
+.item__link { /*Selector de clase para el elemento html que lo posea*/
+    text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
+    color: #da00fe; /*Propiedad de color del texto, con valor de color en hexadecimal*/
 }
 
-@media (max-width: 767px) {
-    .main__title {
-        font-size: 2rem;
+@media (max-width: 767px) { /*Media queri, para un ancho maximo del dispositivo, de 767 pixeles*/
+    .main__title { /*Selector de clase para el elemento html que lo posea*/
+        font-size: 2rem; /*Propiedad del tamaño de fuente de letra, con valor de 2 veces el tamaño de fuente raiz del html*/
     }
 
-    .container {
-        width: 90%;
-        height: 90%;
-        justify-content: center;
-        gap: 1rem;
+    .container { /*Selector de clase para el elemento html que lo posea*/
+        width: 90%; /*Propiedad de ancho, con valor del 90% de su contenedor*/
+        height: 90%; /*Propiedad de alto, con valor del 90% de su contenedor*/
+        justify-content: center; /*Propiedad de alineamiento en el eje principal, con valor para centrar*/
+        gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuene raiz del HTML*/
     }
 
-    .container::after {
-        content: "Desliza a la izquierda";
-        color: #838383;
+    .container::after { /*Pseudo elemento que se coloca despues del elemento que posee el selector de clase*/
+        content: "Desliza a la izquierda"; /*Propiedad de contenido, con valor de texto*/
+        color: #838383; /*Propiedad de color del texto, con valor de color en hexadecimal*/
     }
 
-    table{
-        padding: 20px 12px;
+    table{ /*Selector de clase para el elemento html que lo posea*/
+        padding: 20px 12px; /*Propiedad de margen interno, con valor de 20 pixeles superior e inferior, y 12 pixeles a los lados*/
     }
 
-    tr, td {
-        padding: 17px 6px;
+    tr, td { /*Selector de tipo para los elementos HTML*/
+        padding: 17px 6px; /*Propiedad de margen interno, con valor de 17 pixeles superior e inferior, y 6 pixeles a los lados*/
     }
 
-    table td:nth-child(3) {
-        min-width: 180px;
+    table td:nth-child(3) { /*Pseudo clase que selecciona al elemento hijo en la tercera posicion, dentro del elemento que se encuentra dentro del primer elemento*/
+        min-width: 180px; /*Prooiedad de ancho minimo, con valor para tener minimo 180 pixeles*/
       }
 }

@@ -1,130 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); /*Importación de la fuente de letra importada desde la url del sitio web*/
 
-* {
-    box-sizing: border-box;
-    margin: 0;
+* { /*Selector universal paara todos los elementos del HTML*/
+    box-sizing: border-box; /**Propiedad de comportamiento de dimensiones, con valor para que las dimensiones declaradas no se vean afectadas*/
+    margin: 0; /*Propiedad de margen externo, con valor 0 para no tener margen*/
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+body { /*Selector de tipo para el elemento HTML y sus contenidos*/
+    font-family: 'Poppins', sans-serif; /*Propiedad de fuente de letra, con valor de la fuente importada*/
+    font-size: 16px; /*Propiedad del tamaño de fuente de letra, con valor de 16 pixeles*/
 }
 
-.main {
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(to right, #bc2b2b, #56329a);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main { /*Selector de clase para el elemento html que lo posea*/
+    height: 100vh; /*Propiedad de alto, con valor del 100% del alto del viewport visible*/
+    width: 100vw; /*Propiedad de ancho, con valor del 100% del ancho del viewport visible*/
+    background-image: linear-gradient(to right, #bc2b2b, #56329a); /*Propiedad para colocar una imagen de fondo, con valoe para colocar un gradiente de color, que vayan a la derecha, desde un valor de color, hacia otro*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    justify-content: center; /*Propiedad de alineamiento en el eje principal, con valor para centrar*/
+    align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
 }
 
-.main__container {
-    max-width: 1200px;
-    width: 80%;
-    height: 70%;
-    padding: 1.5em;
-    background-color: #ffffff;
-    border-radius: 0.5em;
-    box-shadow: 0 15px 23px -15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 1em;
+.main__container { /*elector de clase para el elemento html que lo posea*/
+    max-width: 1200px; /*Prooiedad de ancho maximo, con valor para no superar los 1200 pixeles*/
+    width: 80%; /*Propiedad de ancho, con valor del 80% de su contenedor*/
+    height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
+    padding: 1.5rem; /*Propiedad de margen interno, con valor de 1.5 veces el tamaño de fuente raiz del HTML*/
+    background-color: #ffffff; /*Propiedad de color de fondo, con valor del color blanco en hexadecimal*/
+    border-radius: 0.5rem; /*Propiedad de redondeo de esquinas, con valor de 0.5 veces el tamaño de fuente raiz del HTML a todas las esquinas*/
+    box-shadow: 0 15px 23px -15px; /*Propiedad de sombra del elmento, con los valores de 0 en eje "x", 15 pixeles en eje "y", 23 pixeles de difuminado, y -15 pixeles de esparcimiento*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
+    justify-content: space-around; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sumandolo*/
 }
 
-.title__container {
-    text-transform: uppercase;
-    padding: .5rem 0;
-    border-bottom: 2px solid #bc2b2b;
-    display: flex;
-    align-items: center;
+.title__container { /*elector de clase para el elemento html que lo posea*/
+    text-transform: uppercase; /*Propiedad de transformacion del texto, con valor para colocar el texto en mayusculas*/
+    padding: .5rem 0; /*Propiedad de margen interno, con valor de 0.5 veces el tamaño de fuente raiz del HTML superio e inferior, y 0 a los lados*/
+    border-bottom: 2px solid #bc2b2b; /*Propiedad de borde inferior, con los valores de 2 pixeles de grosor, solido, y de color en hexadecimal*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
 }
 
-.number__title {
-    color: #ffffff;
-    background-color: #bc2b2b;
-    margin-right: 1rem;
-    padding: .6rem 1rem;
-    border-radius: .3rem;
+.number__title { /*elector de clase para el elemento html que lo posea*/
+    color: #ffffff; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
+    background-color: #bc2b2b; /*Propiedad de color de fondo, con valor de color en hexadecimal*/
+    margin-right: 1rem; /*propiedad de margen externo derecho, con valor de 1 vez el tamaño de fuente raiz del HTML*/
+    padding: .6rem 1rem; /*Propiedad de margen interno, con valor de 0.6 veces el tamaño de fuente raiz del HTML superio e inferior, y 1 vez el tamalo de fuente raiz del HTML a los lados*/
+    border-radius: .3rem; /*Propiedad de redondeo de esquinas, con valor de 0.3 veces el tamaño de fuente raiz del HTML a todas las esquinas*/
 }
 
-.main__button {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-    margin-left: auto;
-    border-radius: 50%;
-    border: none;
-    background-color: #56329a;
-    color: #ffffff;
-    box-shadow: 0 5px 7px -3px #56329a
+.main__button { /*elector de clase para el elemento html que lo posea*/
+    width: 35px; /*Propiedad de ancho, con valor de 35 pixeles*/
+    height: 35px; /*Propiedad de alto, con valor de 35 pixeles*/
+    font-size: 1rem; /*Propiedad del tamaño de fuente de letra, con valor de 1 vez el tamaño de fuente raiz del html*/
+    margin-left: auto; /*Propiedad de margen externo izquierdo, con valor auto para colocar el elemento al extremo opuesto*/
+    border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor de 50% para crear un circulo*/
+    border: none; /*Propiedad de borde, con valor none para no tener borde*/
+    background-color: #56329a; /*Propiedad de color de fondo, con valor de color en hexadecimal*/
+    color: #ffffff; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
+    box-shadow: 0 5px 7px -3px #56329a /*Propiedad de sombra del elmento, con los valores de 0 en eje "x", 5 pixeles en eje "y", 7 pixeles de difuminado, -3 pixeles de esparcimiento, y de color en valor hexadecimal*/
 }
 
-.main__content {
-    display: flex;
-    gap: 2em;
+.main__content { /*elector de clase para el elemento html que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    gap: 2em; /*Propiedad de espaciado entre elementos, con valor de 2 veces el tamaño de fuene raiz del HTML*/
 }
 
-.paragraph__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1rem;
+.paragraph__container { /*elector de clase para el elemento html que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
+    justify-content: space-evenly; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sin sumarlo*/
+    gap: 2rem; /*Propiedad de espaciado entre elementos, con valor de 2 veces el tamaño de fuene raiz del HTML*/
 }
 
-.location__icon {
-    width: 2rem;
-    vertical-align: bottom;
+.location__icon { /*elector de clase para el elemento html que lo posea*/
+    width: 2rem; /*Propiedad de ancho, con valor de 2 veces el tamaño de fuente raiz del HTML*/
+    vertical-align: bottom; /*Propiedad de alineamiento vertical, con valor para colocarlo en el inferior*/
 }
 
-.ubication__content {
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #56329a;
+.ubication__content { /*elector de clase para el elemento html que lo posea*/
+    font-size: 1.3rem; /*Propiedad del tamaño de fuente de letra, con valor de 1.3 veces el tamaño de fuente raiz del html*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negritas*/
+    text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
+    color: #56329a; /*Propiedad de color del texto, con valor de color en hexadecimal*/
 }
 
-.image {
-    max-width: 300px;
-    width: 30%;
-    border-radius: 0.5em;
+.image__container { /*elector de clase para el elemento html que lo posea*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    overflow: hidden; /*ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para ocultar si se desborda el contenido*/
 }
 
-@media (max-width: 767px) {
-    .main__container {
-        width: 90%;
-        height: 90%;
-        justify-content: center;
-        gap: 0;
+.image { /*elector de clase para el elemento html que lo posea*/
+    max-height: 330px; /*Prooiedad de alto maximo, con valor para no superar los 330 pixeles*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    border-radius: 1.5rem;/*Propiedad de redondeo de esquinas, con valor de 1.5 veces el tamaño de fuente raiz del HTML a todos los lados*/
+    padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
+}
+
+@media (max-width: 767px) { /*Media queri, para un ancho maximo del dispositivo, de 767 pixeles*/
+    .main__container { /*elector de clase para el elemento html que lo posea*/
+        width: 90%; /*Propiedad de ancho, con valor del 90% de su contenedor*/
+        height: 90%; /*Propiedad de alto, con valor del 90% de su contenedor*/
+        justify-content: space-evenly; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sin sumarlo*/
     }
 
-    .main__content {
-        height: 70%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+    .main__content { /*elector de clase para el elemento html que lo posea*/
+        height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
+        flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
+        align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
+        gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuene raiz del HTML*/
     }
 
-    .main__title {
-        font-size: 1.5rem;
+    .main__title { /*elector de clase para el elemento html que lo posea*/
+        font-size: 1.5rem; /*Propiedad del tamaño de fuente de letra, con valor de 1.5 veces el tamaño de fuente raiz del html*/
     }
 
-    .image {
-        width: 80%;
+    .image__container { /*elector de clase para el elemento html que lo posea*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+        height: 40%; /*Propiedad de alto, con valor del 40% de su contenedor*/
+        overflow: hidden; /**ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para ocultar si se desborda el contenido*/
+        text-align: center; /*Propiedad de alineamiento del texto, con valor para centrarlo*/
+        border-radius: 0 0 0.5em 0.5em; /*Propiedad de redondeo de esquinas, con valor de 0 superior izquierda, 0 superior derecha, 0.5 veces el tamaño de fuente raiz del HTML inferior derecha, y 0.5 veces el tamaño de fuente raiz del HTML inferior izquierda*/
     }
 
-    .paragraph__container {
-        height: 50%;
+    .image { /*Selector de clase para el elemento html que lo posea*/
+        max-width: none; /*Prooiedad de ancho maximo, con valor none para no tener un ancho maximo*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+        padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
+        border-radius: 0.5rem; /*Propiedad de redondeo de esquinas, con valor de 0.5 veces el tamaño de fuente raiz del HTML a todas las esquinas*/
     }
 
-    .ubication__content {
-        font-size: 1rem;
+    .paragraph__container { /*elector de clase para el elemento html que lo posea*/
+        height: 60%; /*Propiedad de alto, con valor del 60% de su contenedor*/
+        overflow: scroll; /*ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
+        justify-content: space-between; /*Propiedad de alineamiento en el eje principal, con valor para colocar los elementos a los extremos*/
+        gap: 0.5rem; /*Propiedad de espaciado entre elementos, con valor de 0.5 veces el tamaño de fuene raiz del HTML*/
     }
 
-    .paragraph {
-        padding: 0 0.5rem;
-        line-height: 1.5;
-        font-size: .8rem;
+    .ubication__content { /*elector de clase para el elemento html que lo posea*/
+        padding: 0 0.5rem; /*Propiedad de margen interno, con valor de 0  superio e inferior, y 0.5 veces el tamalo de fuente raiz del HTML a los lados*/
+        font-size: 1rem; /*Propiedad del tamaño de fuente de letra, con valor de 1 vez el tamaño de fuente raiz del html*/
+    }
+
+    .paragraph { /*elector de clase para el elemento html que lo posea*/
+        padding: 0 0.5rem; /*Propiedad de margen interno, con valor de 0  superio e inferior, y 0.5 veces el tamalo de fuente raiz del HTML a los lados*/
+        line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
     }
 }
