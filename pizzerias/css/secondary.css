@@ -19,6 +19,15 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
 }
 
+@keyframes moveDown { /*Declaracion de fotogramas clave*/
+    0%{ /*Inicio de la animación en el 0%, cuando inicia la página*/
+        transform: translateY(-110px); /*Propiedad de transformacion del elemento, con valor de transladarlo en el eje "Y" 110 pixeles hacia afuera*/
+    }
+    100%{ /*Final de la animación en el 100%, cuando ya cargó la pagina*/
+        transform: translateY(0px); /*Propiedad de transformacion del elemento, con valor de transladarlo en el eje "Y" 0 pixeles el cual es su posicion original*/
+    }
+}
+
 .main__container { /*elector de clase para el elemento html que lo posea*/
     max-width: 1200px; /*Prooiedad de ancho maximo, con valor para no superar los 1200 pixeles*/
     width: 80%; /*Propiedad de ancho, con valor del 80% de su contenedor*/
@@ -30,6 +39,8 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
     justify-content: space-around; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sumandolo*/
+    animation-name: moveDown; /*Propiedad de nombre de la animación que será ejecutada, con el valor asignado del nombre del fotograma clave*/
+    animation-duration: 2s; /*Propiedad de duración de la animación, con valor de 2 segundos*/
 }
 
 .title__container { /*elector de clase para el elemento html que lo posea*/
