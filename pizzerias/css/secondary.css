@@ -145,6 +145,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
         overflow: scroll; /*ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
         justify-content: space-between; /*Propiedad de alineamiento en el eje principal, con valor para colocar los elementos a los extremos*/
         gap: 0.5rem; /*Propiedad de espaciado entre elementos, con valor de 0.5 veces el tamaño de fuene raiz del HTML*/
+        box-shadow: inset 0px -5px 25px -15px #000000; /*Propiedad de sombra del elemento, con valor de sombra interna, 0 pixeles en eje "x", -5 pixeles en eje "y", 25 pixeles de difuminado, -15 pixeles de expansión, y de color negro en hexadecimal*/
     }
 
     .ubication__content { /*elector de clase para el elemento html que lo posea*/

@@ -68,6 +68,7 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
 
 .table__row--color { /*Selector de clase modificador para el elemento html que lo posea*/
     background-color: #ffeaf7; /*Propiedad de color de fondo, con valor de color en hexadecimal*/
+    mix-blend-mode: multiply; /*Propiedad de superposicion de colores, con valor para sobreponer colores*/
 }
 
 .table__item--star { /*Selector de clase modificador para el elemento html que lo posea*/
@@ -98,6 +99,10 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
     .container::after { /*Pseudo elemento que se coloca despues del elemento que posee el selector de clase*/
         content: "Desliza a la izquierda"; /*Propiedad de contenido, con valor de texto*/
         color: #838383; /*Propiedad de color del texto, con valor de color en hexadecimal*/
+    }
+
+    .table__container { /*Selector de clase para el elemento html que lo posea*/
+        box-shadow: inset -5px 0px 20px -10px #000000; /*Propiedad de sombra del elemento, con valor de sombra interna, -5 pixeles en eje "x", 0 en eje "y", 20 pixeles de difuminado, -10 pixeles de expansión, y de color negro en hexadecimal*/
     }
 
     table{ /*Selector de clase para el elemento html que lo posea*/
