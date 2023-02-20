@@ -101,11 +101,6 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
         color: #838383; /*Propiedad de color del texto, con valor de color en hexadecimal*/
     }
 
-    .table__container { /*Selector de clase para el elemento html que lo posea*/
-        border-radius: 0.5rem; /*Propiedad de redondeo de esquinas, con valor de 0.5 veces el tamaño de fuente raiz del HTML a todas las esquinas*/
-        box-shadow: inset -5px 0px 20px -10px #000000; /*Propiedad de sombra del elemento, con valor de sombra interna, -5 pixeles en eje "x", 0 en eje "y", 20 pixeles de difuminado, -10 pixeles de expansión, y de color negro en hexadecimal*/
-    }
-
     table{ /*Selector de clase para el elemento html que lo posea*/
         padding: 20px 12px; /*Propiedad de margen interno, con valor de 20 pixeles superior e inferior, y 12 pixeles a los lados*/
     }
