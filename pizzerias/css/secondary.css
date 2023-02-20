@@ -41,6 +41,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     justify-content: space-around; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sumandolo*/
     animation-name: moveDown; /*Propiedad de nombre de la animación que será ejecutada, con el valor asignado del nombre del fotograma clave*/
     animation-duration: 2s; /*Propiedad de duración de la animación, con valor de 2 segundos*/
+    overflow: scroll; /*Propiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
 }
 
 .title__container { /*elector de clase para el elemento html que lo posea*/
@@ -101,6 +102,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negritas*/
     text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
     color: #56329a; /*Propiedad de color del texto, con valor de color en hexadecimal*/
+    padding: 0 1.5rem; /*Propiedad de margen interno, con valor de 0 superior e inferior, y 1.5 veces el tamaño de fuente raíz del documento HTML*/
 }
 
 .image__container { /*elector de clase para el elemento html que lo posea*/
@@ -124,6 +126,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 
     .main__content { /*elector de clase para el elemento html que lo posea*/
         height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
+        padding: 1rem 0; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raíz del HTML superiror e inferiror, y 0 a los lados*/
         flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
         align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
         gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuene raiz del HTML*/
@@ -164,5 +167,9 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     .paragraph { /*elector de clase para el elemento html que lo posea*/
         padding: 0 0.5rem; /*Propiedad de margen interno, con valor de 0  superio e inferior, y 0.5 veces el tamalo de fuente raiz del HTML a los lados*/
         line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
+    }
+
+    .paragraph--final {
+        padding: 0;
     }
 }

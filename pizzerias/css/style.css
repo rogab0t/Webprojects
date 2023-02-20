@@ -46,6 +46,7 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
     justify-content: space-evenly; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sin sumarlo*/
     animation-name: moveDown; /*Propiedad de nombre de la animación que será ejecutada, con el valor asignado del nombre del fotograma clave*/
     animation-duration: 2s; /*Propiedad de duración de la animación, con valor de 2 segundos*/
+    overflow: scroll; /*Propiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
 }
 
 .table__container { /*Selector de clase para el elemento html que lo posea*/
@@ -107,10 +108,6 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
 
     table{ /*Selector de clase para el elemento html que lo posea*/
         padding: 20px 12px; /*Propiedad de margen interno, con valor de 20 pixeles superior e inferior, y 12 pixeles a los lados*/
-    }
-
-    .table__row--color { /*Selector de clase modificador para el elemento html que lo posea*/
-        mix-blend-mode: multiply; /*Propiedad de superposicion de colores, con valor para sobreponer colores*/
     }
 
     tr, td { /*Selector de tipo para los elementos HTML*/
