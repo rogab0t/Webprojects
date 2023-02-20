@@ -75,6 +75,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 .main__content { /*elector de clase para el elemento html que lo posea*/
     padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
     gap: 2em; /*Propiedad de espaciado entre elementos, con valor de 2 veces el tamaño de fuene raiz del HTML*/
 }
 
@@ -117,7 +118,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
 }
 
-@media (max-width: 767px) { /*Media queri, para un ancho maximo del dispositivo, de 767 pixeles*/
+@media (max-width: 1023px) { /*Media queri, para un ancho maximo del dispositivo, de 1023 pixeles*/
     .main__container { /*elector de clase para el elemento html que lo posea*/
         width: 90%; /*Propiedad de ancho, con valor del 90% de su contenedor*/
         height: 90%; /*Propiedad de alto, con valor del 90% de su contenedor*/

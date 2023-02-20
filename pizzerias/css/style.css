@@ -61,7 +61,7 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
 }
 
 .table { /*Selector de clase para el elemento html que lo posea*/
-    width: 95%; /*Propiedad de ancho, con valor del 95% de su contenedor*/
+    width: 100%; /*Propiedad de ancho, con valor del 95% de su contenedor*/
     height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
     margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
     text-align: left; /*Propiedad de alineamiento del texto, con valor para colocarlo a la izquierda*/
