@@ -164,8 +164,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 
     .paragraph__container { /*elector de clase para el elemento html que lo posea*/
         height: 60%; /*Propiedad de alto, con valor del 60% de su contenedor*/
-        padding: 1.5rem 0; /*Propiedad de margen interno, con valor 0 de 1.5 veces el tamaño de fuene raiz del HTML superior e inferior, y 0 a los lados*/
-        gap: 1.5rem; /*Propiedad de espaciado entre elementos, con valor de 1.5 veces el tamaño de fuene raiz del HTML*/
+        gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1.5 veces el tamaño de fuene raiz del HTML*/
     }
 
     .ubication__content { /*elector de clase para el elemento html que lo posea*/
