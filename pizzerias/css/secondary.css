@@ -86,6 +86,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     border: 1px solid #e0dfdf; /*Propiedad de borde, con valor de 1 pixel de ancho, solido, y de color en haxadecimal*/
     background-color: #f4f4f4; /*Propiedad de color de fondo, con valor de color en hexadecimal*/
     padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
+    overflow: scroll; /*ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
     justify-content: space-between; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sin sumarlo*/
@@ -164,7 +165,6 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     .paragraph__container { /*elector de clase para el elemento html que lo posea*/
         height: 60%; /*Propiedad de alto, con valor del 60% de su contenedor*/
         padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
-        overflow: scroll; /*ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
         justify-content: space-evenly; /*Propiedad de alineamiento en el eje principal, con valor para colocar los elementos a los extremos*/
         gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 0.5 veces el tamaño de fuene raiz del HTML*/
     }
