@@ -93,12 +93,8 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     gap: 2rem; /*Propiedad de espaciado entre elementos, con valor de 2 veces el tamaño de fuene raiz del HTML*/
 }
 
-.paragraph { /*Selector de clase para el elemento html que lo posea*/
-    padding: 0 2rem; /*Propiedad de margen interno, con valor de 0 superior e inferior, y 2 veces el tamaño de fuente raiz del HTML*/
-}
-
-.paragraph--final {
-    padding: 0;
+.paragraph { /*elector de clase para el elemento html que lo posea*/
+    line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
 }
 
 .location__icon { /*elector de clase para el elemento html que lo posea*/
@@ -171,10 +167,5 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
         padding: 0; /*Propiedad de margen interno, con valor de 0 a todos los lados*/
         font-size: 1rem; /*Propiedad del tamaño de fuente de letra, con valor de 1 vez el tamaño de fuente raiz del html*/
         margin-bottom: 0.5rem;
-    }
-
-    .paragraph { /*elector de clase para el elemento html que lo posea*/
-        padding: 0 0.5rem; /*Propiedad de margen interno, con valor de 0  superio e inferior, y 0.5 veces el tamalo de fuente raiz del HTML a los lados*/
-        line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
     }
 }
