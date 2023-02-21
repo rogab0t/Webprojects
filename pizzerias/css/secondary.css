@@ -95,6 +95,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 
 .paragraph { /*elector de clase para el elemento html que lo posea*/
     line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
+    padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
 }
 
 .location__icon { /*elector de clase para el elemento html que lo posea*/
@@ -161,6 +162,10 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     .paragraph__container { /*elector de clase para el elemento html que lo posea*/
         height: 60%; /*Propiedad de alto, con valor del 60% de su contenedor*/
         gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1.5 veces el tamaño de fuene raiz del HTML*/
+    }
+
+    .paragraph { /*elector de clase para el elemento html que lo posea*/
+        padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
     }
 
     .ubication__content { /*elector de clase para el elemento html que lo posea*/
