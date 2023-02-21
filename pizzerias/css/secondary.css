@@ -171,10 +171,6 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
         padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
     }
 
-    .paragraph--final { /*Selector de clase modificador para el elemento html que lo posea*/
-        padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
-    }
-
     .ubication__content { /*elector de clase para el elemento html que lo posea*/
         padding: 0; /*Propiedad de margen interno, con valor de 0 a todos los lados*/
         font-size: 1rem; /*Propiedad del tamaño de fuente de letra, con valor de 1 vez el tamaño de fuente raiz del html*/

@@ -52,6 +52,7 @@ table, th, tr, td { /*Selector de tipo para los elementos HTML*/
 .table__container { /*Selector de clase para el elemento html que lo posea*/
     height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
     overflow: scroll; /*Propiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
+    border-radius: 1rem; /*Propiedad de redondeo de esquinas, con valor de 1 vez el tamaño de fuente raiz del HTML a todas las esquinas*/
 }
 
 .main__title { /*Selector de clase para el elemento html que lo posea*/
