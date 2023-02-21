@@ -96,6 +96,10 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     padding: 0 2rem; /*Propiedad de margen interno, con valor de 0 superior e inferior, y 2 veces el tamaño de fuente raiz del HTML*/
 }
 
+.paragraph--final {
+    padding: 0 1rem;
+}
+
 .location__icon { /*elector de clase para el elemento html que lo posea*/
     width: 2rem; /*Propiedad de ancho, con valor de 2 veces el tamaño de fuente raiz del HTML*/
     vertical-align: bottom; /*Propiedad de alineamiento vertical, con valor para colocarlo en el inferior*/
@@ -106,7 +110,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negritas*/
     text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
     color: #56329a; /*Propiedad de color del texto, con valor de color en hexadecimal*/
-    padding: 0 1.5rem; /*Propiedad de margen interno, con valor de 0 superior e inferior, y 1.5 veces el tamaño de fuente raíz del documento HTML*/
+    padding: 0 0.7rem; /*Propiedad de margen interno, con valor de 0 superior e inferior, y 0.7 veces el tamaño de fuente raíz del documento HTML*/
 }
 
 .image__container { /*elector de clase para el elemento html que lo posea*/
@@ -174,9 +178,5 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     .paragraph { /*elector de clase para el elemento html que lo posea*/
         padding: 0 0.5rem; /*Propiedad de margen interno, con valor de 0  superio e inferior, y 0.5 veces el tamalo de fuente raiz del HTML a los lados*/
         line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
-    }
-
-    .paragraph--final {
-        padding: 0;
     }
 }
