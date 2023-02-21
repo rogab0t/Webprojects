@@ -35,10 +35,9 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
     padding: 1.5rem; /*Propiedad de margen interno, con valor de 1.5 veces el tamaño de fuente raiz del HTML*/
     background-color: #ffffff; /*Propiedad de color de fondo, con valor del color blanco en hexadecimal*/
     border-radius: 0.5rem; /*Propiedad de redondeo de esquinas, con valor de 0.5 veces el tamaño de fuente raiz del HTML a todas las esquinas*/
-    box-shadow: 0 15px 23px -15px; /*Propiedad de sombra del elmento, con los valores de 0 en eje "x", 15 pixeles en eje "y", 23 pixeles de difuminado, y -15 pixeles de esparcimiento*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
-    justify-content: space-around; /*Propiedad de alineamiento en el eje principal, con valor para repartir el espacio equitativo sumandolo*/
+    justify-content: center; /*Propiedad de alineamiento en el eje principal, con valor para centrar el contenido*/
     animation-name: moveDown; /*Propiedad de nombre de la animación que será ejecutada, con el valor asignado del nombre del fotograma clave*/
     animation-duration: 2s; /*Propiedad de duración de la animación, con valor de 2 segundos*/
     overflow: scroll; /*Propiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
@@ -73,16 +72,17 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 }
 
 .main__content { /*elector de clase para el elemento html que lo posea*/
-    padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
+    height: 70%; /*Propiedad de alto, con valor del 70% de su contenedor*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     align-items: center; /*Propiedad para alinear en el eje secundario, con valor para centrar*/
     gap: 2em; /*Propiedad de espaciado entre elementos, con valor de 2 veces el tamaño de fuene raiz del HTML*/
 }
 
 .paragraph__container { /*Selector de clase para el elemento html que lo posea*/
-    height: 90%; /*Propiedad de alto, con valor del 90% de su contenedor*/
-    border-radius: 1rem;  /*Propiedad de redondeo de esquinas, con valor de 1 vez el tamaño de fuente raiz del HTML a todas las esquinas*/
-    border: 1px solid #b6b6b6;
+    height: 75%; /*Propiedad de alto, con valor del 90% de su contenedor*/
+    border-radius: 1rem; /*Propiedad de redondeo de esquinas, con valor de 1 vez el tamaño de fuente raiz del HTML a todas las esquinas*/
+    border: 1px solid #e0dfdf; /*Propiedad de borde, con valor de 1 pixel de ancho, solido, y de color en haxadecimal*/
+    background-color: #f4f4f4; /*Propiedad de color de fondo, con valor de color en hexadecimal*/
     padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para ser en columna*/
@@ -155,9 +155,10 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 
     .paragraph__container { /*elector de clase para el elemento html que lo posea*/
         height: 60%; /*Propiedad de alto, con valor del 60% de su contenedor*/
+        padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
         overflow: scroll; /*ropiedad de visualizacion de los elementos dentro de un contenedor, con valor para colocar un scroll si se desborda el contenido*/
         justify-content: space-evenly; /*Propiedad de alineamiento en el eje principal, con valor para colocar los elementos a los extremos*/
-        gap: 0.5rem; /*Propiedad de espaciado entre elementos, con valor de 0.5 veces el tamaño de fuene raiz del HTML*/
+        gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 0.5 veces el tamaño de fuene raiz del HTML*/
     }
 
     .ubication__content { /*elector de clase para el elemento html que lo posea*/
