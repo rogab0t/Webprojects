@@ -98,7 +98,7 @@ body { /*Selector de tipo para el elemento HTML y sus contenidos*/
 }
 
 .paragraph--final {
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .location__icon { /*elector de clase para el elemento html que lo posea*/
