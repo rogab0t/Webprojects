@@ -44,16 +44,21 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuente del padre*/
 }
 
-.nav__logo { /*Selector de clase para el elemento HTML que lo posea*/
-    margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
-    font-size: 2rem; /*Propiedad de tamaña de fuene de letra, con valor de 2 veces el tamaño de fuente raiz del documento HTML*/
-    text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
-    color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
-}
-
 .nav__link { /*Selector de clase para el elemento HTML que lo posea*/
     text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
     font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
+    color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
+    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+}
+
+.nav__link:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    transform: scale(1.1) translateY(-5px); /*Propiedad de transformacion, con valor para escalar el elemento en 1.1 veces su tamaño, y transladarlo en el eje "y" -5 pixeles*/
+}
+
+.nav--logo { /*Selector de clase para el elemento HTML que lo posea*/
+    margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
+    font-size: 2rem; /*Propiedad de tamaña de fuene de letra, con valor de 2 veces el tamaño de fuente raiz del documento HTML*/
+    text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
     color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
 }
 
@@ -131,6 +136,11 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     align-content: center; /*Propiedad para alinear al grid-container horizontalmente, con valor para centrarlo*/
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*Propiedad para crear columnas de grid, con valor para que sean dinamicas utilizando la funcion para repetir, con los parametros de ajuste automatico, y la funcion para el tamaño de las columnas con un minimo y un maximo de tamaño*/
     grid-auto-rows: 320px; /*Propiedad para crear filas automaticas, con valor de 320 pixeles como tamaño minimo*/
+    transition: 1s transform; /*Propiedad de transicion, con valor de 1 segundo, y para ser aplicado a la propiedad transform*/
+}
+
+.projects:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    background-color: #ebf0ff; /*Propiedad de color de fondo, con valor de color en haxadecimal*/
 }
 
 .gallery__img { /*Selector de clase para el elemento HTML que lo posea*/
@@ -139,6 +149,11 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     background-size: cover; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor para para conservar sus dimensiones sin distorcionarse*/
     background-position: center; /*Propiedad para la posicion de la imagen con el valor para colocarla centrada*/
     color: transparent; /*Propiedad de color del texto, con valor transparente para no ser mostrado*/
+    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+}
+
+.gallery__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    transform: scale(0.96); /*Propiedad de transformacion, con valor para escalar el elemento en 0.96 veces su tamaño*/
 }
 
 .gallery__img--1 { /*Selector de clase modificador para el elemento HTML que lo posea*/
@@ -344,8 +359,10 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .form__message { /*Selector de clase para el elemento HTML que lo posea*/
     max-width: 100%; /*Propiedad de ancho maximo, con valor de no superar el 100% de su contenedor*/
+    min-width: 100%; /*Propiedad de ancho minimo, con valor de no superar el 100% de su contenedor*/
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     max-height: 100%; /*Propiedad de alto maximo, con valor de no superar el 100% de su contenedor*/
+    min-height: 100%; /*Propiedad de alto minimo, con valor de no superar el 100% de su contenedor*/
     height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
     padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen interno*/
     display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
@@ -373,7 +390,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
 }
 
-.form__send:focus { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento de dicho selector de clase*/
+.form__send:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
     outline: 2px solid #7dc5f8 ; /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color blanco en hexadecimal*/
 }
 
@@ -406,4 +423,9 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .media__img { /*Selector de clase para el elemento HTML que lo posea*/
     width: 33px; /*Propiedad de ancho, con valor de 20 pixeles*/
+    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+}
+
+.media__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    transform: scale(1.1) translateY(-5px); /*Propiedad de transformacion, con valor para escalar el elemento en 1.1 veces su tamaño, y transladarlo en el eje "y" -5 pixeles*/
 }
