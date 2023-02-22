@@ -136,7 +136,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     align-content: center; /*Propiedad para alinear al grid-container horizontalmente, con valor para centrarlo*/
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*Propiedad para crear columnas de grid, con valor para que sean dinamicas utilizando la funcion para repetir, con los parametros de ajuste automatico, y la funcion para el tamaño de las columnas con un minimo y un maximo de tamaño*/
     grid-auto-rows: 320px; /*Propiedad para crear filas automaticas, con valor de 320 pixeles como tamaño minimo*/
-    transition: 1s transform; /*Propiedad de transicion, con valor de 1 segundo, y para ser aplicado a la propiedad transform*/
+    transition: 1s background-color; /*Propiedad de transicion, con valor de 1 segundo, y para ser aplicado a la propiedad background-color*/
 }
 
 .projects:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
