@@ -176,9 +176,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4em 1em;
+    text-align: left;
+    padding: 4em 2em;
     gap: 55px;
 }
 
@@ -323,7 +322,12 @@ body {
         padding: 2em 0 0 0;
     }
 
+    .panfrutos_description {
+        text-align: center;
+    }
+
     .image_description2 {
+        align-items: center;
         max-width: 1440px;
         padding: 1em 5em;
         gap: 10px;
