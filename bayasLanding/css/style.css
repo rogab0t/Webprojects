@@ -18,16 +18,21 @@ body {
 }
 
 .nav {
-    max-width: 1440px;
     width: 100vw;
     height: 80px;
     background: #3b16032a;
+    position: fixed;
+    z-index: 10;
+}
+
+.nav_container {
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .9em .8em;
-    position: fixed;
-    z-index: 10;
 }
 
 .icon {
@@ -94,6 +99,9 @@ body {
     grid-area: frutos;
     background-color: #F2F2F2;
     width: 100vw;
+}
+
+.section_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +109,7 @@ body {
 }
 
 .container_frutos {
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +118,7 @@ body {
 
 .imagen1_frutos {
     max-width: 390px;
-    width: 80%;
+    width: 90%;
     padding: 1.5em 0 .3em;
     display: block;
 }
@@ -197,7 +206,7 @@ body {
 }
 
 .name {
-    font-size: 15px;
+    font-size: 0.8rem;
     color: #6C6C6C;
 }
 
@@ -224,23 +233,36 @@ body {
     }
 
     .frutos_rojos {
-        height: 100vh;
+        height: auto;
+        padding: 3rem 4.5rem;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .section_container {
+        max-width: 1440px;
+        margin: 0 auto;
         flex-direction: row;
         align-items: flex-start;
     }
 
     .container_frutos {
         width: 40%;
-        margin: auto;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
     }
 
     .imagen1_frutos {
-        width: 60%;
+        width: 70%;
         padding: 0;
+        margin-right: auto;
     }
 
     .image_description {
-        padding: 2em;
+        width: 85%;
+        margin-right: auto;
+        padding: 0;
     }
 
     .frutos_subtitle {
@@ -248,26 +270,31 @@ body {
     }
 
     .frutos_description {
-        font-size: .8em;
-        line-height: 30px;
+        font-size: 0.95em;
+        line-height: 1.5;
     }
 
     .container_frutos2 {
         width: 60%;
-        margin: auto;
+        z-index: 1;
     }
 
     .imagen2_frutos {
-        width: 60%;
-        margin: auto;
+        width: 84%;
+        margin-left: auto;
     }
 
     .rectangle {
-        width: 100%;
+        width: 65%;
+        height: 28%;
+        margin-left: auto;
+        position: relative;
+        left: 4.5rem;
+        bottom: 20%;
     }
 
     .propiedades {
-        height: 100vh;
+        height: 100%;
     }
 
     .panfrutos_imagen {
@@ -275,6 +302,7 @@ body {
     }
 
     .image_description2 {
+        max-width: 1440px;
         padding: 1em 5em;
         gap: 10px;
     }
