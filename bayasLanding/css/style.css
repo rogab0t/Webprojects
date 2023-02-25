@@ -254,7 +254,7 @@ body {
     }
 
     .imagen1_frutos {
-        width: 70%;
+        width: 65%;
         padding: 0;
         margin-right: auto;
     }
@@ -270,8 +270,9 @@ body {
     }
 
     .frutos_description {
-        font-size: 0.95em;
-        line-height: 1.5;
+        font-weight: 300;
+        font-size: 0.95rem;
+        line-height: 2;
     }
 
     .container_frutos2 {
@@ -280,12 +281,12 @@ body {
     }
 
     .imagen2_frutos {
-        width: 84%;
+        width: 80%;
         margin-left: auto;
     }
 
     .rectangle {
-        width: 65%;
+        width: 63%;
         height: 28%;
         margin-left: auto;
         position: relative;
