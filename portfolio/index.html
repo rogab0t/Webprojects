@@ -92,6 +92,17 @@
   
   <footer class="footer" id="footer"> <!--Etiqueta de pie de pagina, posee un selector de clase-->
     <div class="footer__container"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+      <button class="mostrar__camara send">Tómate una foto con rei chiquita</button>
+      <div class="camera__container">
+        <div class="camara">
+          <canvas id="canvas"></canvas>
+          <video src="" controls class="video__source"></video>
+        </div>
+        <div class="buttons">
+          <button id="boton__foto" class="send">Tomar Foto</button>
+        </div>
+      </div>
+      
       <form class="footer__form"> <!--Etiqueta de formulario-->
         <label for="email" class="label__email">Email: <!--Etiqueta enlazadora para un elemento de formulario, posee los atributos de asociacion con el valor de un elemento con id, un selector de clase, y contiene texto-->
           <input type="email" placeholder="hello@gmail.com" id="email" class="form__email"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de email, el de texto demostrativo, un selector de identidad, y un selector de clase-->
@@ -101,7 +112,7 @@
           <textarea name="text" id="text" class="form__message"></textarea> <!--Etiqueta de area de texto, posee los atributos de nombre con el valor text, un selector de identidad, y un selector de clase-->
         </label>
         
-        <input type="submit" value="Enviar" class="form__send"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de entregar, el de valor, y un selector de clase-->
+        <input type="submit" value="Enviar" class="send"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de entregar, el de valor, y un selector de clase-->
       </form>
       
       <div class="contact"> <!--Etiqueta contenedora de bloque, posee un selector de clase, y uno de identidad-->
@@ -124,5 +135,6 @@
       </div>
     </div>
   </footer>
+  <script src="./js/app.js"></script>
 </body>
 </html>
