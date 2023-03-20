@@ -32,7 +32,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     position: fixed; /*Propiedad de posicion del elemento, con valor para ser fijo en el viewport*/
-    z-index: 10; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 1 para ser el primero en ser visible*/
+    z-index: 2; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el primero en ser visible*/
     overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para crear un scroll*/
 }
 
@@ -399,8 +399,8 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 /* photo */
 
-.mostrar__camara {
-    display: none;
+.mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
 }
 
 /* contact */
@@ -439,57 +439,52 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     transform: scale(1.1) translateY(-5px); /*Propiedad de transformacion, con valor para escalar el elemento en 1.1 veces su tamaño, y transladarlo en el eje "y" -5 pixeles*/
 }
 
-@media (max-width: 425px) {
+@media (max-width: 425px) { /*Mediaqueri para un maximo de ancho de dispositivo de 425px*/
     /* photo */
 
-    .mostrar__camara {
-        display: inline-block;
+    .mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
+        display: inline-block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de linea y bloque*/
     }
 
-    .camera__container {
-        flex-direction: column;
-        display: flex;
-        margin: 0 auto;
+    .camera__container { /*Selector de clase para el elemento HTML que lo posea*/
+        margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+        display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+        flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/ 
     }
 
-    .mostrar__camara {
-        width: 100%;
+    .mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     }
 
-    .camara {
-        position: relative;
-        display: inline-block;
-        width: 70vw;
-        aspect-ratio: 9/16;
-        overflow: hidden;
-        margin: 0 auto;
+    .camara { /*Selector de clase para el elemento HTML que lo posea*/
+        position: relative; /*Propiedad de posicion, con valor relativo*/
+        display: inline-block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de linea y bloque*/
+        width: 70vw; /*Propiedad de ancho, con valor del 70% del ancho visible del viewport*/
+        aspect-ratio: 9/16; /*Propiedad de relación de aspecto, con valores para 9 en eje "x" y 16 en eje "y"*/
+        overflow: hidden; /*Propiedad para la visibilidad del contenido dentro de un elemento, con el valor para mostrarlo hasta el final del contenedor sin dosbordar el contenido*/
+        margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
     }
 
-    #canvas {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        background-color: white;
+    #canvas { /*Selector de indentificador para el elemento HTML que lo posea*/
+        z-index: 1; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el segundo en ser visible*/
+        position: absolute; /*Propiedad de posicion, con valor absoluto*/
+        top: 0; /*Propiedad de posicion superior, con valor en 0 para quedar al inicio superior de su contenedor*/
+        left: 0; /*Propiedad de posicion izquierda, con valor en 0 para quedar al inicio izquierdo de su contenedor*/
+        display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+        background-color: #ffffff; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     }
 
-    .buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    .buttons { /*Selector de clase para el elemento HTML que lo posea*/
+        display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+        justify-content: center; /*Propiedad para alinear los elementos en el eje principal, con valor para centrarlos*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     }
 
-    #boton__foto {
-        width: 48%;
+    .video__source { /*Selector de clase para el elemento HTML que lo posea*/
+        display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
     }
 
-    #select__button {
-        position: relative;
-        bottom: -30px;
-        width: 48%;
-        background-color: white;
-        color: #4CAF50;
-        border: 1px solid #4CAF50;
+    #boton__foto { /*Selector de indentificador para el elemento HTML que lo posea*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     }
 }

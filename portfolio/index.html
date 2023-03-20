@@ -92,17 +92,17 @@
   
   <footer class="footer" id="footer"> <!--Etiqueta de pie de pagina, posee un selector de clase-->
     <div class="footer__container"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
-      <button class="mostrar__camara send">Tómate una foto con rei chiquita</button>
-      <div class="camera__container">
-        <div class="camara">
-          <canvas id="canvas"></canvas>
-          <video src="" controls class="video__source"></video>
+      <button class="mostrar__camara send">Tómate una foto con rei chiquita</button> <!--Etiqueta de botón, posee dos selectores de clase, y contiene texto-->
+      <div class="camera__container"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+        <div class="camara"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+          <canvas id="canvas"></canvas>  <!--Etiqueta de canvas, posee un selector de identificador-->
+          <video src="" controls class="video__source"></video>  <!--Etiqueta de video, posee los atributos de recursos con valores vacíos, el de controles para que se muestren los controles del reproductor, y posee un selector de clae-->
         </div>
-        <div class="buttons">
-          <button id="boton__foto" class="send">Tomar Foto</button>
+        <div class="buttons"> <!--Etiqueta contenedora de bloque, posee un selector de clase-->
+          <button id="boton__foto" class="send">Tomar Foto</button>  <!--Etiqueta de botón, posee un selectores de clase, un selector identificador, y contiene texto-->
         </div>
       </div>
-      
+
       <form class="footer__form"> <!--Etiqueta de formulario-->
         <label for="email" class="label__email">Email: <!--Etiqueta enlazadora para un elemento de formulario, posee los atributos de asociacion con el valor de un elemento con id, un selector de clase, y contiene texto-->
           <input type="email" placeholder="hello@gmail.com" id="email" class="form__email"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de email, el de texto demostrativo, un selector de identidad, y un selector de clase-->
@@ -135,6 +135,6 @@
       </div>
     </div>
   </footer>
-  <script src="./js/app.js"></script>
+  <script src="./js/app.js"></script> <!--Etiqueta de dinamismo mediante javascript, posee el atributo de recursos para obtener el archivo javascriptdesde su ruta-->
 </body>
 </html>
