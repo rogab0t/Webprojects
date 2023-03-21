@@ -81,4 +81,4 @@ botonFoto.addEventListener('click', function () { //A dicho elemento, se le apli
     video.srcObject.getTracks().forEach(track => track.stop()); //A dicho elemento, se accede a su objeto de recursos, al cual se le aplica el método de obtener una lista de los objetos MediaStreamTrack que son los flujos multimedia del elemento "video", a dicha lista se le aplica un ciclo forEach que itera por cada ojeto/track de flujos multimedia, ejecutando por cada uno, aplica el método de detener el flujo multimedia
     cameraContainer.style.display = "none"; //A dicho elemento, se accede a su propiedad de estilo, y a su propiedad de comportamiento de visualización, y se le asigna dicho valor para no mostralo
     buttonCamara.style.display = "inline-block"; //A dicho elemento, se accede a su propiedad de estilo, y a su propiedad de comportamiento de visualización, y se le asigna dicho valor para ser un elemento de línea y bloque
-  });
+});
