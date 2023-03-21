@@ -1,3 +1,5 @@
+// CAMERA FUNCTION //
+
 const body = document.querySelector('body'); //Declaración de constante, con valor asignado de obtener desde el docuemnto HTML, el elemento mediante su selector, el cual es el selector de tipo dentro de las comillas de los paréntesis
 const buttonCamara = document.querySelector('.mostrar__camara'); //Declaración de constante, con valor asignado de obtener desde el docuemnto HTML, el elemento mediante su selector, el cual es el selector de clase dentro de las comillas de los paréntesis
 const cameraContainer = document.querySelector('.camera__container'); //Declaración de constante, con valor asignado de obtener desde el docuemnto HTML, el elemento mediante su selector, el cual es el selector de clase dentro de las comillas de los paréntesis

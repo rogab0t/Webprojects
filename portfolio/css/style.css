@@ -33,7 +33,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     position: fixed; /*Propiedad de posicion del elemento, con valor para ser fijo en el viewport*/
     z-index: 2; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el primero en ser visible*/
-    overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para crear un scroll*/
+    overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
+    scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+}
+
+.nav::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
 }
 
 .nav__container { /*Selector de clase para el elemento HTML que lo posea*/
@@ -123,7 +128,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
     max-width: 340px; /*Propiedad de ancho maximo, con valor para no superar los 340 pixeles*/
     margin-left: auto; /*Propiedad para el margen izquierdo, con el valor de auto para que el elemento se coloque al extremo opuesto*/
-    overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para crear un scroll*/
+    overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
+    scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+}
+
+.hero__picture::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
 }
 
 .my__picture { /*Selector de clase para el elemento HTML que lo posea*/
@@ -134,12 +144,18 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* projects */
 
 .projects { /*Selector de clase para el elemento HTML que lo posea*/
-    overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para crear un scroll*/
+    overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
+    scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
     display: grid; /*Propiedad de comportamiento de visualizacion del elemento, con valor para hacer uso de grid*/
     align-content: center; /*Propiedad para alinear al grid-container horizontalmente, con valor para centrarlo*/
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*Propiedad para crear columnas de grid, con valor para que sean dinamicas utilizando la funcion para repetir, con los parametros de ajuste automatico, y la funcion para el tamaño de las columnas con un minimo y un maximo de tamaño*/
     grid-auto-rows: 320px; /*Propiedad para crear filas automaticas, con valor de 320 pixeles como tamaño minimo*/
     transition: 1s background-color; /*Propiedad de transicion, con valor de 1 segundo, y para ser aplicado a la propiedad background-color*/
+    background-image: linear-gradient(to right, #FFFFFF, var(--light-gray));
+}
+
+.projects::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
 }
 
 .projects:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
