@@ -6,19 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio de modelo, fergie grau">
     <title>FergieGrau</title>
-    <link rel="stylesheet" href="./css/movile.css" media="(max-width: 768px)">
-    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="./css/movile.css" media="(max-width: 1023px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1024px)">
     <link rel="icon" type="image/png" sizes="60x60" href="./images/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1ZG82RVKY"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B1ZG82RVKY');
+</script>
 <body>
     <header class="hero" id="hero">
         <figure class="figure__container">
             <img src="./images/fergie_grau.png" alt="fergie de frente en blanco y negro" class="hero__image">
             <div class="text__container">
-                <p class="title">Fergie Grau</p>
+                <p class="title">Fergie</p>
+                <p class="title">Grau</p>
                 <p class="subtitle">model</p>
             </div>
         </figure>
@@ -27,6 +36,8 @@
     <main class="main" id="main">
         <nav class="nav">
             <svg width="24" height="16" viewBox="0 0 24 16" class="nav__menu"><path d="M0 1.66632C0 1.11403 0.44772 0.666321 1 0.666321H23C23.5523 0.666321 24 1.11403 24 1.66632C24 2.2186 23.5523 2.66632 23 2.66632H1C0.44772 2.66632 0 2.2186 0 1.66632Z" fill="black"/><path d="M1 6.99957C0.44772 6.99957 0 7.44731 0 7.99957C0 8.55184 0.44772 8.99957 1 8.99957H23C23.5523 8.99957 24 8.55184 24 7.99957C24 7.44731 23.5523 6.99957 23 6.99957H1Z" fill="black"/><path d="M0 14.333C0 13.7806 0.44772 13.333 1 13.333H23C23.5523 13.333 24 13.7806 24 14.333C24 14.8853 23.5523 15.333 23 15.333H1C0.44772 15.333 0 14.8853 0 14.333Z" fill="black"/></svg>
+
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="cross__menu"><path d="M18.0161 0.571546C18.4067 0.181026 19.0397 0.181026 19.4303 0.571546C19.8208 0.962079 19.8208 1.59524 19.4303 1.98576L11.4164 9.99961L19.4303 18.0135C19.8208 18.404 19.8208 19.0372 19.4303 19.4277C19.0397 19.8183 18.4067 19.8183 18.0161 19.4277L10.0021 11.4139L1.98836 19.4276C1.93955 19.4765 1.88694 19.5192 1.83148 19.5559C1.44334 19.8121 0.915857 19.7693 0.57415 19.4276C0.183617 19.0372 0.183617 18.404 0.57415 18.0135L8.588 9.99961L0.57415 1.98583C0.18363 1.59531 0.18363 0.962133 0.57415 0.571613C0.96467 0.181093 1.59784 0.181093 1.98836 0.571613L10.0021 8.58548L18.0161 0.571546Z" fill="black"/></svg>
             <div class="nav__container">
                 <div class="nav__list">
                     <div class="nav__logo__container show__hero">
@@ -73,19 +84,19 @@
             </div>
             <div class="image__container">
                 <div class="image__light" id="light">  
-                    <img src="./images/fergiegrau_01.png" alt="fergie sentada en blanco y negro">
-                    <img src="./images/fergiegrau_02.png" alt="fergie mirando en blanco y negro">
-                    <img src="./images/fergiegrau_03.png" alt="fergie posando, cuerpo completo en blanco y negro">
-                    <img src="./images/fergiegrau_04.png" alt="fergie sentado mirando, en blanco y negro">
-                    <img src="./images/fergiegrau_05.png" alt="fergie de frente desde los hombros en blanco y negro">
+                    <img class="modelImage" src="./images/fergiegrau_01.png" alt="fergie sentada en blanco y negro">
+                    <img class="modelImage" src="./images/fergiegrau_02.png" alt="fergie mirando en blanco y negro">
+                    <img class="modelImage" src="./images/fergiegrau_03.png" alt="fergie posando, cuerpo completo en blanco y negro">
+                    <img  class="modelImage"src="./images/fergiegrau_04.png" alt="fergie sentado mirando, en blanco y negro">
+                    <img  class="modelImage"src="./images/fergiegrau_05.png" alt="fergie de frente desde los hombros en blanco y negro">
                 </div>
                 <div class="image__dark" id="dark" style="display: none;">
-                    <img src="./images/fergiegrau_color_01.png" alt="fergie con bestido blanco con un ramo de rosas">
-                    <img src="./images/fergiegrau_color_02.png" alt="fergie con vestido negro y viento">
-                    <img src="./images/fergiegrau_color_03.png" alt="fergie con saco rosa y una manzana">
-                    <img src="./images/fergiegrau_color_04.png" alt="fergie con vestino negro y fondo rosa">
-                    <img src="./images/fergiegrau_color_05.png" alt="fergie sentada posando">
-                    <img src="./images/fergiegrau_color_06.png" alt="fergie con vestido negro y viento">
+                    <img class="modelImage" src="./images/fergiegrau_color_01.png" alt="fergie con bestido blanco con un ramo de rosas">
+                    <img class="modelImage" src="./images/fergiegrau_color_02.png" alt="fergie con vestido negro y viento">
+                    <img class="modelImage" src="./images/fergiegrau_color_03.png" alt="fergie con saco rosa y una manzana">
+                    <img class="modelImage" src="./images/fergiegrau_color_04.png" alt="fergie con vestino negro y fondo rosa">
+                    <img class="modelImage" src="./images/fergiegrau_color_05.png" alt="fergie sentada posando">
+                    <img class="modelImage"src="./images/fergiegrau_color_06.png" alt="fergie con vestido negro y viento">
                 </div>
             </div>
             <svg class="arrow__svg" width="45" height="45" viewBox="0 0 24 24"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>

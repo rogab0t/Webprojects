@@ -8,6 +8,7 @@ const header = document.querySelector('.hero');
 const buttonsLogo = document.querySelectorAll(".show__hero");
 
 window.addEventListener('load', () => {
+    checkTheme();
     setTimeout(() => {
         header.classList.add('hidde');
     }, 2000);
@@ -39,10 +40,12 @@ buttonsLogo[1].addEventListener('click', () => {
 const navContainer = document.querySelector(".nav__container");
 const iconoMenu = document.querySelector(".nav__menu");
 const navMenu = document.querySelector(".nav__list");
+const crossMenu = document.querySelector(".cross__menu");
 
 function showMainMenu() {
     iconoMenu.classList.toggle("nav__menu--show");
     navMenu.classList.toggle("nav__list--show");
+    crossMenu.classList.toggle("cross__menu--show");
     switchColor.classList.toggle("switch__theme--show");
     navContainer.classList.toggle("nav__container--show");
     projectsButtons[0].style.textDecoration = "underline";
@@ -72,17 +75,59 @@ iconoMenuFooter.addEventListener('click', showFooterMenu);
 const main = document.querySelector('.main');
 const projectsImagesLight = document.querySelectorAll(".image__light img");
 const projectsImagesDark = document.querySelectorAll(".image__dark img");
+const allImagesModel = document.querySelectorAll(".modelImage");
 
 projectsImagesLight.forEach((image) => {
-    image.addEventListener('click', () => {
-        image.classList.toggle("showImage");
+    image.addEventListener('click', (ev) => {
+        ev.currentTarget.classList.add("showImage");
+        iconoMenu.classList.add("nav__menu--show");
+        switchColor.classList.add("switch__theme--show");
+        crossMenu.classList.add("cross__menu--show");
+
+        /*if (image.classList.contains("showImage") && !document.querySelector(".fake")) {
+            buildFakeElement(imageLightContainer, imageLightContainer.querySelector(".modelImage"));
+        }*/
     });
 });
 
 projectsImagesDark.forEach((image) => {
-    image.addEventListener('click', () => {
-        image.classList.toggle("showImage");
+    image.addEventListener('click', (ev) => {
+        ev.currentTarget.classList.add("showImage");
+        iconoMenu.classList.add("nav__menu--show");
+        switchColor.classList.add("switch__theme--show");
+        crossMenu.classList.add("cross__menu--show");
+
+        /*if (image.classList.contains("showImage") && !document.querySelector(".fake")) {
+            buildFakeElement(imageDarkContainer, imageDarkContainer.querySelector(".modelImage"));
+        }*/
     });
+});
+
+/*
+function buildFakeElement(imageContainer, zoomImage) {
+    fakeElement = document.createElement("div");
+    fakeElement.style.height = window.getComputedStyle(zoomImage).getPropertyValue('height');
+    fakeElement.style.width = window.getComputedStyle(zoomImage).getPropertyValue('width');
+    fakeElement.classList.add("fake");
+
+    imageContainer.appendChild(fakeElement);
+}
+*/
+
+crossMenu.addEventListener('click', () => {
+    allImagesModel.forEach((image) => {
+        if (image.classList.contains("showImage")) {
+            image.classList.remove("showImage");
+            iconoMenu.classList.toggle("nav__menu--show");
+            switchColor.classList.toggle("switch__theme--show");
+            crossMenu.classList.toggle("cross__menu--show");
+            /*document.querySelectorAll(".fake").forEach((element) => {
+                element.remove()
+            })*/
+        } else {
+            showMainMenu();
+        }
+    })
 });
 
 /* show sections */
@@ -175,18 +220,18 @@ function changeToDarkMode() {
     darkImages.style.display = "flex";
 }
 
-switchColor.addEventListener('click', function () {
+function checkTheme() {
     if (isUsingDarkMode()) {
         changeToLightMode();
     } else if (!isUsingDarkMode()) {
         changeToDarkMode();
     }
-});
+}
+
+switchColor.addEventListener('click', checkTheme);
 
 /* move carrusel */
 
-const imageLight = document.querySelector(".image__light img");
-const imageDark = document.querySelector(".image__dark img");
 const arrowSvgDeskL = document.querySelector(".arrow__svg__deskL");
 const arrowSvgDeskR = document.querySelector(".arrow__svg__deskR");
 const imageLightContainer = document.querySelector(".image__light");
@@ -198,66 +243,80 @@ class Slider {
         this.moveByButtonLeft = this.moveByButtonLeft.bind(this);
         this.moveByButtonRight = this.moveByButtonRight.bind(this);
         this.sizeMove = 0;
-
+        this.isFunctionRunning = false;
+        
         this.bindEvents();
     }
 
     bindEvents() {
         arrowSvgDeskL.addEventListener("click", () => {
-            if (!isUsingDarkMode()) {
-                this.moveByButtonRight(imageLightContainer, "." + imageLightContainer.classList[0]);
-            } else if (isUsingDarkMode()) {
-                this.moveByButtonRight(imageDarkContainer, "." + imageDarkContainer.classList[0]);
+            if (this.isFunctionRunning) {
+                return;
             }
-        });
+            this.isFunctionRunning = true;
 
-        arrowSvgDeskR.addEventListener("click", () => {
             if (!isUsingDarkMode()) {
                 this.moveByButtonLeft(imageLightContainer, "." + imageLightContainer.classList[0]);
-
             } else if (isUsingDarkMode()) {
                 this.moveByButtonLeft(imageDarkContainer, "." + imageDarkContainer.classList[0]);
             }
         });
-    }   
+
+        arrowSvgDeskR.addEventListener("click", () => {
+            if (this.isFunctionRunning) {
+                return;
+            }
+            this.isFunctionRunning = true;
+            
+            if (!isUsingDarkMode()) {
+                this.moveByButtonRight(imageLightContainer, "." + imageLightContainer.classList[0]);
+
+            } else if (isUsingDarkMode()) {
+                this.moveByButtonRight(imageDarkContainer, "." + imageDarkContainer.classList[0]);
+            }
+        });
+    }
     
-    moveByButtonLeft(container, containerSelector) {
-        console.log("L")
-        console.log(containerSelector)
-        if (container.offsetLeft >= imageContainer.offsetLeft) {
-            return
+    moveByButtonLeft(containerImages, containerSelector) {
+        if (containerImages.getBoundingClientRect().left < imageContainer.getBoundingClientRect().left) {
+            this.sizeMove = this.sizeMove - 12;
+            this.moveToL(this.sizeMove, containerSelector);
         } else {
-            this.moveToL(this.sizeMove + 1, containerSelector);
-            //this.sizeMove--
-            console.log(this.sizeMove)
+            this.sizeMove = 12;
+            arrowSvgDeskR.style.opacity = "1";
+            arrowSvgDeskL.style.opacity = "0.5";
         }
+
+        setTimeout(() => {
+            this.isFunctionRunning = false;
+        }, 500);
     }
 
-    moveByButtonRight(container, containerSelector) {
-        console.log("R")
-        console.log(containerSelector)
-        if (((container.offsetLeft > 0))) {
-            return
-        } else {
+    moveByButtonRight(containerImages, containerSelector) {
+        if (containerImages.getBoundingClientRect().right >= imageContainer.getBoundingClientRect().right) {
+            this.sizeMove = this.sizeMove + 12;
             this.moveToR(this.sizeMove, containerSelector);
-            //this.sizeMove++
-            console.log(this.sizeMove)
-        } 
+        } else {
+            this.sizeMove = 12;
+            arrowSvgDeskR.style.opacity = "0.5";
+            arrowSvgDeskL.style.opacity = "1";
+        }
+
+        setTimeout(() => {
+            this.isFunctionRunning = false;
+        }, 500);
     }
 
     moveToR(sizeMove, containerSelector) {
-        let left = sizeMove;
-        this.slider.querySelector(containerSelector).style.left = "+"+left+"vw";
+        this.slider.querySelector(containerSelector).style.transform = `translateX(${"-" + sizeMove}%)`;
     }
 
     moveToL(sizeMove, containerSelector) {
-        let left = sizeMove * 70;
-        this.slider.querySelector(containerSelector).style.left = "-"+left+"vw";
+        this.slider.querySelector(containerSelector).style.transform = `translateX(${"-" + sizeMove}%)`;
     }
 }
 
 function moveSlider() {
     new Slider(".image__container");
 }
-
 moveSlider();
