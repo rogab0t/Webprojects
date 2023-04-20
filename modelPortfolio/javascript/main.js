@@ -2,10 +2,42 @@ const projectsButtons = document.querySelectorAll(".nav__link.projects");
 const aboutButtons = document.querySelectorAll(".nav__link.about");
 const footer = document.querySelector(".footer");
 
-/* header */
-
 const header = document.querySelector('.hero');
 const buttonsLogo = document.querySelectorAll(".show__hero");
+
+const navContainer = document.querySelector(".nav__container");
+const iconoMenu = document.querySelector(".nav__menu");
+const navMenu = document.querySelector(".nav__list");
+const crossMenu = document.querySelector(".cross__menu");
+
+const navContainerFooter = document.querySelector(".nav__container__footer");
+const iconoMenuFooter = document.querySelector(".nav__menu__footer");
+const socialListContainer = document.querySelector(".social__list__container");
+const navMenuFooter = document.querySelector(".nav__list__footer");
+
+const main = document.querySelector('.main');
+const projectsImagesLight = document.querySelectorAll(".image__light img");
+const projectsImagesDark = document.querySelectorAll(".image__dark img");
+const allImagesModel = document.querySelectorAll(".modelImage");
+
+const imageContainer = document.querySelector('.image__container');
+const containerAbout = document.querySelector('.container__about');
+const arrowSvg = document.querySelector('.arrow__svg');
+const arrowSvgFooter = document.querySelector('.arrow__svg__footer');
+
+const darkImages = document.getElementById('dark');
+const lightImages = document.getElementById('light');
+const switchColor = document.querySelector('.switch__theme');
+
+const arrowSvgDeskL = document.querySelector(".arrow__svg__deskL");
+const arrowSvgDeskR = document.querySelector(".arrow__svg__deskR");
+const imageLightContainer = document.querySelector(".image__light");
+const imageDarkContainer = document.querySelector(".image__dark");
+
+let mainStyles = window.getComputedStyle(main);
+let footerStyles = window.getComputedStyle(footer);
+
+/* header */
 
 window.addEventListener('load', () => {
     checkTheme();
@@ -37,11 +69,6 @@ buttonsLogo[1].addEventListener('click', () => {
 
 /* menú main*/
 
-const navContainer = document.querySelector(".nav__container");
-const iconoMenu = document.querySelector(".nav__menu");
-const navMenu = document.querySelector(".nav__list");
-const crossMenu = document.querySelector(".cross__menu");
-
 function showMainMenu() {
     iconoMenu.classList.toggle("nav__menu--show");
     navMenu.classList.toggle("nav__list--show");
@@ -55,11 +82,6 @@ iconoMenu.addEventListener('click', showMainMenu);
 
 /* menú footer */
 
-const navContainerFooter = document.querySelector(".nav__container__footer");
-const iconoMenuFooter = document.querySelector(".nav__menu__footer");
-const socialListContainer = document.querySelector(".social__list__container");
-const navMenuFooter = document.querySelector(".nav__list__footer");
-
 function showFooterMenu() {
     iconoMenuFooter.classList.toggle("nav__menu__footer--show");
     socialListContainer.classList.toggle("social__list__container--show");
@@ -72,21 +94,12 @@ iconoMenuFooter.addEventListener('click', showFooterMenu);
 
 /* main */
 
-const main = document.querySelector('.main');
-const projectsImagesLight = document.querySelectorAll(".image__light img");
-const projectsImagesDark = document.querySelectorAll(".image__dark img");
-const allImagesModel = document.querySelectorAll(".modelImage");
-
 projectsImagesLight.forEach((image) => {
     image.addEventListener('click', (ev) => {
         ev.currentTarget.classList.add("showImage");
         iconoMenu.classList.add("nav__menu--show");
         switchColor.classList.add("switch__theme--show");
         crossMenu.classList.add("cross__menu--show");
-
-        /*if (image.classList.contains("showImage") && !document.querySelector(".fake")) {
-            buildFakeElement(imageLightContainer, imageLightContainer.querySelector(".modelImage"));
-        }*/
     });
 });
 
@@ -96,23 +109,8 @@ projectsImagesDark.forEach((image) => {
         iconoMenu.classList.add("nav__menu--show");
         switchColor.classList.add("switch__theme--show");
         crossMenu.classList.add("cross__menu--show");
-
-        /*if (image.classList.contains("showImage") && !document.querySelector(".fake")) {
-            buildFakeElement(imageDarkContainer, imageDarkContainer.querySelector(".modelImage"));
-        }*/
     });
 });
-
-/*
-function buildFakeElement(imageContainer, zoomImage) {
-    fakeElement = document.createElement("div");
-    fakeElement.style.height = window.getComputedStyle(zoomImage).getPropertyValue('height');
-    fakeElement.style.width = window.getComputedStyle(zoomImage).getPropertyValue('width');
-    fakeElement.classList.add("fake");
-
-    imageContainer.appendChild(fakeElement);
-}
-*/
 
 crossMenu.addEventListener('click', () => {
     allImagesModel.forEach((image) => {
@@ -121,9 +119,6 @@ crossMenu.addEventListener('click', () => {
             iconoMenu.classList.toggle("nav__menu--show");
             switchColor.classList.toggle("switch__theme--show");
             crossMenu.classList.toggle("cross__menu--show");
-            /*document.querySelectorAll(".fake").forEach((element) => {
-                element.remove()
-            })*/
         } else {
             showMainMenu();
         }
@@ -131,9 +126,6 @@ crossMenu.addEventListener('click', () => {
 });
 
 /* show sections */
-
-let mainStyles = window.getComputedStyle(main);
-let footerStyles = window.getComputedStyle(footer);
 
 function showMain() {
     main.classList.remove("hidde");
@@ -175,11 +167,6 @@ aboutButtons.forEach((button) => {
 
 /* show down arrows */
 
-const imageContainer = document.querySelector('.image__container');
-const containerAbout = document.querySelector('.container__about');
-const arrowSvg = document.querySelector('.arrow__svg');
-const arrowSvgFooter = document.querySelector('.arrow__svg__footer');
-
 function hiddeArrow(element, arrow) {
     element.addEventListener('scroll', () => {
         if (element.scrollTop + element.clientHeight >= (element.scrollHeight/1.03)) {
@@ -194,10 +181,6 @@ hiddeArrow(imageContainer, arrowSvg);
 hiddeArrow(containerAbout, arrowSvgFooter);
 
 /* dark mode */
-
-const darkImages = document.getElementById('dark');
-const lightImages = document.getElementById('light');
-const switchColor = document.querySelector('.switch__theme');
 
 function isUsingDarkMode() {
     let mainBackgroudColor = mainStyles.backgroundColor
@@ -231,11 +214,6 @@ function checkTheme() {
 switchColor.addEventListener('click', checkTheme);
 
 /* move carrusel */
-
-const arrowSvgDeskL = document.querySelector(".arrow__svg__deskL");
-const arrowSvgDeskR = document.querySelector(".arrow__svg__deskR");
-const imageLightContainer = document.querySelector(".image__light");
-const imageDarkContainer = document.querySelector(".image__dark");
 
 class Slider {
     constructor(selector) {
