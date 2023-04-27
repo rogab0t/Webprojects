@@ -27,10 +27,10 @@ links.forEach(link => {
         
         document.querySelector(".menu__screen").classList.remove("active");
 
-        let paths = ev.currentTarget.href.split("/");
+        let paths = ev.currentTarget.href.split("#");
         let selector = paths[paths.length - 1];
        
-        scrollToElement(document.querySelector(selector));
+        scrollToElement(document.querySelector("#" + selector));
 
         return !!window.scrollTo;
     })
