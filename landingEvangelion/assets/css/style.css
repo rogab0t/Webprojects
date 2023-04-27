@@ -311,11 +311,11 @@ img {
 
 .controls .left__arrow, .controls .right__arrow {
     height: 70px;
+    cursor: pointer;
     transition: all 0.3s ease-out;
 }
 
-.controls .left__arrow:hover, .controls .right__arrow:hover {
-    cursor: pointer;
+.controls .left__arrow:active, .controls .right__arrow:active {
     opacity: 0.2;
 }
 
@@ -436,7 +436,6 @@ img {
 #map {
     position: relative;
     margin-top: var(--big-margin);
-    z-index: -1;
 }
 
 .mapa{
@@ -495,6 +494,10 @@ img {
         gap: 1.5em;
         padding-right: 1em;
         transform: translateY(0);
+    }
+
+    .controls .left__arrow:hover, .controls .right__arrow:hover {
+        opacity: 0.2;
     }
 
     .slider {
