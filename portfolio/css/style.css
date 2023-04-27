@@ -192,7 +192,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .gallery__img--5 { /*Selector de clase modificador para el elemento HTML que lo posea*/
-    background-image: url(../images/proyecto-1-02.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+    background-image: url(../images/proyecto-5-01.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
 }
 
 .gallery__img--6 { /*Selector de clase modificador para el elemento HTML que lo posea*/
