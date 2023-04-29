@@ -21,8 +21,16 @@ export default class Slider {
 
     innerPrev() {
         this.index--;
-        if (this.index < 0) this.index = this.elements.length - 1;
+        if (this.index < 0) this.index = this.size - 1;
         this.animationFunc(this.elements[this.index]);
+    }
+
+    play() {
+        this.interval = setInterval(this.innerNext, this.speed);
+    }
+
+    stop() {
+        clearInterval(this.interval);
     }
 
     next() {
@@ -39,13 +47,5 @@ export default class Slider {
             this.stop();
             this.play();
         }
-    }
-
-    play() {
-        this.interval = setInterval(this.innerNext, this.speed);
-    }
-
-    stop() {
-        clearInterval(this.interval);
     }
 }

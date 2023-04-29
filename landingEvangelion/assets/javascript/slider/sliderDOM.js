@@ -6,7 +6,7 @@ const textContent = document.getElementById("slider__text__content");
 const sliderText = document.getElementById("slider__text");
 const sliderTitle = document.getElementById("slider__title");
 const sliderSubTitle = document.getElementById("slider__subtitle");
-const sliderImage = document.getElementById("slider__image");
+const sliderImage = document.getElementById("slider__image")
 
 const controls =  document.querySelector(".controls");
 const leftArrow = document.querySelector(".left__arrow");
@@ -28,7 +28,7 @@ let slider = new Slider({
             sliderImage.classList.remove("hide");
         }, 600);
     },
-    speed: 5000
+    speed: 10000
 });
 
 slider.play();
