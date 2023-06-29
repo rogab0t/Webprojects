@@ -82,3 +82,78 @@ botonFoto.addEventListener('click', function () { //A dicho elemento, se le apli
     cameraContainer.style.display = "none"; //A dicho elemento, se accede a su propiedad de estilo, y a su propiedad de comportamiento de visualización, y se le asigna dicho valor para no mostralo
     buttonCamara.style.display = "inline-block"; //A dicho elemento, se accede a su propiedad de estilo, y a su propiedad de comportamiento de visualización, y se le asigna dicho valor para ser un elemento de línea y bloque
 });
+
+// COMENTS FUNCTION //
+
+const footerForm = document.querySelector(".footer__form");
+const commentsInput = document.querySelector(".comments__input");
+const commentButton = document.querySelector(".submit__button");
+const commentsList = document.querySelector(".comments__list");
+
+function deleteComment(e) {
+    commentsList.removeChild(e.target.parentNode.parentNode);
+}
+
+function editComment(comment, commentLi, buttonEdit, commentsButtons) {
+    comment.style.display = "none";
+    buttonEdit.style.display = "none";
+
+    let newTextInput = document.createElement('input');
+    newTextInput.type = "text";
+    newTextInput.className = "comments__input";
+
+    let buttonFinishEdit = document.createElement("button");
+    buttonFinishEdit.className = "comment__buttons";
+    buttonFinishEdit.textContent = "Finalizar";
+
+    commentsButtons.insertBefore(buttonFinishEdit, commentsButtons.firstChild)
+
+    commentLi.insertBefore(newTextInput, commentLi.firstChild);
+
+    buttonFinishEdit.addEventListener('click', () => {
+        comment.textContent = newTextInput.value;
+        comment.style.display = "block";
+        newTextInput.style.display = "none";
+        buttonEdit.style.display = "block";
+        buttonFinishEdit.style.display = "none";
+    });
+}
+
+function createComment(commentValue) {
+    let commentLi = document.createElement('li');
+    commentLi.className = "comment__li";
+
+    let commentP = document.createElement('p');
+    commentP.className = "comment__p";
+    commentP.textContent = commentValue;
+
+    let divButtons = document.createElement('div');
+    divButtons.className = "buttonsComments";
+
+    let commentButtonEdit = document.createElement('button');
+    commentButtonEdit.className = "comment__buttons";
+    commentButtonEdit.textContent = "Editar";
+
+    let commentButtonDelete = document.createElement('button');
+    commentButtonDelete.className = "comment__buttons";
+    commentButtonDelete.textContent = "Eliminar";
+
+    divButtons.append(commentButtonEdit, commentButtonDelete);
+
+    commentLi.append(commentP, divButtons);
+
+    commentsList.appendChild(commentLi);
+
+    commentButtonDelete.addEventListener('click', deleteComment);
+    commentButtonEdit.addEventListener('click', () => {
+        editComment(commentP, commentLi, commentButtonEdit, divButtons);
+    });
+ }
+
+footerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let comment = commentsInput.value;
+    createComment(comment);
+
+    e.target.reset(); //Al elemento que ejecutó el evento, el cual es el formulario y el evento es 'submit', se le aplica el método de resetear los valores de los campos del formulario después de que se envía el formulario.
+});

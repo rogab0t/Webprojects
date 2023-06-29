@@ -119,7 +119,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .paragraph__3 { /*Selector de clase para el elemento HTML que lo posea*/
-    padding-top: .5rem; /*Propiedad de margen interno superior, con valor de .5 veces el tamaño de fuente raiz del documento HTML*/
+    padding-top: .5rem; /*Propiedad de margen interno superior, con valor de .5 veces el tamaño de fuente raiz del docdumento HTML*/
     font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
     font-size: 1.1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1.1 veces el tamaño de fuente raiz del documento HTML*/
 }
@@ -325,48 +325,79 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
     flex-wrap: wrap; /*Propiedad de nuevas lineas por elementos desbordados, con valor para crear nuevas lineas*/
     justify-content: space-between; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
-    align-items: center; /*Propiedad para alinear respecto al eje secundario, con valor para centrar*/
     gap: 4rem; /*Propiedad de espaciado entre elementos, con valor de 4 veces el tamaño de fuente del padre*/
 }
 
-.footer__form { /*Selector de clase para el elemento HTML que lo posea*/
+.form__container {
+    display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
+    flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+    gap: 20px; /*Propiedad de separació entre los felx-itemscon valor de 20 pixeles*/
     width: 458px; /*Propiedad de ancho, con valor de 458 pixeles*/
-    height: 335px; /*Propiedad de alto, con valor de 335 pixeles*/
+    max-width: 100%; /*Propiedad de ancho máximo, con valor del 100% de su contenedor*/
+    height: 100%; /*Propiedad de alto con valor del 100% de su contenedor*/
     padding: 1.8rem; /*Propiedad de margen interno, con valor de 1.8 veces el tamaño de fuente raiz del HTML a todos los lados*/
     margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
     background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.1); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 40 pixeles en eje "y", 80px de difuminado, y de color en valor de rgba*/
 }
 
-.label__email { /*Selector de clase para el elemento HTML que lo posea*/
+.footer__form { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
+}
+
+.comments__input { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
     height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
     padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML a todos los lados*/
-    margin-bottom: 1rem; /*Propiedad de margen externo inferior, con valor de 1 vez el tamaño de fuente raiz del HTML*/
     background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
-    color: var(--gray); /*Propiedad de color del texto, con valor de propiedad personalizada*/
     border: 1px solid var(--gray); /*Propiedad de borde, con valor de 1 pixel de ancho, solido, y de color de una propiedad personalizada*/
     font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
     font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
-    font-size: .7rem; /*Propiedad de tamaña de fuene de letra, con valor de .7 veces el tamaño de fuente raiz del documento HTML*/
-    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
 }
 
-.form__email { /*Selector de clase para el elemento HTML que lo posea*/
-    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
-    padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen interno*/
-    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
-    border: none; /*Propiedad de borde, con valor none para no tener borde*/
-    background-color: transparent; /*Propiedad de color de fondo, con valor para ser transparente*/
-    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
-}
-
-.form__email::placeholder { /*Selector de clase al cual se le aplica el pseudo elemento de texto demostrativo de dicho selector de clase*/
+.comments__input::placeholder { /*Selector de clase al cual se le aplica el pseudo elemento de texto demostrativo de dicho selector de clase*/
     color: var(--gray); /*Propiedad de color del texto, con valor de propiedad personalizada*/
 }
 
-.form__email:focus { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento de dicho selector de clase*/
+.comments__input:focus { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento de dicho selector de clase*/
     outline: 1px solid var(--gray); /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color de una propiedad personalizada*/
     font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+}
+
+.comments__list {
+    height: auto;
+    max-height: 115px;
+    overflow: scroll;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment__li {
+    list-style: none;
+    padding: 3%;
+    background-color: var(--light-gray);
+}
+
+.comment__p {
+    word-wrap: break-word;
+}
+
+.buttonsComments {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1%;
+}
+
+.comment__buttons {
+    height: 30px;
+    width: 60px;
+    border: none;
+    color: #FFFFFF;
+    background-color: var(--green);
+    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2);
 }
 
 .label__message { /*Selector de clase para el elemento HTML que lo posea*/
@@ -404,9 +435,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .send { /*Selector de clase para el elemento HTML que lo posea*/
-    position: relative; /*Propiedad de posicion, con valor relativo*/
-    bottom: -30px; /*Propiedad de posicion inferior, con valor de -30 pixeles para desplazarlo mas abajo de dicha posicion*/
-    height: 40px; /*Propiedad de alto, con valor de 40 pixeles*/
+    height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
     width: 120px; /*Propiedad de ancho, con valor de 120 pixeles*/
     border: none; /*Propiedad de borde, con valor none para no tener borde*/
     color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/

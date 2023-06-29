@@ -112,18 +112,14 @@
         </div>
       </div>
 
-      <form class="footer__form"> <!--Etiqueta de formulario-->
-        <label for="email" class="label__email">Email: <!--Etiqueta enlazadora para un elemento de formulario, posee los atributos de asociacion con el valor de un elemento con id, un selector de clase, y contiene texto-->
-          <input type="email" placeholder="hello@gmail.com" id="email" class="form__email"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de email, el de texto demostrativo, un selector de identidad, y un selector de clase-->
-        </label>
+      <div class="form__container">
+        <form class="footer__form"> <!--Etiqueta de formulario-->
+          <input type="text" id="comment" class="comments__input" placeholder="Agregar comentario..." required> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de texto, un selector de identidad, un selector de clase, el de texto demostrativo-->
+          <input type="submit" value="Enviar" class="send submit__button"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de entregar, el de valor, y un selector de clase-->
+        </form>
+        <ul class="comments__list"></ul>
+      </div>
 
-        <label for="text" class="label__message"> Message <!--Etiqueta enlazadora para un elemento de formulario, posee los atributos de asociacion con el valor de un elemento con id, un selector de clase, y contiene texto-->
-          <textarea name="text" id="text" class="form__message"></textarea> <!--Etiqueta de area de texto, posee los atributos de nombre con el valor text, un selector de identidad, y un selector de clase-->
-        </label>
-        
-        <input type="submit" value="Enviar" class="send"> <!--Etiqueta de ingreso de datos, posee los atributos de tipo con el valor de entregar, el de valor, y un selector de clase-->
-      </form>
-      
       <div class="contact"> <!--Etiqueta contenedora de bloque, posee un selector de clase, y uno de identidad-->
         <h2 class="footer__title">Hablemos</h2> <!--Etiqueta de subtitulo, posee un selector de clase, y contiene texto-->
         <p class="footer__paragraph paragraph">Envíame un mensaje diciendome que es lo que necesitas y lo creamos.</p> <!--Etiqueta de parrafo, posee dos selectores de clase, y contiene texto-->
