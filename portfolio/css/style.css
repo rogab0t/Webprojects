@@ -328,7 +328,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     gap: 4rem; /*Propiedad de espaciado entre elementos, con valor de 4 veces el tamaño de fuente del padre*/
 }
 
-.form__container {
+.form__container { /*Selector de clase para el elemento HTML que lo posea*/
     display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
     flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
     gap: 20px; /*Propiedad de separació entre los felx-itemscon valor de 20 pixeles*/
@@ -365,39 +365,39 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
 }
 
-.comments__list {
-    height: auto;
-    max-height: 115px;
-    overflow: scroll;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.comments__list { /*Selector de clase para el elemento HTML que lo posea*/
+    height: auto; /*Propiedad de alto, con valo auto para que sea del alto de su contenido*/
+    max-height: 115px; /*Propiedad de alto máximo, con valor de 115 pixeles*/
+    overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento*/
+    padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
+    display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+    gap: 20px; /*Propiedad de separación entre flex-items, con valor de 20 pixeles*/
 }
 
-.comment__li {
-    list-style: none;
-    padding: 3%;
-    background-color: var(--light-gray);
+.comment__li { /*Selector de clase para el elemento HTML que lo posea*/
+    list-style: none; /*Propiedad de estilo de listas, con valor none para no tener estilo*/
+    padding: 3%; /*Propiedad de margen interno, con valor del 3% de su contendor*/
+    background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
 }
 
-.comment__p {
-    word-wrap: break-word;
+.comment__p { /*Selector de clase para el elemento HTML que lo posea*/
+    word-wrap: break-word; /*Propiedad de ajuste de línea de palabras con valor para hacer un salto de línea para no desbordar el contenido*/
 }
 
-.buttonsComments {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1%;
+.buttonsComments { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    justify-content: flex-end; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al final del eje*/
+    gap: 1%; /*Propiedad de separación entre flex-items, con valor del 1% de su contenedor*/
 }
 
-.comment__buttons {
-    height: 30px;
-    width: 60px;
-    border: none;
-    color: #FFFFFF;
-    background-color: var(--green);
-    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2);
+.comment__buttons { /*Selector de clase para el elemento HTML que lo posea*/
+    height: 30px; /*Propiedade alto, con valor de 30 pixeles*/
+    width: 60px; /*Propiedade ancho, con valor de 60 pixeles*/
+    border: none; /*Propiedad de borde, con valor none para no tener borde*/
+    color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
+    background-color: var(--green); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
 }
 
 .label__message { /*Selector de clase para el elemento HTML que lo posea*/
