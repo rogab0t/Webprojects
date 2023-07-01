@@ -91,10 +91,10 @@ const commentButton = document.querySelector(".submit__button"); //Declaración 
 const commentsList = document.querySelector(".comments__list"); //Declaración de constante con valor asignado de, en el documento HTML, obtener el primer elemento mediante su selector, el cual es el de clase dentro de las comillas de los paréntesis
 
 function deleteComment(e) { //Declaración de función para eliminar comentarios, posee un parámetro para recibir como argumento el evento que ejecutará dicha función, la cual ejecuta el siguiente bloque
-    commentsList.removeChild(e.target.parentNode.parentNode); //A dicho elemento obtenido mediante su selector, se le aplica el método para remover elementos hijos, el cual recibe como argumento, del evento que ejecutó la función para eliminar comentarios, obtener el elemento que ejecutó dicho evento, y se accede a dos niveles superiores del nodo/elemento padre para acceder al contendor del comentario y removerlo
+    commentsList.removeChild(e.target.parentNode.parentNode.parentNode); //A dicho elemento obtenido mediante su selector, se le aplica el método para remover elementos hijos, el cual recibe como argumento, del evento que ejecutó la función para eliminar comentarios, obtener el elemento que ejecutó dicho evento, y se accede a tres niveles superiores del nodo/elemento padre para acceder al contendor del comentario y removerlo
 }
 
-function editComment(commentP, commentLi, buttonEdit, divButtons) { //Declaración de función para editar comentarios, dicha función posee los parámetros para recibir los argumentos necesarios, siendo en este orden, el elemento "p" del comentario, el elemento "li" que contiene el comentario, el botón para editar el comentario, y el contenedor de los botones para interactuar con el comentario, la cual ejecuta el siguiente bloque
+function editComment(commentP, commentLi, buttonEdit, divButtons, buttonInteract) { //Declaración de función para editar comentarios, dicha función posee los parámetros para recibir los argumentos necesarios, siendo en este orden, el elemento "p" del comentario, el elemento "li" que contiene el comentario, el botón para editar el comentario, el contenedor de los botones para interactuar con el comentario, y el botón para interactuar con el comentario, la cual ejecuta el siguiente bloque
     commentP.style.display = "none"; //A dicho elemento "p", se accede a sus estilos, a su propiedad de comportamiento de visualzación, y se le asigna el valor "none" para no ser visible
     buttonEdit.style.display = "none"; //A dicho botón para editar, se accede a sus estilos, a su propiedad de comportamiento de visualzación, y se le asigna el valor "none" para no ser visible
 
@@ -117,6 +117,8 @@ function editComment(commentP, commentLi, buttonEdit, divButtons) { //Declaraci�
         buttonEdit.style.display = "block"; //A dicho elemento "botón" para editar el comentario, se accede a sus estilos, a su propiedad de comportamiento de visualización, y se le asigna "block" para ser visible como un elemento de bloque
         commentLi.removeChild(newTextInput); //A dicho elemento "lista" que contiene el comentario, se le aplica el método para remover elementos hijos, siendo removido dicho elemento "input para la edición" el que será eliminado
         divButtons.removeChild(buttonFinishEdit); //A dicho elemento "contenedor de los botones para interactuar con el comentario", se le aplica el método para remover elementos hijos, siendo removido dicho elemento "botón" para finalizar la edición el que será eliminado
+        divButtons.classList.remove('show'); //A dicho elemento "contenedor de los botones para interactuar con el comentario", se accede a su lista de claes, y se le aplica el método para remover dicha clase dentro de las comillas de los paréntesis
+        buttonInteract.classList.remove('ocult'); //A dicho elemento "botón para interactuar con el comentario", se accede a su lista de claes, y se le aplica el método para remover dicha clase dentro de las comillas de los paréntesis
     });
 }
 
@@ -128,8 +130,16 @@ function createComment(commentValue) { //Declaración de función para crear un 
     commentP.className = "comment__p"; //A dicho elemento "parrafo" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas
     commentP.textContent = commentValue; //A dicho elemento "parrafo" creado, se accede a su texto contenido, y se le asigan, el valor del comentario ontenido en el argumento de la función 
 
+    let buttonInteract = document.createElement('img'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "imagen"
+    buttonInteract.classList.add('commentInteract'); //A dicho elemento "imagen" creado, se accede a su lista de clases, y se le aplica el método para añadir, dicha clase dentro de las comillas de los paréntesis
+    buttonInteract.src = './images/edit-com.svg'; //A dicho elemento "imagen" creado, se accede a su propiedad de "fuente", y se le asigna como valor de cadena de texto, la ruta obtener dicha imagen
+    buttonInteract.style.marginBottom = "auto"; //A dicho elemento "imagen" creado, se accede a sus estilos, a la propiedad de margen externo inferior, y se le asigna el valor "auto" para que se coloque al extremo opuesto(arriba)
+
     let divButtons = document.createElement('div'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "contenedor de bloque"
     divButtons.className = "buttonsComments"; //A dicho elemento "contenedor de bloque" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas
+
+    let buttonsContainer = document.createElement('div'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "contenedor de bloque"
+    buttonsContainer.classList.add('buttonsContainer'); //A dicho elemento "contenedor de bloque" creado, se accede a su lista de clases, y se le aplica el método para añadir, dicha clase dentro de las comillas de los paréntesis
 
     let commentButtonEdit = document.createElement('button'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "botón"
     commentButtonEdit.className = "comment__buttons"; //A dicho elemento "botón" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas
@@ -140,12 +150,19 @@ function createComment(commentValue) { //Declaración de función para crear un 
     commentButtonDelete.textContent = "Eliminar"; //A dicho elemento "botón" creado, se accede a su texto contenido, y se le asigna como valor, dicha cadena de texto
 
     divButtons.append(commentButtonEdit, commentButtonDelete); //A dicho elemento "contenedor de bloque" creado, se le aplica el método de añadir dentro del mismo, dichos ambos elementos botón creados
-    commentLi.append(commentP, divButtons); //A dicho elemento "listado" creado, se le aplica el método de añadir dentro del mismo, dicho elemento "parrafo" creado, y dicho elemento "contenedor de bloque" creado el cual ya contiene su respetivos elementos contenidos
-    commentsList.appendChild(commentLi); //A dicho elemento obtenido mediante su selector de clase, se le aplica el método para añadir como elemento hijo, dicho elemento "listado" creado el cual ya contiene su respetivos elementos contenidos
+    buttonsContainer.append(buttonInteract, divButtons); //A dicho elemento "contenedor de bloque" creado, se le aplica el método de añadir dentro del mismo, dichos ambos elementos, el botón de interación con el comentario, y el contenedor de los botones
+    commentLi.append(commentP, buttonsContainer); //A dicho elemento "listado" creado, se le aplica el método de añadir dentro del mismo, dicho elemento "parrafo" creado, y dicho elemento "contenedor de bloque" creado el cual ya contiene su respetivos elementos contenidos
+
+    commentsList.insertBefore(commentLi, commentsList.firstChild)//A dicho elemento obtenido mediante su selector de clase, se le aplica el método para añadir como elemento hijo, dicho elemento "listado" creado el cual ya contiene su respetivos elementos contenidos
 
     commentButtonDelete.addEventListener('click', deleteComment); //A dicho elemento "botón" creado para eliminar el comentario, se le agrega un escuchador de eventos, el cual detecta el evento de "click" sobre el mismo, ejecutando dicho método para eliminar comentarios
     commentButtonEdit.addEventListener('click', () => {  //A dicho elemento "botón" creado para editar el comentario, se le agrega un escuchador de eventos, el cual detecta el evento de "click" sobre el mismo, ejecutando una función flecha que ejecuta el siguiente bloque
-        editComment(commentP, commentLi, commentButtonEdit, divButtons); //Se llama a ejecutar dicha función para editar el comentario, la cual recibe como arguentos, el elemento "p" del comentario, el elemento "li" que contiene el comentario, el elemento "botón" para editar, y el elemento "div" que contiene los botones para interactuar con el comentario
+        editComment(commentP, commentLi, commentButtonEdit, divButtons, buttonInteract); //Se llama a ejecutar dicha función para editar el comentario, la cual recibe como arguentos, el elemento "p" del comentario, el elemento "li" que contiene el comentario, el elemento "botón" para editar, el elemento "div" que contiene los botones para interactuar con el comentario, y el botón creado para interactuar con el comentario
+        buttonInteract.classList.toggle('ocult'); //A dicho botón creado para interactuar con el comentario, se accede a su lista de clases, y se le aplica el método de alternar, dicho selector de clase
+    });
+
+    buttonInteract.addEventListener('click', () => { //A dicho botón creado para interactuar con el comentario, se le agrega un escuchador de eventos, el cual detecta el evento de 'click' sobre el mismo, ejecutando una función flecha que ejecuta el siguiente bloque
+        divButtons.classList.toggle('show'); //A dicho elemento "contenedor de bloque" creado, se accede a su lista de clases, y se le aplica el método de alternar, dicho selector de clase
     });
 }
 
