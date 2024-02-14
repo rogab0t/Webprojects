@@ -208,13 +208,13 @@ img {
     grid-template-areas: 
     "title title title title title title title title title"
     "image image image image image image image image image";
-    margin-top: 3%; 
+    margin-top: var(--big-margin); 
     margin-bottom: var(--big-margin); 
 }
 
 .grid__main__area .text { 
     grid-area: title; 
-    height: 100%;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -324,7 +324,9 @@ img {
 }
 
 .slider header { 
-    width: 90%; 
+    width: 90%;
+    height: 100%;
+    overflow: scroll;
     position: relative; 
     margin: 0 auto; 
     z-index: 10; 
@@ -373,11 +375,13 @@ img {
     display: flex; 
     align-items: center; 
     overflow: hidden;
+    height: 26vh;
 }
 
 #slider__image { 
     opacity: 1; 
-    transition: all 0.6s ease-out; 
+    transition: all 0.6s ease-out;
+    width: 100%;
 }
 
 #slider__image.hide { 
@@ -490,6 +494,7 @@ img {
 
     .grid__main__area .text { 
         gap: 3vh;
+        height: auto;
     }
 
     .grid__main__area .text p {
@@ -521,12 +526,15 @@ img {
 
     .slider header { 
         min-height: 350px; 
-        width: 100%; 
+        width: 100%;
+        height: 40%;
         transform: translateX(100px); 
     }
 
     #slider__text__content { 
-        transform: translateX(0); 
+        transform: translateX(0);
+        height: 100%;
+        overflow: scroll;
     }
     
     #slider__text__content.hide { 
@@ -536,6 +544,10 @@ img {
     .slider .image { 
         min-height: 100vh;
         justify-content: space-evenly;
+    }
+
+    #slider__image { 
+        width: auto;
     }
 
     /* mission */
